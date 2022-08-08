@@ -71,3 +71,7 @@ OR
 - Plugins
 - 3rd Party integration
 - Terraform
+
+
+steve - cert?
+OK to use container OS's? for automation pieces?
