@@ -50,7 +50,17 @@ NetBox was designed with the following tenets foremost in mind.
 - Keep it Simple
     - When given a choice between a relatively simple 80% solution and a much more complex complete solution, the former will typically be favored. This ensures a lean codebase with a low learning curve.
 
-## Video Demo - Introduction to the WebUI and REST API
+## Video Demo 1 - Introduction to the NetBox WebUI
+
+
+## Video Demo 2 - Introduction to the NetBox REST API
+For a deep dive into the REST API, the NetBox documentation is the best start: https://docs.netbox.dev/en/stable/rest-api/overview/
+
+Another great way of exploring the API is via the comprehensive, interactive documentation of all REST API endpoints that is available on a running NetBox instance at /api/docs/. This interface provides a convenient sandbox for researching and experimenting with specific endpoints and request types. The API itself can also be explored using a web browser by navigating to its root at /api/.
+
+With that said let's take a quick tour of the REST API in this short demo video, to help get you up and running in no time: 
+
+*Link to YT Video*
 
 
 ## Example Scenario
@@ -59,5 +69,5 @@ The fictional scenario that will be used throughout this course to demonstrate N
 - ABC Corp (better name?) is a legal firm of 1000 employees, with a small IT team 
 - The network consists of two small Data Centers, plus multiple branch office locations around the world 
 - Susan and Eric are awesome Network Engineers with a burning desire to introduce this amazing 'NetDevOps' stuff they keep hearing about (so they can do less work but still wow the bosses!)
-- The network team has been handed a new project to deploy a branch office network in the new location of Brisbane, Australia. The corporate standard standard branch office design consists of a WAN Router, an Access Switch and a Wireless Access Point)
+- The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and a Wireless Access Point
 - Susan and Eric are going to use NetBox used every step of the way to help deliver the project on time and also to power some network automation to get the devices configured error free (this has long been a problem for them with new sites taking hours and even days to stand up!)
