@@ -54,11 +54,9 @@ NetBox was designed with the following tenets foremost in mind.
 
 
 ## Video Demo 2 - Introduction to the NetBox REST API
-For a deep dive into the REST API, the NetBox documentation is the best start: https://docs.netbox.dev/en/stable/rest-api/overview/
+For a deep dive into the REST API, the NetBox documentation is the best place to start: https://docs.netbox.dev/en/stable/rest-api/overview/
 
-Another great way of exploring the API is via the comprehensive, interactive documentation of all REST API endpoints that is available on a running NetBox instance at /api/docs/. This interface provides a convenient sandbox for researching and experimenting with specific endpoints and request types. The API itself can also be explored using a web browser by navigating to its root at /api/.
-
-With that said let's take a quick tour of the REST API in this short demo video, to help get you up and running in no time: 
+For now, let's take a quick tour of the REST API in this short demo video, which will help you to get up and running in no time: 
 
 *Link to YT Video*
 
