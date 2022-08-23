@@ -10,4 +10,3 @@
 
 steve - cert?
 OK to use container OS's? for automation pieces?
-adsdasd

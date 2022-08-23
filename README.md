@@ -1,29 +1,31 @@
 # NetBox ‘Zero-To-Hero’ Course
-This is a training course that takes new NetBox users through a real world scenario that demonstrates various features of NetBox.
 
-## Goals
-This course aims to: 
-- enable new customers to get up and running and immediately start to get value from the product
-- build a foundation from which customers can start to leverage NetBox's extra features ie. custom fields, reports, plugins etc
-- introduce the power of NetBox to drive network automation efforts
-- compliment the official NetBox documentation
+## Introduction
+Hello and welcome to this short course designed to take you from 'Zero to Hero' with NetBox. We are excited to have you here! 
 
-## Format
-- bite-sized modules consisting of text and graphics along with an accompanying short video demo of each concept 
-- each module introduces a new concept/area within NetBox, and is a step along the road of the example scenario leading to the deployment of a new branch office site
-- demo how to do each step via Web UI and REST API (script or postman) 
-- code examples available in public github repo (and Postman collection?) 
+The goals of this course are as follows: 
 
-## Fictional Scenario
-The course will make use of a fictional organization in modules 1 - 12 to help demonstrate NetBox features:  
-- medium sized consulting company, with a small IT team 
-- the network consists of 2 small DC's, multiple sites/branch office locations
-- standard branch office deployments (WAN router, access switch, WiFi)
-- 1 or 2 awesome Network Engineers with a burning desire to introduce this amazing NetDevOps stuff they keep hearing about (so they can do less work but still wow the bosses!)
-- project is a new branch office deployment in Brisbane, Australia
-- use NetBox every step of the way to help deliver the project on time and enable the network team to leverage NetBox as the single source of truth for the network going forward
+- Enable you to get up and running with minimal fuss and immediately start to get value from NetBox
+- Build a solid foundation from which you can start to leverage NetBox's extra features ie. custom fields, reports, plugins etc
+- Introduce the power of NetBox to drive your Network Automation efforts as the 'Single Source Of Truth' for your NetDevOps workflows
 
-## Course Modules
+## Course Format
+The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company. 
+
+Each module includes a video teaching you how to interact with NetBox both via the Web UI and programmatically using the REST API. You can follow along with your own instance of NetBox, and all code used to interact with the REST API will be available in a Git repo and Postman collection, so you will have a fully working code base which you can clone to get you started!
+
+## Example Scenario
+The fictional scenario that will be used throughout this course to demonstrate NetBox features is: 
+
+- ABC Corp (better name?) is a legal firm of 1000 employees, with a small IT team 
+- The network consists of two small Data Centers, plus multiple branch office locations around the world 
+- Susan and Eric are awesome Network Engineers with a burning desire to introduce this amazing 'NetDevOps' stuff they keep hearing about (so they can do less work but still wow the bosses!)
+- The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and a Wireless Access Point
+- Susan and Eric are going to use NetBox used every step of the way to help deliver the project on time and also to power some network automation to get the devices configured error free (this has long been a problem for them with new sites taking hours and even days to stand up!)
+
+So, with that said, lets dive in!
+
+## Modules
 
 ### [Module 1: Introduction](modules/1-Introduction/1-introduction.md)
 - NetBox overview, what it is and is not

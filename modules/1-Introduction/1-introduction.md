@@ -1,17 +1,6 @@
 # Introduction
 
-Hello and welcome to the first module in this short course designed to take you from 'Zero to Hero' with NetBox. We are excited to have you here! The goals of this course are as follows: 
-
-- Enable you to get up and running with minimal fuss and immediately start to get value from NetBox
-- Build a solid foundation from which you can start to leverage NetBox's extra features ie. custom fields, reports, plugins etc
-- Introduce the power of NetBox to drive your Network Automation efforts as the 'Single Source Of Truth' for your NetDevOps workflows
-
-## Course Format
-The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company. 
-
-Each module includes a video teaching you how to interact with NetBox both via the Web UI and programmatically using the REST API. You can follow along with your own instance of NetBox, and all code used to interact with the REST API will be available in a Git repo and Postman collection, so you will have a fully working code base which you can clone to get you started!
-
-So, with that said, lets dive in!
+blah blah blah 
 
 ## What NetBox Is (and what it isn't)
 
@@ -63,12 +52,6 @@ For now, let's take a quick tour of the REST API in this short video, which will
 
 [![Introduction to the NetBox REST API](../../images/1-introduction-API.png)](https://youtu.be/Gsarb0elmoA)
 
-
-## Example Scenario
-The fictional scenario that will be used throughout this course to demonstrate NetBox features is: 
-
-- ABC Corp (better name?) is a legal firm of 1000 employees, with a small IT team 
-- The network consists of two small Data Centers, plus multiple branch office locations around the world 
-- Susan and Eric are awesome Network Engineers with a burning desire to introduce this amazing 'NetDevOps' stuff they keep hearing about (so they can do less work but still wow the bosses!)
-- The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and a Wireless Access Point
-- Susan and Eric are going to use NetBox used every step of the way to help deliver the project on time and also to power some network automation to get the devices configured error free (this has long been a problem for them with new sites taking hours and even days to stand up!)
+## External Links
+- [NetBox Documentation](https://docs.netbox.dev/en/stable/)
+- [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
