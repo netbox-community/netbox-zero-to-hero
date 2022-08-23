@@ -7,7 +7,9 @@ Hello and welcome to the first module in this short course designed to take you 
 - Introduce the power of NetBox to drive your Network Automation efforts as the 'Single Source Of Truth' for your NetDevOps workflows
 
 ## Course Format
-The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company. Each module includes a video teaching you how to interact with NetBox both via the Web UI and programmatically using the REST API. You can follow along with your own instance of NetBox, and all code used to interact with the REST API will be available in a Git repo and Postman collection, so you will have a fully working code base which you can clone to get you started!
+The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company. 
+
+Each module includes a video teaching you how to interact with NetBox both via the Web UI and programmatically using the REST API. You can follow along with your own instance of NetBox, and all code used to interact with the REST API will be available in a Git repo and Postman collection, so you will have a fully working code base which you can clone to get you started!
 
 So, with that said, lets dive in!
 
@@ -52,13 +54,14 @@ NetBox was designed with the following tenets foremost in mind.
 
 ## Video Demo 1 - Introduction to the NetBox WebUI
 
+*Link to Video*
 
 ## Video Demo 2 - Introduction to the NetBox REST API
-For a deep dive into the REST API, the NetBox documentation is the best place to start: https://docs.netbox.dev/en/stable/rest-api/overview/
+For a deep dive into the REST API, head over to the official NetBox documentation at: https://docs.netbox.dev/en/stable/rest-api/overview/
 
-For now, let's take a quick tour of the REST API in this short demo video, which will help you to get up and running in no time: 
+For now, let's take a quick tour of the REST API in this short video, which will help you to get up and running in no time: 
 
-*Link to YT Video*
+*Link to Video*
 
 
 ## Example Scenario
