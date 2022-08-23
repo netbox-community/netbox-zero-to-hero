@@ -54,14 +54,14 @@ NetBox was designed with the following tenets foremost in mind.
 
 ## Video Demo 1 - Introduction to the NetBox WebUI
 
-*Link to Video*
+[![Introduction to the NetBox WebUI](../../images/1-introduction-UI.png)](https://youtu.be/zT82jOUCcW4)
 
 ## Video Demo 2 - Introduction to the NetBox REST API
 For a deep dive into the REST API, head over to the official NetBox documentation at: https://docs.netbox.dev/en/stable/rest-api/overview/
 
 For now, let's take a quick tour of the REST API in this short video, which will help you to get up and running in no time: 
 
-*Link to Video*
+[![Introduction to the NetBox REST API](../../images/1-introduction-API.png)](https://youtu.be/Gsarb0elmoA)
 
 
 ## Example Scenario
