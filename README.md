@@ -1,7 +1,7 @@
 # NetBox ‘Zero-To-Hero’ Course
 
 ## Introduction
-Hello and welcome to this short course designed to take you from 'Zero to Hero' with NetBox. We are excited to have you here! 
+Hello and welcome to this short course designed to take new NetBox users from 'Zero to Hero'. We are excited to have you here! 
 
 The goals of this course are as follows: 
 
@@ -17,8 +17,8 @@ Each module includes a video teaching you how to interact with NetBox both via t
 ## Example Scenario
 The fictional scenario that will be used throughout this course to demonstrate NetBox features is: 
 
-- ABC Corp (better name?) is a legal firm of 1000 employees, with a small IT team 
-- The network consists of two small Data Centers, plus multiple branch office locations around the world 
+- The organization is a small consulting firm, with a small IT team 
+- The network consists of two Data Centers, plus multiple branch office locations around the world 
 - Susan and Eric are awesome Network Engineers with a burning desire to introduce this amazing 'NetDevOps' stuff they keep hearing about (so they can do less work but still wow the bosses!)
 - The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and a Wireless Access Point
 - Susan and Eric are going to use NetBox used every step of the way to help deliver the project on time and also to power some network automation to get the devices configured error free (this has long been a problem for them with new sites taking hours and even days to stand up!)
@@ -28,7 +28,8 @@ So, with that said, lets dive in!
 ## Modules
 
 ### [Module 1: Introduction](modules/1-Introduction/1-introduction.md)
-- NetBox overview, what it is and is not
+- NetBox overview
+- What NetBox Is (and what it isn't)
 - Introduction to the Web Interface and the REST API
 
 ### Module 2: Setting up the Site
