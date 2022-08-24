@@ -66,3 +66,8 @@ So, with that said, lets dive in!
 - Automated Device Config Generation (pull device vars and feed into Jinja2 templates) 
 OR
 - Dynamic Inventory to be consumed by automation (Nornir ?) 
+
+## Useful Links
+- [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
+- [NetBox GitHub](https://github.com/netbox-community/netbox)
+- [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)
