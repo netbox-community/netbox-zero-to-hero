@@ -49,8 +49,7 @@ The best way to understand the power of NetBox is to dive right in and start exp
 [![Introduction to the NetBox WebUI](../../images/1-introduction-UI.png)](https://youtu.be/zT82jOUCcW4)
 
 ## Video 2 - Introduction to the NetBox REST API
-For a deep dive into the REST API, head over to the official NetBox documentation at: https://docs.netbox.dev/en/stable/rest-api/overview/
-
+For a deep dive, you can check out the NetBox [REST API documentation](https://docs.netbox.dev/en/stable/integrations/rest-api/). 
 For now, let's take a quick tour of the REST API in this short video, which will help you to get up and running in no time: 
 
 [![Introduction to the NetBox REST API](../../images/1-introduction-API.png)](https://youtu.be/Gsarb0elmoA)
