@@ -2,17 +2,19 @@
 
 Hello and welcome to the first module in this NetBox 'Zero-to-Hero' course. By the end of this module you will be able to:  
 
-- Describe what NetBox Is (and what it isn't)
+- Describe what NetBox is and it's main features and benefits
 - Navigate around the Web Interface and explore the data model
 - Explore the REST API and start to use it to programmatically interact with NetBox 
 
-## What NetBox Is
+## What is NetBox?
 NetBox is designed to be the single network source of truth, providing a complete strategic picture across multiple aspects of network management. That strategic layer then acts as the backbone for layers of network automation and monitoring tools.
 
 It’s worth noting that NetBox is designed to show the *desired* state of a network, not its operational state. As a source of truth for that desired state, NetBox is what network monitoring tools use as the basis of comparison to current reality. 
 
-NetBox is thriving as an open source tool, with over 10,000 [GitHub](https://github.com/netbox-community/netbox) stars, 1,800 forks, and a vibrant [user community](https://github.com/netbox-community/netbox/discussions). NetBox is currently deployed on thousands of networks around the world, representing a diverse mix of use cases, market verticals, and places along the automation journey. The user base spans some of the world’s largest and most complex telecommunications networks to smaller networks of 
+NetBox is thriving as an open source tool, with over 11,000 [GitHub](https://github.com/netbox-community/netbox) stars, 1,800 forks, and a vibrant [user community](https://github.com/netbox-community/netbox/discussions). NetBox is currently deployed on thousands of networks around the world, representing a diverse mix of use cases, market verticals, and places along the automation journey. The user base spans some of the world’s largest and most complex telecommunications networks to smaller networks of 
 just a few devices.
+
+**Feedback from Jeremy here that needs addressing: some feedback on module 1: you might want to provide more context around what NetBox is and what it's used for, with some real-world examples illustrating how it fills IPAM/DCIM roles**
 
 From the [Official NetBox Documentation](https://docs.netbox.dev/en/stable/): 
 > ### The Premiere Network Source of Truth
@@ -30,18 +32,6 @@ From the [Official NetBox Documentation](https://docs.netbox.dev/en/stable/):
 >### Always Open
 >
 >Because NetBox is an open source application licensed under Apache 2, its entire code base is completely accessible to the end user, and there's never a risk of vendor lock-in. Additionally, NetBox development is an entirely public, community-driven process to which everyone can provide input.
-
-
-## What NetBox Is Not
-Whilst NetBox is incredibly feature rich and highly extensible, you should also understand what functionality it does NOT provide. Some examples being:  
-
-- Network monitoring
-- DNS server
-- RADIUS server
-- Configuration management
-- Facilities management
-
-Having said this, NetBox fits into the Network Monitoring and Management eco-system in a way that allows it to integrate with external tools that do provide the functions listed above.
 
 ## Video  1 - Introduction to the NetBox Web Interface
 The best way to understand the power of NetBox is to dive right in and start exploring, and this short video will give you a guided tour of the Web Interface: 
