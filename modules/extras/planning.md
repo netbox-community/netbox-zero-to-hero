@@ -1,4 +1,5 @@
 # Overall Planning
+Company name: TLE Consulting
 2 x corporate sites
 10 x branch sites
 2 x data centre sites
@@ -108,3 +109,17 @@ Tenant Group: Departments
         - Infrastructure
       - Rack R005
         - Infrastructure
+
+## Contact Groups, Roles and Contacts: 
+Contact Groups: 
+  - IT
+  - Facilities Management
+  
+- Roles:
+  - Operations
+  - Emergency
+
+- Contacts: 
+  - Susan 
+  - Eric
+  - Alexa 
