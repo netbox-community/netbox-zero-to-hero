@@ -31,8 +31,10 @@ So, with that said, lets dive in!
 - NetBox overview
 - Introduction to the Web Interface and the REST API
 
-### Module 2: Setting up the Organization
-- Tenant groups, tenants, regions, site groups, sites, locations, racks and contacts 
+### [Module 2: Setting up the Organization](modules/2-setting-up-the-organization/2-setting-up-the-orgainzation.md)
+- Modelling the organization using tenant groups, tenants, regions, site groups, sites, locations, racks and contacts
+- Using the web interface to manually add data for the organization
+- Using the web interface to bulk upload data for the organization
 
 ### Module 3: IP Addressing and VLANs
 - Prefixes, IP Addresses, VLANs
