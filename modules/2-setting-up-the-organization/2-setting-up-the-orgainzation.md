@@ -19,10 +19,10 @@ Our fictional company, TLE Consulting, is structured as follows:
 ### Tenancy
 In NetBox most core objects can be associated with a tenant and this conveys ownership of the object. For example a managed service provider can associate network devices with individual customers. 
 
-TLE Consulting is using the Tenancy feature to define it's internal business units and associate them with objects. They have a tenant group (Departments) and this contains the tenants - Sales, Finance, IT, Marketing and Consulting
+TLE Consulting is using the Tenancy feature to define it's internal business units and associate them with objects. They have a tenant group (TLE Departments) and this contains the tenants - Sales, Finance, IT, Marketing and Consulting
 
 ### Regions
-In NetBox, regions are typically used to model countries, states, and cities. TLE Consulting is present in 4 regions - Africa, Asia Pacific, Europe and North America. 
+In NetBox, regions are typically used to model countries, states, and cities. TLE Consulting is present in 4 regions - Africa, Asia Pacific, Europe and North America. These 'parent' regions will also contain the Country, State and City regions nested within them.
 
 ### Site Groups and Sites
 Whereas regions are intended for geographic organization, site groups may be used for functional groupings. A site typically represents a building within a region and/or site group. 

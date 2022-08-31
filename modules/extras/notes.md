@@ -10,3 +10,14 @@
 
 steve - cert?
 OK to use container OS's? for automation pieces?
+
+
+## module 2
+Data to add by hand: 
+- tenant group and tenants
+- site groups
+- Brisbane site
+
+Data to bulk import:
+- Regions
+- all other sites
