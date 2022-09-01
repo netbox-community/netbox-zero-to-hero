@@ -1,6 +1,6 @@
 # Introduction
 
-Hello and welcome to module 2 of the NetBox 'Zero-to-Hero' course. In [Module 1: Introduction](modules/1-Introduction/1-introduction.md) you learned the features of NetBox, and had a guided tour of both the Web Interface and the REST API. In this module we will expand on this and add the Organizational data for our fictional consulting firm,  into NetBox. 
+Hello and welcome to module 2 of the NetBox 'Zero-to-Hero' course. In [Module 1: Introduction](modules/1-Introduction/1-introduction.md) you learned the features of NetBox, and had a guided tour of both the Web Interface and the REST API. In this module we will expand on this and add the Organizational data for our fictional consulting firm, into NetBox. 
 
 By the end of this module you will be able to:  
 - Describe how NetBox models the organization using tenant groups, tenants, regions, site groups, sites, locations, racks and contacts
@@ -14,7 +14,10 @@ If you'd like to follow along with the examples used in this course, it's super 
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox   
 
 ## The Organizational Data
-Our fictional company, TLE Consulting, is structured as follows:
+Our fictional organization, TLE Consulting, is structured as follows:
+
+### NetBox System Users
+TLE Consulting's two Network Engineers, Eric and Susan will be set up with their own user accounts as they will be the two main administrators of the NetBox System. 
 
 ### Tenancy
 In NetBox most core objects can be associated with a tenant and this conveys ownership of the object. For example a managed service provider can associate network devices with individual customers. 
@@ -27,14 +30,14 @@ In NetBox, regions are typically used to model countries, states, and cities. TL
 ### Site Groups and Sites
 Whereas regions are intended for geographic organization, site groups may be used for functional groupings. A site typically represents a building within a region and/or site group. 
 
-TLE Consulting has 2 Site Groups - Branch (consisting of 10 sites) and Corporate (consisting of 2 sites). 
+TLE Consulting has two Site Groups - Branch (consisting of ten sites) and Corporate (consisting of two sites). 
 
 ### Locations 
 A location can be any logical subdivision within a building, such as a floor or room. All TLE Consulting Branch sites have a single location (Comms Room)
-and the Corporate sites have an extra location within them (Data Center)
+and the Corporate sites have an extra location within them (On-Premises Data Center)
 
 ### Racks and Rack Roles
-Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least 1 rack where Network/IT equipment is installed. 
+Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least one rack where Network/IT equipment is installed. 
 
 Users can also create custom roles to which racks can be assigned, and TLE has defined their rack roles as Infrastructure, Compute and Storage.
 
@@ -44,7 +47,7 @@ To complete the organizational set up we will need to add some contacts. A conta
 TLE will use 2 contact groups - IT (contains Susan and Eric) and Facilities (contains Alexa). The contacts will be assigned to site objects and be given one of the contact roles 'Operations' or 'Emergency'. 
 
 ## Video - Setting Up The Organization
-As always the best way to understand the power of NetBox is to dive right in! This short video will step through creating all the objects  for the TLE Consulting Organization. Also, as LTE's awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch office site in Brisbane, Australia, they will also add the new information for this site. 
+As always the best way to understand the power of NetBox is to dive right in! This short video will step through creating all the objects for the TLE Consulting Organization. Also, as TLE's awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch office site in Brisbane, Australia, they will also add the new information for this site. 
 
 With that said, let's get started! 
 

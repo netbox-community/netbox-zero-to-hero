@@ -1,8 +1,7 @@
 # Overall Planning
 Company name: TLE Consulting
-2 x corporate sites
-10 x branch sites
-2 x data centre sites
+10 x regional branch sites
+2 x regional corporate headquarters, each with an on-premises data center
 1 new branch site for project
 
 ## Tenants
@@ -37,8 +36,8 @@ Tenant Group: Departments
       - Denver
     - California
       - Los Angeles
-    - New York
-      - New York
+    - Chicago
+      - Illinois
 
 ## Site Groups, Sites, Locations, Racks, Rack Roles
 - Branch
@@ -94,7 +93,7 @@ Tenant Group: Departments
         - Infrastructure
       - Rack R006
         - Infrastructure
-  - USNYC01
+  - USCHG01
     - Data Center
       - Rack R001
         - Infrastructure
@@ -123,3 +122,16 @@ Contact Groups:
   - Susan 
   - Eric
   - Alexa 
+
+## New Site
+AUBRI01
+aubri01
+planned
+asia pacific - australia - brisbane
+branch
+australia/brisbane
+TLE departments
+consulting
+30 Mills Street BRISBANE, Queensland(QLD), 4000
+-27.611508
+152.903083
