@@ -106,40 +106,19 @@ And then just go ahead and click create, down at the bottom here. And that's it!
 
 OK so as you know TLE Consulting has a number of other sites around the world so make use of the bulk upload feature again to save some time. This time go to Sites and click the upload link and here is the form to submit CSV data again. For these sites add the name, slug, status, region, group and tenant:
 
-name,slug,status,region,group,tenant
-ZAJNB01,zajnb01,active,Johannesburg,Branch,Consulting
-NZAKL01,nzakl01,active,Auckland,Branch,Sales
-MYKUL01,mykul01,active,Kuala Lumpur,Branch,Marketing
-AUSYD01,ausyd1,active,Sydney,Branch,Consulting
-AUMEL01,aumel1,active,Melbourne,Branch,Consulting
-CAMON01,camon1,active,Montreal,Branch,Consulting
-USDEN01,usden1,active,Denver,Branch,Consulting
-USLAX01,uslax01,active,Los Angeles,Branch,Sales
-UKLON01,uklon01,active,London,Corporate,Finance
-USCHG01,uschg01,active,Chicago,Corporate,IT
+**netbox_sites.csv**
 
 So just paste them in click submit and that's the import completed, so now click on 'View All' and here is the full list of sites including the planned new site in Brisbane.
 
 ### Locations 
 
-So now the sites are set up, we will go ahead and add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or a room. All TLE Consulting Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites the comms room plus an additional location within them (the on premises data center). 
+So now the sites are set up, the next step is to add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or a room. All TLE Consulting Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites the comms room plus an additional location within them (the on premises data center). 
 
 So once again Susan can manually add the the location in the new Brisbane site, and use the bulk upload for the other sites from CSV data. So from locations click 'add' and then select the region as Brisbane, the site group is Branch, the site is AUBRI01, the name is Comms Room, we'll pop in a description of 'Main IT Suite'. then lastly the tenant group is TLE Departments and the tenant at this location is the Consulting department. OK, so go ahead and click create on that, and there is the new location all set up. 
 
 OK, so now click Locations and then the upload button for the bulk import of the rest of the locations. we'll set the headers to site,name,slug,tenant, and description, and paste in the rest of data and click submit. 
 
-site,name,slug,tenant,description
-NZAKL01,Comms Room,comms-room,Sales,Main IT Suite
-MYKUL01,Comms Room,comms-room,Marketing,Main IT Suite
-AUSYD01,Comms Room,comms-room,Consulting,Main IT Suite
-AUMEL01,Comms Room,comms-room,Consulting,Main IT Suite
-CAMON01,Comms Room,comms-room,Consulting,Main IT Suite
-USDEN01,Comms Room,comms-room,Consulting,Main IT Suite
-USLAX01,Comms Room,comms-room,Sales,Main IT Suite
-UKLON01,Comms Room,comms-room,Finance,3rd Floor IT Suite
-UKLON01,Data Center,data-center,IT,On Premises Data Center
-USCHG01,Comms Room,comms-room,IT,10th Floor IT Suite
-USCHG01,Data Center,data-center,IT,On Premises Data Center
+**netbox_locatons.csv**
 
 And that's now imported 11 locations successfully, so click on 'View all' to get the nice table view again of all the locations.
 
@@ -156,24 +135,7 @@ Now as this is branch office site the requirement is only for a half height rack
 
 Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,type,width,u_height:
 
-site,location,name,tenant,status,role,type,width,u_height
-NZAKL01,Comms Room,NZAKL01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
-MYKUL01,Comms Room,MYKUL01-RK-01,Marketing,active,Infrastructure,4-post-cabinet,19,22
-AUSYD01,Comms Room,AUSYD01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
-AUMEL01,Comms Room,AUMEL01-RK-1,Consulting,active,Infrastructure,4-post-cabinet,19,22
-CAMON01,Comms Room,CAMON01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
-USDEN01,Comms Room,USDEN01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
-USLAX01,Comms Room,USLAX01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
-UKLON01,Comms Room,UKLON01-RK-01,Finance,active,Infrastructure,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-04,IT,active,Compute,4-post-cabinet,19,42
-UKLON01,Data Center,UKLON01-RK-05,IT,active,Storage,4-post-cabinet,19,42
-USCHG01,Comms Room,USCHG01-RK-01,IT,active,Infrastructure,4-post-cabinet,19,22
-USCHG01,Data Center,USCHG01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
-USCHG01,Data Center,USCHG01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
-USCHG01,Data Center,USCHG01-RK-04,IT,active,Compute,4-post-cabinet,19,42
-USCHG01,Data Center,USCHG01-RK-05,IT,active,Storage,4-post-cabinet,19,42
+**netbox_racks.csv**
 
 Note here that the London and Chicago sites each have 2 locations - the Comms Room and the on premises data center - and the data center racks are full height 42 rack units and there is a mixture of roles - infrastructure, Compute and storage.
 
@@ -182,16 +144,18 @@ so once again, click on import and NetBox successfully imported all of the racks
 ### Contacts
 To complete the organizational set up Susan is going to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship that a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects. 
 
-So 
-Contact Groups: 
-  - IT
-  - Facilities Management
-  
-- Roles:
-  - Operations
-  - Emergency
+So to start off TLE consulting has 2 contact groups - IT and facilities management. So from contact groups, click add and then the first one is IT, with a description of IT Staff, the 2nd one is Facilities Management, with a description of 'Facilities Management Staff'
 
-- Contacts: 
-  - Susan 
-  - Eric
-  - Alexa 
+Next add the contact roles, again clicking add. the first role to add is Operations, and then the next role will be Emergency.
+
+Alright, so now add the individual contacts - starting with Susan - now she is in the IT contact group, and she is an Awesome Network Engineer. and then add her phone 555-123-4567 and email susan@example.com. 
+
+Then do the same for Eric who is also in the IT group, and works with Susan as an Awesome Network Engineer. he can be reached on the same number 555-123-4567, and has his email address eric@example.com
+
+OK the last contact to add is Alexa who works in the Facilities Management team and is the Facilities Manager there. so complete her contact details as usual(555-765-4321 and alexa@example.com). OK so then click contacts to view the list. 
+
+Now contacts are assigned to objects and most core objects in NetBox can have contacts assigned to them. and the way that TLE Consulting has chosen to assign them is at the Site Group level. So go to Site Groups, and then click the Branch site group and then once in the object click on add a contact. 
+
+From the group, select the IT Group, then Susan as the contact, select operations for the contact role, and then set Susan to be the primary contact. then add another and this time select Eric and make him the secondary contact. Lastly add another this time select facilities management, and then Alexa as the contact, giving her the role of Emergency contact. and then click on create. 
+
+Then when the Branch Site Group object is displayed, it now shows the contacts that have been assigned to it. The point here is that there is a lot of flexibility when it comes to assigning contacts, but the model is to create the contact only once and then assigned it to as many objects as required in a manner that suits your own organization. 
