@@ -13,7 +13,6 @@ For now though, just click 'save and add another' down at the bottom, and add Er
 
 Great, so we can stay logged in as Susan to do the rest of the work for this module.
 
-
 ### Tenancy
 
 First of all Susan needs to set up the tenants. TLE Consulting is using the Tenancy feature to define it's internal business units and associate them with objects. 
@@ -79,23 +78,23 @@ Chicago,chicago,Illinois
 
 OK note here that Brisbane included as a region - and this will be the geographical location of the the new site that Eric and Susan are going to be deploying. 
 
-Ok great, so click on Submit and boom! there are all of the regions created using the bulk upload method. click 'view all' and you can see how the regions are nested - for example Johannesburg, sits under South Africa, which comes under the Africa parent regions. 
+Ok great, so click on 'Submit' and there are all of the regions created using the bulk upload method. click 'view all' to see how the regions are nested - for example Johannesburg, sits under South Africa, which comes under the Africa parent regions. 
 
 ### Site Groups and Sites
 
 Alright, so next up Susan needs to set up the Site Groups and Sites. Site groups are used for functional groupings, and a site typically represents a building within a region and/or site group. 
 
-So, TLE Consulting, has 2 Site Groups based on the function of the sites. the first is Branch so let's add that manually by clicking on organization and then the plus sign next to Site Groups. So the name is entered as 'Branch' and add a description of 'TLE Branch Sites'
+So, TLE Consulting, has 2 Site Groups based on the function of the sites. the first is Branch so add that manually by clicking on organization and then the plus sign next to Site Groups. So the name is entered as 'Branch' and add a description of 'TLE Branch Sites'
 
 click create + add another, and this one is 'corporate' for 'TLE Corporate Sites'
 
-OK, so now the Site Groups re set up (click on org--site groups) go ahead and manually add the site for the new Brisbane branch office. So this will be a member of the Branch group (click branch) and then click 'add site'. 
+OK, so now the Site Groups are set up (click on org-site groups) go ahead and manually add the site for the new Brisbane branch office. So this will be a member of the Branch group (click branch) and then click 'add site'. 
 
 So the name is 'AUBRI01', and leave the default value for the slug. As this site is not active yet, set the status to 'planned'. From the drop down, select 'asia pacific - australia - brisbane'. 
 
 This is a branch site so there's no need for a provider or facility. similarly there is no ASN for this site, so skip that. Set the time zone to be 'australia/brisbane' and add a description of 'New branch site'
 
-There are not tags set up yet so skip that, but do select the 'TLE departments' tenant group and then the 'consulting' department as the tenant. 
+There are no tags set up yet so skip that, but do select the 'TLE departments' tenant group and then the 'consulting' department as the tenant. 
 
 Next, paste in the address and co-ordinates:
 
@@ -103,22 +102,96 @@ Next, paste in the address and co-ordinates:
 -27.611508
 152.903083
 
-And then just go ahead and click create, down at the bottom here. And that's it! wew have are new site set up. 
+And then just go ahead and click create, down at the bottom here. And that's it! The new Brisbane site is set up. 
 
-OK so as you know TLE Consulting has a number of other sites around the world so we will make use of the bulk upload feature again to save some time. so this time I go to Sites and click the upload link and here I have the form to submit CSV data again. For these sites we will add the name, slug, status,region,group and tenant. So I just paste them in and that's the import completed, so I can click on 'View All' and can now see the full list of sites including the planned new site in Brisbane.
+OK so as you know TLE Consulting has a number of other sites around the world so make use of the bulk upload feature again to save some time. This time go to Sites and click the upload link and here is the form to submit CSV data again. For these sites add the name, slug, status, region, group and tenant:
+
+name,slug,status,region,group,tenant
+ZAJNB01,zajnb01,active,Johannesburg,Branch,Consulting
+NZAKL01,nzakl01,active,Auckland,Branch,Sales
+MYKUL01,mykul01,active,Kuala Lumpur,Branch,Marketing
+AUSYD01,ausyd1,active,Sydney,Branch,Consulting
+AUMEL01,aumel1,active,Melbourne,Branch,Consulting
+CAMON01,camon1,active,Montreal,Branch,Consulting
+USDEN01,usden1,active,Denver,Branch,Consulting
+USLAX01,uslax01,active,Los Angeles,Branch,Sales
+UKLON01,uklon01,active,London,Corporate,Finance
+USCHG01,uschg01,active,Chicago,Corporate,IT
+
+So just paste them in click submit and that's the import completed, so now click on 'View All' and here is the full list of sites including the planned new site in Brisbane.
 
 ### Locations 
 
-So now the sites are set up, we will go ahead and add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or room. All TLE Consulting Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites the comms room plus an additional location within them (the Data Center). 
+So now the sites are set up, we will go ahead and add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or a room. All TLE Consulting Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites the comms room plus an additional location within them (the on premises data center). 
 
-So once again we will manually add the the location in the new Brisbane site, and the bulk upload the other sites from CSV data. So from locations I click 'add' and then select the region as Brisbane, the site group is Branch, the site is AUBRI01, the name is Comms Room, we'll pop in a description of 'Main IT Suite'. then lastly the the tenant group is TLE Departments and and the tenant a this location is the Consulting department. OK so I go ahead and click create on that, and there is the new location all set up. 
+So once again Susan can manually add the the location in the new Brisbane site, and use the bulk upload for the other sites from CSV data. So from locations click 'add' and then select the region as Brisbane, the site group is Branch, the site is AUBRI01, the name is Comms Room, we'll pop in a description of 'Main IT Suite'. then lastly the tenant group is TLE Departments and the tenant at this location is the Consulting department. OK, so go ahead and click create on that, and there is the new location all set up. 
 
-OK, so we'll now Locations and then the upload button for the bulk import of the rest of the locations. we'll set the headers to site,name,slug,tenant, and description, and paste in the rest of data and click submit. And we have now imported 11 locations, and If I click on 'View all' I get the nice table view again of all the locations.
+OK, so now click Locations and then the upload button for the bulk import of the rest of the locations. we'll set the headers to site,name,slug,tenant, and description, and paste in the rest of data and click submit. 
+
+site,name,slug,tenant,description
+NZAKL01,Comms Room,comms-room,Sales,Main IT Suite
+MYKUL01,Comms Room,comms-room,Marketing,Main IT Suite
+AUSYD01,Comms Room,comms-room,Consulting,Main IT Suite
+AUMEL01,Comms Room,comms-room,Consulting,Main IT Suite
+CAMON01,Comms Room,comms-room,Consulting,Main IT Suite
+USDEN01,Comms Room,comms-room,Consulting,Main IT Suite
+USLAX01,Comms Room,comms-room,Sales,Main IT Suite
+UKLON01,Comms Room,comms-room,Finance,3rd Floor IT Suite
+UKLON01,Data Center,data-center,IT,On Premises Data Center
+USCHG01,Comms Room,comms-room,IT,10th Floor IT Suite
+USCHG01,Data Center,data-center,IT,On Premises Data Center
+
+And that's now imported 11 locations successfully, so click on 'View all' to get the nice table view again of all the locations.
 
 ### Racks and Rack Roles
 Racks are physical objects into which devices are installed. NetBox models each equipment rack as a discrete object within a site and location. In our example all sites have at least 1 rack where Network/IT equipment is installed. 
 
 Users can also create custom roles to which racks can be assigned, and TLE has defined their rack roles as Infrastructure, Compute and Storage.
 
+So first of all, to create the Rack Roles, click the plus sign next to Rack Roles and the first one to add is 'Infrastructure', leave the color as grey and add a description of 'Mixed IT Infrastructure', the click create+add another. Next to add is the 'Compute' role select Amber, this doesn't needs a description as the clue is in the name. Then add the last role type of 'Storage', go with Brown and click create. 
+
+OK so the new Comms Room location at the Brisbane site has a single rack that is used for mixed IT infrastructure - so click the 'infrastucture' rack role and then click 'add rack. The region is Brisbane, the site group is 'branch', then select the site and the location is the 'comms room', give it the name of 'AUBRI01-RK-01', status is 'planned' again, the role is already set to 'infrastructure'. The tenant group is 'TLE Departments, and the tenant is 'Consulting' 
+
+Now as this is branch office site the requirement is only for a half height rack, so select 4 post cabinet, 19 inch width, and 22 rack units in height. optionally you could set the outer dimensions also here if required, then click create. So there is the new rack for Brisbane all set up. 
+
+Now to add more racks there is the option to clone an existing one in the top right, or you can do the bulk import again. So paste in the data for the existing racks with the headers of site,location,name,tenant,status,role,type,width,u_height:
+
+site,location,name,tenant,status,role,type,width,u_height
+NZAKL01,Comms Room,NZAKL01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
+MYKUL01,Comms Room,MYKUL01-RK-01,Marketing,active,Infrastructure,4-post-cabinet,19,22
+AUSYD01,Comms Room,AUSYD01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
+AUMEL01,Comms Room,AUMEL01-RK-1,Consulting,active,Infrastructure,4-post-cabinet,19,22
+CAMON01,Comms Room,CAMON01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
+USDEN01,Comms Room,USDEN01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
+USLAX01,Comms Room,USLAX01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
+UKLON01,Comms Room,UKLON01-RK-01,Finance,active,Infrastructure,4-post-cabinet,19,42
+UKLON01,Data Center,UKLON01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
+UKLON01,Data Center,UKLON01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
+UKLON01,Data Center,UKLON01-RK-04,IT,active,Compute,4-post-cabinet,19,42
+UKLON01,Data Center,UKLON01-RK-05,IT,active,Storage,4-post-cabinet,19,42
+USCHG01,Comms Room,USCHG01-RK-01,IT,active,Infrastructure,4-post-cabinet,19,22
+USCHG01,Data Center,USCHG01-RK-02,IT,active,Infrastructure,4-post-cabinet,19,42
+USCHG01,Data Center,USCHG01-RK-03,IT,active,Infrastructure,4-post-cabinet,19,42
+USCHG01,Data Center,USCHG01-RK-04,IT,active,Compute,4-post-cabinet,19,42
+USCHG01,Data Center,USCHG01-RK-05,IT,active,Storage,4-post-cabinet,19,42
+
+Note here that the London and Chicago sites each have 2 locations - the Comms Room and the on premises data center - and the data center racks are full height 42 rack units and there is a mixture of roles - infrastructure, Compute and storage.
+
+so once again, click on import and NetBox successfully imported all of the racks! 
+
 ### Contacts
-To complete the organizational set up we will need to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a groups, and contact roles define the relationship a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects. 
+To complete the organizational set up Susan is going to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship that a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects. 
+
+So 
+Contact Groups: 
+  - IT
+  - Facilities Management
+  
+- Roles:
+  - Operations
+  - Emergency
+
+- Contacts: 
+  - Susan 
+  - Eric
+  - Alexa 

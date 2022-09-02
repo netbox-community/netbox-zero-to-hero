@@ -91,8 +91,6 @@ Tenant Group: Departments
     - Comms Room
       - Rack R005
         - Infrastructure
-      - Rack R006
-        - Infrastructure
   - USCHG01
     - Data Center
       - Rack R001
@@ -104,8 +102,6 @@ Tenant Group: Departments
       - Rack R004
         - Storage
     - Comms Room
-      - Rack R005
-        - Infrastructure
       - Rack R005
         - Infrastructure
 
