@@ -52,7 +52,7 @@ If you are following along you can find the [CSV data](csv_data/) in course Git 
 
 With that said, let's get started! 
 
-[![Setting Up The Organization](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v5) 
+[![Setting Up The Organization](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v4) 
 
 OK, so now you know how to set up your organization's data in NetBox, in the next module you will learn how to....TBC
 
