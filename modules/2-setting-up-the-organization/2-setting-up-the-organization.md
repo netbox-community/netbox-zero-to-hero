@@ -13,6 +13,8 @@ If you'd like to follow along with the examples used in this course, it's super 
 2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox   
 
+The NetBox version used in the video for this module is v3.3.2.
+
 ## The Organizational Data
 Our fictional organization, TLE Consulting, is structured as follows:
 
@@ -28,9 +30,7 @@ TLE Consulting is using the Tenancy feature to define it's internal business uni
 In NetBox, regions are typically used to model countries, states, and cities. TLE Consulting is present in 4 regions - Africa, Asia Pacific, Europe and North America. These 'parent' regions will also contain the Country, State and City regions nested within them.
 
 ### Site Groups and Sites
-Whereas regions are intended for geographic organization, site groups may be used for functional groupings. A site typically represents a building within a region and/or site group. 
-
-TLE Consulting has two Site Groups - Branch (consisting of ten sites) and Corporate (consisting of two sites). 
+Whereas regions are intended for geographic organization, site groups may be used for functional groupings. A site typically represents a building within a region and/or site group. TLE Consulting has two Site Groups - Branch (consisting of ten sites) and Corporate (consisting of two sites). 
 
 ### Locations 
 A location can be any logical subdivision within a building, such as a floor or room. All TLE Consulting Branch sites have a single location (Comms Room) and the Corporate sites have an extra location within them (On-Premises Data Center)
@@ -46,15 +46,15 @@ To complete the organizational set up we will need to add some contacts. A conta
 TLE will use 2 contact groups - IT, which contains Susan and Eric and Facilities, which contains Alexa. The contacts will be assigned to site objects and be given one of the contact roles 'Operations' or 'Emergency'. 
 
 ## Video - Setting Up The Organization
-As always the best way to understand the power of NetBox is to dive right in! This short video will step through creating all the objects for the TLE Consulting Organization. Also, as TLE's awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch office site in Brisbane, Australia, they will also add the new information for this site. 
+As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the objects for the fictional TLE Consulting organization. Also, as TLE's awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch network in Brisbane, Australia, they will also add the information for this new site to kick off the project.
 
-If you are following along you can find the data used in .csv files in the course Git Repository.
+If you are following along you can find the [CSV data](csv_data/) Git Repository.
 
 With that said, let's get started! 
 
-**INSERT VIDEO LINK HERE**
+[![Setting Up The Organization](../../images/2-organization.png)](https://youtu.be/GMdiORFMSw4)
 
-OK, so now you know how to set up your organizational data in NetBox, in the next module you will learn how to..... 
+OK, so now you know how to set up your organization's data in NetBox, in the next module you will learn how to....TBC
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)

@@ -1,9 +1,9 @@
-Hello and welcome to this short video for module 2 of the NetBox Zero to Hero training course. If you haven't already checked out the first module yet then you can find the link in the video notes below to get started. For this demo I am using a docker instance of NetBox running locally on my laptop. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you spin up your own instance of NetBox, along with a link to the notes that accompany this video module. 
+Hello and welcome to this video for module 2 of the NetBox Zero to Hero training course. If you haven't already checked out the first module yet then you can find the link in the notes below to get started. For this demo I am using a docker instance of NetBox running locally on my laptop. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you spin up your own instance of NetBox, along with a link to the notes that accompany this video module. 
 
-In this video we will be laying the foundations of the NetBox data for our fictional organization called TLE Consulting. This organizational data is critical and according to NetBox best practice should be added at the start - as everything else is built on top of it. OK, so I am logged into NetBox as the admin user and as you can see I have a completely empty database. 
+In this video we will be laying the foundations of the NetBox data for our fictional organization called TLE Consulting. This organizational data is critical and according to NetBox best practice should be added at the start - as everything else is built on top of it. 
 
 ### NetBox System Users
-The very first thing to do is set up the Network Engineers Eric and Susan as users on the system, as they are going to be the 2 main users for now. 
+OK, so I am logged into NetBox as the admin user and as you can see I have a completely empty database. The very first thing to do is set up the Network Engineers Eric and Susan as users on the system, as they are going to be the 2 main users for now. 
 
 By setting up separate user accounts for them it is easy to track what changes each user is making to the database. To do this, log into the Django back end of the NetBox system by clicking on Admin and then Admin again. Django is a framework for building web applications such as NetBox and this is the Django administration site. 
 
@@ -146,7 +146,7 @@ To complete the organizational set up Susan is going to add some contacts. A con
 
 So to start off TLE consulting has 2 contact groups - IT and facilities management. So from contact groups, click add and then the first one is IT, with a description of IT Staff, the 2nd one is Facilities Management, with a description of 'Facilities Management Staff'
 
-Next add the contact roles, again clicking add. the first role to add is Operations, and then the next role will be Emergency.
+Next add the contact roles, again clicking add. the first role to add is    , and then the next role will be Emergency.
 
 Alright, so now add the individual contacts - starting with Susan - now she is in the IT contact group, and she is an Awesome Network Engineer. and then add her phone 555-123-4567 and email susan@example.com. 
 

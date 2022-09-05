@@ -1,0 +1,26 @@
+name,slug,parent
+Africa,africa, 
+Asia Pacific,asia-pacific, 
+Europe,europe, 
+North America,north-america, 
+Australia,australia,Asia Pacific
+South Africa,south-africa,Africa 
+New Zealand,new-zealand,Asia Pacific
+Malaysia,malaysia,Asia Pacific
+United Kingdom,united-kingdom,Europe 
+Canada,canada,North America
+United States,united-states,North America
+California,california,United States
+Colorado,colorado,United States
+Illinois,illinois,United States
+Johannesburg,johannesburg,South Africa
+Brisbane,brisbane,Australia
+Melbourne,melbourne,Australia
+Sydney,sydney,Australia
+Auckland,auckland,New Zealand
+Kuala Lumpur,kuala-lumpur,Asia Pacific
+London,london,United Kingdom
+Montreal,montreal,Canada
+Denver,denver,Colorado
+Los Angeles,los-angeles,California
+Chicago,chicago,Illinois
