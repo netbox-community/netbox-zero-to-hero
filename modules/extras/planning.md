@@ -131,3 +131,37 @@ consulting
 30 Mills Street BRISBANE, Queensland(QLD), 4000
 -27.611508
 152.903083
+
+## Devices
+manufacturers
+Cisco
+Juniper
+Panduit
+Avocent 
+
+Device Roles
+WAN Router
+Access Switch
+Wireless AP
+Patch Panel
+Console Server
+
+Platforms
+Cisco IOS
+Juniper JunOS
+Meraki Cloud Managed
+
+devices
+patch panel x 1 AUBRI01-PAN-1
+router x 1 AUBRI01-RTR-1
+switch x 1 AUBRI01-SW-1
+AP x 2 AUBRI01-AP-1+2
+ISP Router/Circuit
+console server AUBRI01-CON-1
+
+Device Types
+Cisco ISR4321
+Juniper EX4300-48P
+Cisco MR56
+Avocent ACS16
+Panduit CPP48HDEWBL

@@ -36,11 +36,11 @@ So, with that said, lets dive in!
 - Using the web interface to manually add data for the organization
 - Using the web interface to bulk upload data for the organization
 
-### Module 3: IP Addressing and VLANs
+### [Module 3: Adding the Kit](modules/3-adding-the-kit/3-adding-the-kit.md)
+- Manufacturers, Device Types, Platforms, Device Roles, Devices
+  
+### Module 4: IP Addressing and VLANs
 - Prefixes, IP Addresses, VLANs
-
-### Module 4: Adding the Kit
-- Manufacturers, Device Types, Device Roles, Platforms, Components
 
 ### Module 5: Making the Connections
 - Cables, Interface, console and power connections
