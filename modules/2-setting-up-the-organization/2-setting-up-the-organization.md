@@ -54,7 +54,7 @@ With that said, let's get started!
 
 [![Setting Up The Organization](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v4) 
 
-OK, so now you know how to set up your organization's data in NetBox, in the next module you will learn how to....TBC
+OK, so now you know how to set up your organization's data in NetBox using the Web Interface, in the next module you will learn how to add network devices using the REST API. 
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
