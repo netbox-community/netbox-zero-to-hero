@@ -33,10 +33,10 @@ So, with that said, lets dive in!
 
 ### [Module 2: Setting up the Organization](modules/2-setting-up-the-organization/2-setting-up-the-organization.md)
 - Model the organization using tenant groups, tenants, regions, site groups, sites, locations, racks and contacts
-- Using the web interface to manually add data for the organization
-- Using the web interface to bulk upload data for the organization
+- Use the web interface to manually add data for the organization
+- Use the web interface to bulk upload data for the organization
 
-### [Module 3: Adding the Kit`](modules/3-adding-the-kit/3-adding-the-kit.md)
+### [Module 3: Adding the Kit](modules/3-adding-the-kit/3-adding-the-kit.md)
 - Model the Manufacturers, Device Types, Platforms, Device Roles and Devices
 - Use Postman to make REST API calls into NetBox to add devices
   
