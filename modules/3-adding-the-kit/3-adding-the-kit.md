@@ -2,12 +2,17 @@
 
 Hello and welcome to module 3 of the NetBox 'Zero-to-Hero' course. In [Module 2: Setting up the Organization](../2-setting-up-the-organization/2-setting-up-the-organization.md) you learned how to model an organization within NetBox, and how to use the Web Interface to both manually create individual objects, and bulk import objects using CSV-formatted data. 
 
-In this module we will continue to populate NetBox with data for our fictional organization. Our intrepid Network Engineer Eric will be adding the network devices that are going to be installed at the planned new Brisbane branch office, making use of the NetBox REST API (he's heard about these API things on a podcast and is keen to learn how to work with one!).
+In this module we will continue to populate NetBox with data for our fictional organization. Our intrepid Network Engineer Eric will be adding the network devices that are going to be installed at the planned new Brisbane branch office, making use of the NetBox REST API (he's heard about these API things on the 'Router Nerds' podcast and is keen to learn how to use one).
 
 By the end of this module you will be able to:  
 - Describe how NetBox models devices
 - Use Postman to make REST API calls to NetBox
 - Save time by making use of the community library of pre-defined device types
+
+## Why Use The REST API? 
+You can obviously add all this data manually via the Web Interface, but by getting hands on with the REST API, you will start to take your skills with NetBox to the next level! A lot of Network Engineers have never used an API (they have surely heard of them by now though) and they might be unsure of how to work with one, or why they should even bother. 
+
+The goal of this module is to demystify REST API's and show you how powerful and simple to use the NetBox REST API is. You will quickly start to see how you can interact programmatically with NetBox and how NetBox can drive your Network Automation efforts going forward.
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
@@ -20,7 +25,7 @@ The NetBox version used in the video for this module is v3.3.2, and the followin
 - [YAML files](../3-adding-the-kit/yaml_data/) used for device types
 
 ## Devices
-Devices are a key part of NetBox - after all NetBox is a tool for modeling network infrastructure. A device can be any piece of physical hardware installed within your network, such as server, router, or switch, and may optionally be mounted within a rack. Within each device, resources such as network interfaces and console ports are modeled as discrete components, which may optionally be grouped into modules.
+Devices are a key part of NetBox - after all NetBox is a tool for modeling network infrastructure. A device can be any piece of physical hardware installed within your network, such as a server, router, or switch, and may optionally be mounted within a rack. Within each device, resources such as network interfaces and console ports are modeled as discrete components, which may optionally be grouped into modules.
 
 Device objects in NetBox have some dependencies that must already exist in NetBox before you can add the device. They are Manufacturer (the organization that produces the hardware) and Device Type. A device can be installed at a particular position within an equipment rack, or simply associated with a site (and optionally with a location within that site).
 
@@ -39,7 +44,7 @@ Once a device type has been created, then each new device instance of that parti
 These are the functional roles of devices, and are fully customizable by the user. For example, you might create roles for core switches, distribution switches, and access switches within your network.
 
 ## Platforms
-A platform defines the type of software running on a device or virtual machine, for example Cisco IOS version 15. NetBox can optionally connect to network devices (to retrieve device information such as LLDP Neighbors) using [NAPALM](https://napalm.readthedocs.io/en/latest/) and you also define the driver to be used (eg. ios) as part of the Platform definition.
+A platform defines the type of software running on a device or virtual machine, for example Cisco IOS version 15. NetBox can optionally connect to network devices (to retrieve device information such as LLDP Neighbors) using [NAPALM](https://napalm.readthedocs.io/en/latest/) and you can also (optionally) define the driver to be used (eg. ios) as part of the Platform definition.
 
 ## The Project - New Branch Site Devices
 Our fictional organization has standardized on the following network devices for their Branch office network deployments:
@@ -52,8 +57,10 @@ Our fictional organization has standardized on the following network devices for
 | Avocent | ACS16 | Console Server | n/a | n/a |
 | Panduit | Mini-Com High Density Patch Panel (48 Port, 1RU) | Patch Panel | n/a | n/a |
 
+The video demo will now show you how to add all of this into NetBoX mainly using the REST API (the device types will be uploaded manually as YAML files).  
+
 ## Video - Adding Devices Into NetBox
-As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the devices for our fictional organization's new branch office network in Brisbane, Australia.`
+As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the devices for our fictional organization's new branch office network in Brisbane, Australia.
 
 With that said, let's get started. If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/)` used for adding device types.
 
@@ -64,5 +71,5 @@ OK, so now you know how to add your devices into NetBox, in the next module you 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox REST API Overview](https://docs.netbox.dev/en/stable/integrations/rest-api/)
-- [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 - [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
+- [NetBox Docker](https://github.com/netbox-community/netbox-docker)
