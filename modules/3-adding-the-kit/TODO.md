@@ -1,2 +1,3 @@
 - [ ] share postman collection
 - [ ] update video link
+- [ ] youtube links and notes

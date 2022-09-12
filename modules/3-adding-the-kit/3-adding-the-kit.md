@@ -58,9 +58,9 @@ Our fictional organization has standardized on the following network devices for
 | Panduit | Mini-Com High Density Patch Panel (48 Port, 1RU) | Patch Panel | n/a | n/a |
 
 ## Video - Adding Devices Into NetBox
-The video demo will now show you how to add all of the device data into NetBox mainly using the REST API (the device types will be uploaded manually as YAML files).  As always the best way to understand the power of NetBox is to dive right in so let's get started!
+The video demo will now show you how to add all of the device data into NetBox mainly using the REST API (the device types will be uploaded manually as YAML files). As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/)` used for adding device types.
+If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/) used for adding device types.
 
 [![Adding Devices Into NetBox](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v4) 
 
