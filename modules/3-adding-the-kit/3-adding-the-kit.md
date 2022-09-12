@@ -57,12 +57,10 @@ Our fictional organization has standardized on the following network devices for
 | Avocent | ACS16 | Console Server | n/a | n/a |
 | Panduit | Mini-Com High Density Patch Panel (48 Port, 1RU) | Patch Panel | n/a | n/a |
 
-The video demo will now show you how to add all of this into NetBoX mainly using the REST API (the device types will be uploaded manually as YAML files).  
-
 ## Video - Adding Devices Into NetBox
-As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the devices for our fictional organization's new branch office network in Brisbane, Australia.
+The video demo will now show you how to add all of the device data into NetBox mainly using the REST API (the device types will be uploaded manually as YAML files).  As always the best way to understand the power of NetBox is to dive right in so let's get started!
 
-With that said, let's get started. If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/)` used for adding device types.
+If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/)` used for adding device types.
 
 [![Adding Devices Into NetBox](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v4) 
 
@@ -71,5 +69,6 @@ OK, so now you know how to add your devices into NetBox, in the next module you 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox REST API Overview](https://docs.netbox.dev/en/stable/integrations/rest-api/)
+- NetBox Zero to Hero [Postman collection]()
 - [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
