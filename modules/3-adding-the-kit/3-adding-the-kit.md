@@ -49,8 +49,8 @@ A platform defines the type of software running on a device or virtual machine, 
 ## The Project - New Branch Site Devices
 Our fictional organization has standardized on the following network devices for their Branch office network deployments:
 
-| Manufacturer | Device Type | Device Role | Platform | Napalm Driver |
-| --- | --- | --- | --- | --- |
+| Manufacturer | Device Type | Device Role | Platform | NAPALM Driver |
+| :--- | :--- | :--- | :--- | :--- |
 | Cisco | ISR4321 | WAN Router | Cisco IOS | ios |
 | Juniper | EX4300-48P | Access Switch | Juniper JunOS | junos |
 | Cisco Meraki | MR56 | Wireless AP | n/a | n/a |
