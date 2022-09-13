@@ -21,7 +21,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox   
 
 The NetBox version used in the video for this module is v3.3.2, and the following course materials used in the demo are available: 
-- [Postman collection]() for making API calls
+- [Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) for making API calls
 - [YAML files](../3-adding-the-kit/yaml_data/) used for device types
 
 ## Devices
@@ -51,8 +51,8 @@ Our fictional organization has standardized on the following network devices for
 
 | Manufacturer | Device Type | Device Role | Platform | Napalm Driver |
 | --- | --- | --- | --- | --- |
-| Cisco | ISR4321 | WAN Router | Cisco IOS 15 | ios |
-| Juniper | EX4300-48P | Access Switch | Junos 22.1 | junos |
+| Cisco | ISR4321 | WAN Router | Cisco IOS | ios |
+| Juniper | EX4300-48P | Access Switch | Juniper JunOS | junos |
 | Cisco Meraki | MR56 | Wireless AP | n/a | n/a |
 | Avocent | ACS16 | Console Server | n/a | n/a |
 | Panduit | Mini-Com High Density Patch Panel (48 Port, 1RU) | Patch Panel | n/a | n/a |
@@ -69,6 +69,6 @@ OK, so now you know how to add your devices into NetBox, in the next module you 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox REST API Overview](https://docs.netbox.dev/en/stable/integrations/rest-api/)
-- NetBox Zero to Hero [Postman collection]()
+- NetBox Zero to Hero [Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) 
 - [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)

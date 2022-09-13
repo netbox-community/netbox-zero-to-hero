@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "6b61ee7a-a1c0-4bab-8e7c-ba77e36ca1c1",
+		"name": "NetBox - Zero to Hero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21687002"
+	},
+	"item": [
+		{
+			"name": "Devices",
+			"item": [
+				{
+					"name": "get manufacturers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/manufacturers/?brief=1",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"manufacturers",
+								""
+							],
+							"query": [
+								{
+									"key": "brief",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add manufacturers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Cisco\",\n        \"slug\": \"cisco\"\n    },\n    {\n        \"name\": \"Cisco Meraki\",\n        \"slug\": \"cisco-meraki\"\n    },\n    {\n        \"name\": \"Juniper\",\n        \"slug\": \"juniper\"\n    },\n    {\n        \"name\": \"Panduit\",\n        \"slug\": \"panduit\"\n    },\n    {\n        \"name\": \"Avocent\",\n        \"slug\": \"avocent\"\n    }\n]"
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/manufacturers/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"manufacturers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add device roles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"WAN Router\",\n        \"slug\": \"wan-router\",\n        \"color\": \"327fa8\",\n        \"vm_role\": false\n    },\n    {\n        \"name\": \"Access Switch\",\n        \"slug\": \"access-switch\",\n        \"color\": \"32a871\",\n        \"vm_role\": false\n    },\n    {\n        \"name\": \"Wireless AP\",\n        \"slug\": \"wireless-ap\",\n        \"color\": \"a86332\",\n        \"vm_role\": false\n    },\n    {\n        \"name\": \"Patch Panel\",\n        \"slug\": \"patch-panel\",\n        \"color\": \"dbc230\",\n        \"vm_role\": false\n    },\n    {\n        \"name\": \"Console Server\",\n        \"slug\": \"console-server\",\n        \"color\": \"db30a8\",\n        \"vm_role\": false\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/device-roles/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"device-roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add device",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"AUBRI01-RTR-1\",\n        \"device_type\": 6,\n        \"device_role\": 6,\n        \"tenant\": 5,\n        \"platform\": 3,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 20.0,\n        \"face\": \"front\",\n        \"status\": \"planned\",\n        \"airflow\": \"front-to-rear\"\n    },\n    {\n        \"name\": \"AUBRI01-SW-1\",\n        \"device_type\": 7,\n        \"device_role\": 7,\n        \"tenant\": 5,\n        \"platform\": 4,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 21.0,\n        \"face\": \"front\",\n        \"status\": \"planned\",\n        \"airflow\": \"front-to-rear\"\n    },\n    {\n        \"name\": \"AUBRI01-PAN-1\",\n        \"device_type\": 10,\n        \"device_role\": 9,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 22.0,\n        \"face\": \"front\",\n        \"status\": \"planned\"\n    },\n    {\n        \"name\": \"AUBRI01-CON-1\",\n        \"device_type\": 9,\n        \"device_role\": 10,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"rack\": 1,\n        \"position\": 19.0,\n        \"face\": \"front\",\n        \"status\": \"planned\"\n    },   \n    {\n        \"name\": \"AUBRI01-AP-1\",\n        \"device_type\": 8,\n        \"device_role\": 8,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"status\": \"planned\"\n    },\n    {\n        \"name\": \"AUBRI01-AP-2\",\n        \"device_type\": 8,\n        \"device_role\": 8,\n        \"tenant\": 5,\n        \"site\": 1,\n        \"location\": 1,\n        \"status\": \"planned\"\n    }   \n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/devices/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"devices",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get device roles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/device-roles/?brief=1",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"device-roles",
+								""
+							],
+							"query": [
+								{
+									"key": "brief",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get platforms",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/platforms/?brief=1",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"platforms",
+								""
+							],
+							"query": [
+								{
+									"key": "brief",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get devices",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/devices/?brief=1",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"devices",
+								""
+							],
+							"query": [
+								{
+									"key": "brief",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get device types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/device-types/?model__ic=ISR",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"device-types",
+								""
+							],
+							"query": [
+								{
+									"key": "model__ic",
+									"value": "ISR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add platforms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Cisco IOS\",\n        \"slug\": \"cisco-ios\",\n        \"manufacturer\": {\n            \"name\": \"Cisco\"\n        },\n        \"napalm_driver\": \"ios\"\n    },\n    {\n        \"name\": \"Juniper JunOS\",\n        \"slug\": \"juniper-junos\",\n        \"manufacturer\": {\n            \"name\": \"Juniper\"\n        },\n        \"napalm_driver\": \"junos\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/platforms/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organization",
+			"item": [
+				{
+					"name": "get sites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/sites/?name__ic=bri",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"sites",
+								""
+							],
+							"query": [
+								{
+									"key": "name__ic",
+									"value": "bri"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get locations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/locations/?status=planned",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"locations",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "planned"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tenants",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/tenancy/tenants/?name__isw=consult",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"tenancy",
+								"tenants",
+								""
+							],
+							"query": [
+								{
+									"key": "name__isw",
+									"value": "consult"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get racks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/dcim/racks/?name__isw=aubri",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"dcim",
+								"racks",
+								""
+							],
+							"query": [
+								{
+									"key": "name__isw",
+									"value": "aubri"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "netboxURL",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "8000",
+			"type": "string"
+		},
+		{
+			"key": "protocol",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"key": "api_token",
+			"value": "your API token",
+			"type": "string"
+		}
+	]
+}
