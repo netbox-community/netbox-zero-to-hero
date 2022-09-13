@@ -60,7 +60,7 @@ Our fictional organization has standardized on the following network devices for
 ## Video - Adding Devices Into NetBox
 The video demo will now show you how to add all of the device data into NetBox mainly using the REST API (the device types will be uploaded manually as YAML files). As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/) used for adding device types.
+If you are following along, don't forget to use the [Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/) used for adding device types.
 
 [![Adding Devices Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
