@@ -69,6 +69,6 @@ OK, so now you know how to add your devices into NetBox, in the next module you 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox REST API Overview](https://docs.netbox.dev/en/stable/integrations/rest-api/)
-- NetBox Zero to Hero [Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) 
+- [Zero to Hero Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) 
 - [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
