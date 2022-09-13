@@ -62,7 +62,7 @@ The video demo will now show you how to add all of the device data into NetBox m
 
 If you are following along, don't forget to use the [Postman collection]() for making the API calls and the [YAML files](../3-adding-the-kit/yaml_data/) used for adding device types.
 
-[![Adding Devices Into NetBox](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v4) 
+[![Adding Devices Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
 OK, so now you know how to add your devices into NetBox, in the next module you will learn how to....TBC
 
