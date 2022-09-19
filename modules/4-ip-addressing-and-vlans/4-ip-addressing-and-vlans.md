@@ -9,7 +9,7 @@ By the end of this module you will be able to:
 - Integrate Ansible with NetBox, and run playbooks to populate the NetBox database
 - Get started with a set of [Ansible playbooks](../../ansible/) for NetBox that can be easily adapted and extended to suit your own requirements 
 
-## Why Integrate Ansible with NetBox? 
+## Why Integrate NetBox with Ansible? 
 From the [Ansible](https://www.ansible.com/use-cases/network-automation) website: 
 >
 >Ansible Automation Platform is a single, flexible automation technology that can be used across diverse network devices and other IT domains, making it easy to automate entire network and IT processes.
