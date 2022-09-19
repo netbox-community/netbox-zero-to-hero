@@ -58,6 +58,28 @@ export NETBOX_TOKEN=< YOUR_API_TOKEN >
 export NETBOX_API=< YOUR_NETBOX_URL >
 ```
 
+## NetBox For IPAM
+From the NetBox documentation: 
+
+>### IP Address Management
+>IP address management (IPAM) is one of NetBox's core features. It supports full parity for IP4 and IPv6, advanced VRF assignment, automatic hierarchy formation, and much more.
+
+## IP Hierarchy
+NetBox employs several object types to represent a hierarchy of IP resources:
+
+## RIRs and Aggregates
+A prefix which represents the root of an addressing hierarchy. This is typically a large swath of public or private address space allocated for use by your organization. Each aggregate is assigned to an authoritative **RIR**.
+
+## Prefixes and IP Ranges
+A subnet defined within an aggregate. Prefixes extend the hierarchy by nesting within one another. (For example, 192.168.123.0/24 will appear within 192.168.0.0/16.) Each prefix can be assigned a functional role as well as an operational status.
+
+IP Range - An arbitrary range of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
+
+**IP Range** - An arbitrary range of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
+
+## IP Addresses
+An individual IP address along with its subnet mask, automatically arranged beneath its parent prefix.
+
 ## Video - Adding IPAM Data Into NetBox
 The video demo will now show you how to .... As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 

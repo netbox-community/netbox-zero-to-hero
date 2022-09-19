@@ -40,8 +40,9 @@ So, with that said, lets dive in!
 - Model the Manufacturers, Device Types, Platforms, Device Roles and Devices
 - Use Postman to make REST API calls into NetBox to add devices
   
-### Module 4: IP Addressing and VLANs
-- Prefixes, IP Addresses, VLANs
+### [Module 4: IP Addressing and VLANs](modules/4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md)
+- Model IPAM (IP Address Management) Data - RIRs, Aggregates, Prefixes, IP Addresses and VLANs
+- Integrate NetBox with Ansible, and run playbooks to populate the NetBox database with IPAM data
 
 ### Module 5: Making the Connections
 - Cables, Interface, console and power connections
