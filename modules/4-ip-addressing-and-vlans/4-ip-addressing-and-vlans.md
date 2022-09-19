@@ -1,15 +1,22 @@
 # Introduction
 
-Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](3-adding-the-kit.md) you learned how to...
-In this module we will continue to populate NetBox with data for our fictional organization. Our intrepid Network Engineer Susan will be ..... making use of
+Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (Awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of the NetBox REST API. 
 
-By the end of this module you will be able to:  
-- 
+In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using of the [Ansible Automation Platform](https://www.ansible.com/) and in particular the collection of [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
 
-## Why Use Ansible? 
-You can obviously add all this data manually via the Web Interface, but by getting hands on with the REST API, you will start to take your skills with NetBox to the next level! A lot of Network Engineers have never used an API (they have surely heard of them by now though) and they might be unsure of how to work with one, or why they should even bother. 
+By the end of this module you will be able to:
+- Describe how NetBox models IPAM (IP Address Management) Data
+- Understand how to integrate Ansible with NetBox and how it can be used to populate the NetBox database
+- Get started using Ansible and NetBox with a set of [Ansible playbooks](../../ansible/) that can be easily adapted and extended to suit your own requirements 
 
-The goal of this module is to demystify REST API's and show you how powerful and simple to use the NetBox REST API is. You will quickly start to see how you can interact programmatically with NetBox and how NetBox can drive your Network Automation efforts going forward.
+## Why Integrate Ansible with NetBox? 
+From the [Ansible](https://www.ansible.com/use-cases/network-automation) website: 
+>
+>Ansible Automation Platform is a single, flexible automation technology that can be used across diverse network devices and other IT domains, making it easy to automate entire network and IT processes.
+
+Of course, you could add IPAM data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become tedious and prone to human error. Integrating Ansible with NetBox is quick and easy, and within a few minutes you can be running Ansible playbooks to Create, Read, Update and Delete (CRUD operations in computer programming terms) NetBox data programmatically via the REST API.
+
+Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical to outsmart the complexity of modern networks - by adding some Ansible knowledge to your armory, you will stay ahead of the game!
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
@@ -17,11 +24,39 @@ If you'd like to follow along with the examples used in this course, it's super 
 2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox   
 
-The NetBox version used in the video for this module is v3.3.2, and the following course materials used in the demo are available: 
-- [Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) for making API calls
-- [YAML files](../3-adding-the-kit/yaml_data/) used for device types
+The software versions used in the video for this module are: 
+- `NetBox v3.3.2`
+- `Python 3.8.9`
+- `ansible-core 2.13.4`
+- `ansible package 6.4.0`
+- `pynetbox 6.6.2`
 
+## Installing Ansible
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps (they assume Git is already installed and set up on the system):
 
+1. Clone the NetBox Zero to Hero Git repository and change into the Ansible directory:
+
+```
+git clone https://github.com/richbibby-NS1/netbox-zero-to-hero.git
+cd netbox-zero-to-hero/ansible
+```
+
+2. Create a new Python Virtual Environment and activate it: 
+```
+python3 -m venv .
+source bin/activate
+```
+3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), and Ansible: 
+```
+python3 -m pip install --upgrade pip
+pip3 install pynetbox
+pip3 install ansible
+```
+4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks):
+```
+export NETBOX_TOKEN=< YOUR_API_TOKEN >
+export NETBOX_API=< YOUR_NETBOX_URL >
+```
 
 ## Video - Adding IPAM Data Into NetBox
 The video demo will now show you how to .... As always the best way to understand the power of NetBox is to dive right in, so let's get started!
