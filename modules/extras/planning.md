@@ -183,9 +183,7 @@ Prefix/VLAN Roles:
 
 Prefixes, IP ranges, and IP addresses
 
-VLAN groups
-
-and VLANs
+VLAN groups and VLANs
 
 Interface IP address assignments
 
