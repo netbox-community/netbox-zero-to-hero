@@ -1,0 +1,85 @@
+---
+ip_addresses:
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: me0
+    prefix: 192.168.2.0/26
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: ge-0/0/0
+    prefix: 192.168.2.64/30
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: vlan.10
+    prefix: 192.168.0.128/25
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: vlan.20
+    prefix: 192.168.0.128/25
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: vlan.30
+    prefix: 192.168.1.0/25
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: vlan.40
+    prefix: 192.168.1.128/25
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-SW-1
+      name: vlan.50
+    prefix: 192.168.2.0/26
+    status: Reserved
+    tenant: Consulting
+  - assigned_object:
+      device: AUBRI01-RTR-1
+      name: GigabitEthernet0
+    prefix: 192.168.2.0/26
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-RTR-1
+      name: GigabitEthernet0/0/0
+    prefix: 192.168.2.64/30
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-AP-1
+      name: main
+    prefix: 192.168.2.0/26
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-AP-2
+      name: main
+    prefix: 192.168.2.0/26
+    status: Reserved
+    tenant: Consulting
+
+  - assigned_object:
+      device: AUBRI01-CON-1
+      name: Ethernet
+    prefix: 192.168.2.0/26
+    status: Reserved
+    tenant: Consulting

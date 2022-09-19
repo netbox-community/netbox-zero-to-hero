@@ -1,0 +1,11 @@
+---
+- name: Create VLAN Interfaces
+  netbox.netbox.netbox_device_interface:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ interface }}"
+    state: present    
+  loop: "{{ interfaces }}"
+  loop_control: 
+    loop_var: interface
+    label: "{{ interface['name']}}"

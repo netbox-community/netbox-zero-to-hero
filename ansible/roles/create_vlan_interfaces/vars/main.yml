@@ -1,0 +1,27 @@
+---
+interfaces:
+
+  - device: AUBRI01-SW-1
+    enabled: yes
+    type: virtual
+    name: vlan.10
+
+  - device: AUBRI01-SW-1
+    enabled: yes
+    type: virtual
+    name: vlan.20
+
+  - device: AUBRI01-SW-1
+    enabled: yes
+    type: virtual
+    name: vlan.30
+
+  - device: AUBRI01-SW-1
+    enabled: yes
+    type: virtual
+    name: vlan.40
+
+  - device: AUBRI01-SW-1
+    enabled: yes
+    type: virtual
+    name: vlan.50

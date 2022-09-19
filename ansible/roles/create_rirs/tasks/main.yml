@@ -1,0 +1,11 @@
+---
+- name: Create RIRs
+  netbox.netbox.netbox_rir:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ rir }}"        
+    state: present
+  loop: "{{ ipam_rirs }}"
+  loop_control: 
+    loop_var: rir
+    label: "{{ rir['name']}}"

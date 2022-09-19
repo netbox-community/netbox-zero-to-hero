@@ -1,0 +1,11 @@
+---
+- name: Create VLANs
+  netbox.netbox.netbox_vlan:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ vlan }}"
+    state: present    
+  loop: "{{ vlans }}"
+  loop_control: 
+    loop_var: vlan
+    label: "{{ vlan['name']}}"

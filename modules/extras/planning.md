@@ -165,3 +165,42 @@ Juniper EX4300-48P
 Cisco MR56
 Avocent ACS16
 Panduit CPP48HDEWBL
+
+## 
+RIRs and aggregates:
+  - RFC1918
+  - 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+  
+IP roles:
+- loopback
+
+Prefix/VLAN Roles:
+- Data 
+- Voice
+- Management
+- Corp Wifi
+- Guest Wifi 
+
+Prefixes, IP ranges, and IP addresses
+
+VLAN groups
+
+and VLANs
+
+Interface IP address assignments
+
+| Device | Interface | VLAN |
+| --- | --- | --- | 
+| AUBRI01-RTR-1 | GigabitEthernet0 | AUBRI01_MGMT (50) |
+| AUBRI01-RTR-1 | GigabitEthernet0/0/0 | AUBRI01_P2P (60) |
+| AUBRI01-SW-1|  me0 | AUBRI01_MGMT (50) |
+| AUBRI01-SW-1 | ge-0/0/0 | AUBRI01_P2P (60) |
+| AUBRI01-SW-1 | vlan.10 | AUBRI01_DATA (10) |
+| AUBRI01-SW-1 | vlan.20 | AUBRI01_VOICE (20) |
+| AUBRI01-SW-1 | vlan.30 | AUBRI01_BRANCH_WIFI (30) |
+| AUBRI01-SW-1 | vlan.40 | AUBRI01_GUEST_WIFI (40) |
+| AUBRI01-SW-1 | vlan.50 | AUBRI01_MGMT (50) |
+| AUBRI01-SW-1 | vlan.60 | AUBRI01_P2P (60) |
+| AUBRI01-AP-1 |  main | AUBRI01_MGMT (50) |
+| AUBRI01-AP-2 |  main | AUBRI01_MGMT (50) |
+| AUBRI01-CON-1 | Ethernet | AUBRI01_MGMT (50) |

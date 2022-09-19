@@ -1,0 +1,5 @@
+---
+ipam_rirs:
+
+  - name: RFC 1918
+    is_private: yes

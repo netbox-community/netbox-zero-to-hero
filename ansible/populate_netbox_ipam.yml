@@ -1,0 +1,54 @@
+---
+- name: PLAY 1 - Create RIRs
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_rirs
+      tags: rirs
+
+- name: PLAY 2 - Create Aggregates
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_aggregates
+      tags: aggregates
+
+- name: PLAY 3 - Create Prefix and VLAN Roles
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_prefix_and_vlan_roles
+      tags: prefix_and_roles
+
+- name: PLAY 4 - Create SuperNet Prefixes
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_supernets
+      tags: supernets
+
+- name: PLAY 5 - Create VLAN Groups
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_vlan_groups
+      tags: vlan_groups
+
+- name: PLAY 6 - Create VLANs
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_vlans
+      tags: vlans

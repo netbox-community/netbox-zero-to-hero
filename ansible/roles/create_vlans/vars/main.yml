@@ -1,0 +1,50 @@
+---
+vlans:
+
+  - name: AUBRI01_DATA
+    site: AUBRI01
+    status: reserved
+    tenant: Consulting
+    vid: 10
+    vlan_group: AUBRI01
+    vlan_role: Data
+
+  - name: AUBRI01_VOICE
+    site: AUBRI01
+    status: reserved
+    tenant: Consulting
+    vid: 20
+    vlan_group: AUBRI01
+    vlan_role: Voice
+
+  - name: AUBRI01_BRANCH_WIFI
+    site: AUBRI01
+    status: reserved
+    tenant: Consulting
+    vid: 30
+    vlan_group: AUBRI01
+    vlan_role: Branch Wifi
+
+  - name: AUBRI01_GUEST_WIFI
+    site: AUBRI01
+    status: reserved
+    tenant: Consulting
+    vid: 40
+    vlan_group: AUBRI01
+    vlan_role: Guest Wifi
+
+  - name: AUBRI01_MGMT
+    site: AUBRI01
+    status: reserved
+    tenant: Consulting
+    vid: 50
+    vlan_group: AUBRI01
+    vlan_role: Management
+    
+  - name: AUBRI01_P2P
+    site: AUBRI01
+    status: reserved
+    tenant: Consulting
+    vid: 60
+    vlan_group: AUBRI01
+    vlan_role: p2p

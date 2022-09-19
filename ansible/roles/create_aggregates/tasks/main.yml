@@ -1,0 +1,11 @@
+---
+- name: Create Aggregates within NetBox
+  netbox.netbox.netbox_aggregate:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ aggregate }}"
+    state: present
+  loop: "{{ ipam_aggregates }}"
+  loop_control: 
+    loop_var: aggregate
+    label: "{{ aggregate['prefix']}}"

@@ -1,0 +1,8 @@
+---
+supernet_prefixes:
+
+  - prefix: 192.168.0.0/22
+    status: reserved
+    description: AUBRI01 SuperNet
+    site: AUBRI01
+    tenant: Consulting

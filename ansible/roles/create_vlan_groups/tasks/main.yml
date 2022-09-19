@@ -1,0 +1,11 @@
+---
+- name: Create VLAN Groups within NetBox
+  netbox.netbox.netbox_vlan_group:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ vlan_group }}"
+    state: present
+  loop: "{{ vlan_groups }}"
+  loop_control: 
+    loop_var: vlan_group
+    label: "{{ vlan_group['name']}}"

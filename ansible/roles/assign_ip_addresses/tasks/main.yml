@@ -1,0 +1,11 @@
+---
+- name: Assign IP Addresses to interfaces
+  netbox.netbox.netbox_ip_address:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ ip }}"  
+    state: present
+  loop: "{{ ip_addresses }}"
+  loop_control: 
+    loop_var: ip
+    label: "{{ ip['assigned_object']}}"

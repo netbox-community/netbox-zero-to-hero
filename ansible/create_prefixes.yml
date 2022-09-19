@@ -1,0 +1,10 @@
+---
+
+- name: PLAY 1 - Create Next Available Prefix Per VLAN
+  connection: local
+  hosts: localhost
+  gather_facts: False
+
+  roles:
+    - role: create_prefixes 
+      tags: create_prefixes

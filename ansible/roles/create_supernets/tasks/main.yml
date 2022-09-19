@@ -1,0 +1,11 @@
+---
+- name: Create SuperNets within NetBox
+  netbox.netbox.netbox_prefix:
+    netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+    netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+    data: "{{ supernet_prefix }}"
+    state: present
+  loop: "{{ supernet_prefixes }}"
+  loop_control: 
+    loop_var: supernet_prefix
+    label: "{{ supernet_prefix['prefix']}}"

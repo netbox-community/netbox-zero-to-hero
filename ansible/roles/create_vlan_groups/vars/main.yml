@@ -1,0 +1,6 @@
+---
+vlan_groups:
+
+  - name: AUBRI01
+    scope_type: dcim.site
+    scope: AUBRI01
