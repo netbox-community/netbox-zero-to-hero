@@ -2,7 +2,7 @@
 
 Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (Awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of the NetBox REST API. 
 
-In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using of the [Ansible Automation Platform](https://www.ansible.com/) and in particular the collection of [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
+In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible Automation Platform](https://www.ansible.com/) and in particular the collection of [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
 
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
@@ -14,9 +14,9 @@ From the [Ansible](https://www.ansible.com/use-cases/network-automation) website
 >
 >Ansible Automation Platform is a single, flexible automation technology that can be used across diverse network devices and other IT domains, making it easy to automate entire network and IT processes.
 
-Of course, you could add IPAM data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become tedious and prone to human error. Integrating Ansible with NetBox is quick and easy, and within a few minutes you can be running Ansible playbooks to Create, Read, Update and Delete (CRUD operations in computer programming terms) NetBox data programmatically via the REST API.
+Of course, you could add IPAM data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become tedious is error prone. Integrating Ansible with NetBox is quick and easy, and within a few minutes you can be running Ansible playbooks to Create, Read, Update and Delete (CRUD operations in computer programming terms) NetBox data programmatically via the REST API.
 
-Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical to outsmart the complexity of modern networks - by adding some Ansible knowledge to your armory, you will stay ahead of the game!
+Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical for managing modern networks, so by adding some Ansible knowledge to your armory, you will stay ahead of the game!
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
