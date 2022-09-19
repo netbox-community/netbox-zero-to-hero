@@ -62,5 +62,3 @@ As you can see clicking on any hyperlink will take you to the related objects, f
 Also, right down at the footer of the page, are handy links to the official documentation, the REST and GraphQL API documentation, the source code and the community Slack channel.  And lastly, if all this wasn't enough, you can even switch the UI to Dark Mode! 
 
 So, I hope that has been a useful introduction to the NetBox User Interface, and thanks for watching!
-
-Al3xa3v3Ad0b3
