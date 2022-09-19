@@ -6,8 +6,8 @@ In this module Susan (the other member of the Network Engineering dream team) wi
 
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
-- Understand how to integrate Ansible with NetBox and how it can be used to populate the NetBox database
-- Get started using Ansible and NetBox with a set of [Ansible playbooks](../../ansible/) that can be easily adapted and extended to suit your own requirements 
+- Integrate Ansible with NetBox, and run playbooks to populate the NetBox database
+- Get started with a set of [Ansible playbooks](../../ansible/) for NetBox that can be easily adapted and extended to suit your own requirements 
 
 ## Why Integrate Ansible with NetBox? 
 From the [Ansible](https://www.ansible.com/use-cases/network-automation) website: 
