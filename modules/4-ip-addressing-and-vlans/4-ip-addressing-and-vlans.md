@@ -46,11 +46,12 @@ cd netbox-zero-to-hero/ansible
 python3 -m venv .
 source bin/activate
 ```
-3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), and Ansible: 
+3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), Ansible and the NetBox modules for Ansible using Ansible Collections:
 ```
-python3 -m pip install --upgrade pip
+python3 -m pip install
 pip3 install pynetbox
 pip3 install ansible
+ansible-galaxy collection install netbox.netbox
 ```
 4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks):
 ```
@@ -64,21 +65,70 @@ From the NetBox documentation:
 >### IP Address Management
 >IP address management (IPAM) is one of NetBox's core features. It supports full parity for IP4 and IPv6, advanced VRF assignment, automatic hierarchy formation, and much more.
 
-## IP Hierarchy
-NetBox employs several object types to represent a hierarchy of IP resources:
+IPAM data is hierarchical in nature and NetBox reflects this: 
 
 ## RIRs and Aggregates
-A prefix which represents the root of an addressing hierarchy. This is typically a large swath of public or private address space allocated for use by your organization. Each aggregate is assigned to an authoritative **RIR**.
+Regional Internet Registries (**IRRs**), such as ARIN, RIPE, APNIC control the allocation of globally-routable address space. Internal IP address space (eg. RFC 1918) is also treated as an RIR within NetBox, and users can can create whatever RIRs they like. 
+
+Aggregates are assigned to RIRs, and typically, an aggregate will correspond to either an allocation of public (globally routable) IP space granted by a regional authority, or a private (internally-routable) designation.
+
+For our fictional organization we will be defining RFC 1918 Private Address space for IPv4, which has the following Aggregates assigned to it: 
+
+-  10.0.0.0/8
+-  172.16.0.0/12
+-  192.168.0.0/16
 
 ## Prefixes and IP Ranges
-A subnet defined within an aggregate. Prefixes extend the hierarchy by nesting within one another. (For example, 192.168.123.0/24 will appear within 192.168.0.0/16.) Each prefix can be assigned a functional role as well as an operational status.
+IP subnets are defined within an aggregate. **Prefixes** extend the hierarchy by nesting within one another. (For example, 192.168.123.0/24 will appear within 192.168.0.0/16.) Each prefix can be assigned a functional role as well as an operational status.
 
-IP Range - An arbitrary range of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
+**IP Range** - are arbitrary ranges of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
 
-**IP Range** - An arbitrary range of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
+Our fictional organization will be using a 'SuperNet' Prefix of **192.168.0.0/22** for the planned new office site in Brisbane, and this will be further divided into smaller, individual prefixes. When populating NetBox with this data we will request the next available prefixes based on prefix length requirements. 
 
 ## IP Addresses
-An individual IP address along with its subnet mask, automatically arranged beneath its parent prefix.
+These are individual IP addresses along with their subnet mask, that are automatically arranged beneath their parent prefixes. 
+
+## Prefix and VLAN Roles
+Roles define the function of a prefix or VLAN - for example you might define separate Voice and Data roles for your prefixes and VLANs. 
+
+## VLAN Groups
+VLAN groups can be used to organize your VLANs in a way that suits your organization, and their scope can be a particular region, site group, site, location, rack, cluster group, or cluster. 
+
+Our fictional organization will be using a VLAN group called **AUBRI01** which will be scoped to the AUBRI01 Site. This means that any VLAN assigned from this group will be tied to devices and VM's within the AUBRI01 Site. 
+
+## The Project - New Branch Site IPAM Data
+Our fictional organization will be using the following IPAM data for the new site in Brisbane (AUBRI01)
+
+### Brisbane Prefixes and VLANs
+All prefixes will be the next available, and allocated dynamically in NetBox from the **192.168.0.0/22** Supernet using an Ansible playbook.
+
+| VLAN Name | VLAN ID | VLAN Group | Role | Prefix Length |
+| :--- | :--- | :--- | :--- | :--- |
+| AUBRI01_DATA | 10 | AUBRI01 | Data | /25 | 
+| AUBRI01_VOICE | 20 | AUBRI01 | Voice | /25 | 
+| AUBRI01_BRANCH_WIFI | 30 | AUBRI01 | Branch Wifi | /25 | 
+| AUBRI01_GUEST_WIFI | 40 | AUBRI01 | Guest Wifi | /25 | 
+| AUBRI01_MGMT | 50 | AUBRI01 | Management | /26 | 
+| AUBRI01_P2P | 60 | AUBRI01 | Data | /30 | 
+
+### Brisbane IPv4 Addresses
+All addresses will be the next available, and allocated dynamically from the corresponding Prefix using an Ansible playbook. The list of devices and interfaces to be assigned IP addresses is as follows: 
+
+| Device | Interface | VLAN |
+| --- | --- | --- | 
+| AUBRI01-RTR-1 | GigabitEthernet0 | AUBRI01_MGMT (50) |
+| AUBRI01-RTR-1 | GigabitEthernet0/0/0 | AUBRI01_P2P (60) |
+| AUBRI01-SW-1|  me0 | AUBRI01_MGMT (50) |
+| AUBRI01-SW-1 | ge-0/0/0 | AUBRI01_P2P (60) |
+| AUBRI01-SW-1 | vlan.10 | AUBRI01_DATA (10) |
+| AUBRI01-SW-1 | vlan.20 | AUBRI01_VOICE (20) |
+| AUBRI01-SW-1 | vlan.30 | AUBRI01_BRANCH_WIFI (30) |
+| AUBRI01-SW-1 | vlan.40 | AUBRI01_GUEST_WIFI (40) |
+| AUBRI01-SW-1 | vlan.50 | AUBRI01_MGMT (50) |
+| AUBRI01-SW-1 | vlan.60 | AUBRI01_P2P (60) |
+| AUBRI01-AP-1 |  main | AUBRI01_MGMT (50) |
+| AUBRI01-AP-2 |  main | AUBRI01_MGMT (50) |
+| AUBRI01-CON-1 | Ethernet | AUBRI01_MGMT (50) |
 
 ## Video - Adding IPAM Data Into NetBox
 The video demo will now show you how to .... As always the best way to understand the power of NetBox is to dive right in, so let's get started!
