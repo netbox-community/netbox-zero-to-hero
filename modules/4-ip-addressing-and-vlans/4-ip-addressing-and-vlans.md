@@ -1,6 +1,6 @@
 # Introduction
 
-Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (Awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
+Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (our awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
 
 In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible Automation Platform](https://www.ansible.com/) and in particular the collection of [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
 
@@ -86,12 +86,12 @@ All prefixes will be the next available, and allocated dynamically in NetBox fro
 
 | VLAN Name | VLAN ID | VLAN Group | Role | Prefix Length |
 | :--- | :---: | :--- | :--- | :---: |
-| DATA | 10 | Brisbane | Branch_Data | /25 | 
-| VOICE | 20 | Brisbane | Branch_Voice | /25 | 
-| B_WIFI | 30 | Brisbane | Branch_WiFi | /25 | 
-| G_WIFI | 40 | Brisbane | Guest Wifi | /25 | 
-| NETMAN | 50 | Brisbane | Network_Management | /26 | 
-| P2P | 60 | Brisbane | Point_to_Point | /30 | 
+| DATA | 10 | Brisbane_VLANS | Branch_Data | /25 | 
+| VOICE | 20 | Brisbane_VLANS | Branch_Voice | /25 | 
+| B_WIFI | 30 | Brisbane_VLANS | Branch_WiFi | /25 | 
+| G_WIFI | 40 | Brisbane_VLANS | Guest Wifi | /25 | 
+| NETMAN | 50 | Brisbane_VLANS | Network_Management | /26 | 
+| P2P | 60 | Brisbane_VLANS | Point_to_Point | /30 | 
 
 ### Brisbane IPv4 Addresses
 All IP addresses will be the next available, and allocated dynamically from the corresponding Prefix using an Ansible playbook. The list of devices and interfaces to be assigned IP addresses is as follows: 
