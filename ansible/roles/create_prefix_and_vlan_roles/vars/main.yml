@@ -3,7 +3,7 @@ ipam_roles:
 
   - name: Branch_Data
   - name: Branch_Voice  
-  - name: Branch_Wifi
-  - name: Guest_Wifi
+  - name: Branch_WiFi
+  - name: Guest_WiFi
   - name: Network_Management
   - name: Point_to_Point
