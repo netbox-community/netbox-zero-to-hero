@@ -82,7 +82,7 @@ Our fictional organization will be using a VLAN group called **Brisbane_VLANS** 
 Our fictional organization will be using the following IPAM data for the new site in Brisbane: 
 
 ### Brisbane Prefixes and VLANs
-All prefixes will be the next available, and allocated dynamically in NetBox from the **192.168.0.0/22** Supernet using an Ansible playbook.
+All prefixes assigned will be the next available, and allocated dynamically in NetBox from the **192.168.0.0/22** Supernet using an Ansible playbook.
 
 | VLAN Name | VLAN ID | VLAN Group | Role | Prefix Length |
 | :--- | :---: | :--- | :--- | :---: |
@@ -94,7 +94,7 @@ All prefixes will be the next available, and allocated dynamically in NetBox fro
 | P2P | 60 | Brisbane_VLANS | Point_to_Point | /30 | 
 
 ### Brisbane IPv4 Addresses
-All IP addresses will be the next available, and allocated dynamically from the corresponding Prefix using an Ansible playbook. The list of devices and interfaces to be assigned IP addresses is as follows: 
+All IP addresses assigned will be the next available, and allocated dynamically from the corresponding Prefix using an Ansible playbook. The list of devices and interfaces to be assigned IP addresses is as follows: 
 
 | Device | Interface | VLAN ID |
 | --- | --- | --- | 
