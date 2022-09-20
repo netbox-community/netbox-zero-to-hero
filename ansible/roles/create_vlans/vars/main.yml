@@ -1,50 +1,50 @@
 ---
 vlans:
 
-  - name: AUBRI01_DATA
+  - name: DATA
     site: AUBRI01
     status: reserved
     tenant: Consulting
     vid: 10
-    vlan_group: AUBRI01
-    vlan_role: Data
+    vlan_group: Brisbane
+    vlan_role: Branch_Data
 
-  - name: AUBRI01_VOICE
+  - name: VOICE
     site: AUBRI01
     status: reserved
     tenant: Consulting
     vid: 20
-    vlan_group: AUBRI01
-    vlan_role: Voice
+    vlan_group: Brisbane
+    vlan_role: Branch_Voice
 
-  - name: AUBRI01_BRANCH_WIFI
+  - name: B_WIFI
     site: AUBRI01
     status: reserved
     tenant: Consulting
     vid: 30
-    vlan_group: AUBRI01
-    vlan_role: Branch Wifi
+    vlan_group: Brisbane
+    vlan_role: Branch_WiFi
 
-  - name: AUBRI01_GUEST_WIFI
+  - name: G_WIFI
     site: AUBRI01
     status: reserved
     tenant: Consulting
     vid: 40
-    vlan_group: AUBRI01
-    vlan_role: Guest Wifi
+    vlan_group: Brisbane
+    vlan_role: Guest_WiFi
 
-  - name: AUBRI01_MGMT
+  - name: NETMAN
     site: AUBRI01
     status: reserved
     tenant: Consulting
     vid: 50
-    vlan_group: AUBRI01
-    vlan_role: Management
+    vlan_group: Brisbane
+    vlan_role: Network_Management
     
-  - name: AUBRI01_P2P
+  - name: P2P
     site: AUBRI01
     status: reserved
     tenant: Consulting
     vid: 60
-    vlan_group: AUBRI01
-    vlan_role: p2p
+    vlan_group: Brisbane
+    vlan_role: Point_to_Point

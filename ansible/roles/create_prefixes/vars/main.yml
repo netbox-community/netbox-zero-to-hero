@@ -3,48 +3,48 @@ prefixes:
 
   - parent: 192.168.0.0/22
     status: reserved
-    description: AUBRI01 Data
+    description: Data
     prefix_length: 25
     site: AUBRI01
     tenant: Consulting
-    vlan: AUBRI01_DATA
+    vlan: DATA
 
   - parent: 192.168.0.0/22
     status: reserved
-    description: AUBRI01 Voice
+    description: Voice
     prefix_length: 25
     site: AUBRI01
     tenant: Consulting
-    vlan: AUBRI01_VOICE
+    vlan: VOICE
 
   - parent: 192.168.0.0/22
     status: reserved
-    description: AUBRI01 Branch Wifi
+    description: Branch Wifi
     prefix_length: 25
     site: AUBRI01
     tenant: Consulting
-    vlan: AUBRI01_BRANCH_WIFI
+    vlan: B_WIFI
 
   - parent: 192.168.0.0/22
     status: reserved
-    description: AUBRI01 Guest Wifi
+    description: Guest Wifi
     prefix_length: 25
     site: AUBRI01
     tenant: Consulting
-    vlan: AUBRI01_GUEST_WIFI
+    vlan: G_WIFI
 
   - parent: 192.168.0.0/22
     status: reserved
-    description: AUBRI01 Management
+    description: Network Management
     prefix_length: 26
     site: AUBRI01
     tenant: Consulting
-    vlan: AUBRI01_MGMT
+    vlan: NETMAN
     
   - parent: 192.168.0.0/22
     status: reserved
-    description: AUBRI01 P2P
+    description: P2P RTR-SW
     prefix_length: 30
     site: AUBRI01
     tenant: Consulting
-    vlan: AUBRI01_P2P
+    vlan: Point_to_Point

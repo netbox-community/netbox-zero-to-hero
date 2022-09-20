@@ -1,5 +1,5 @@
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps (they assume Git is already installed and set up on the system):
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps to set up Ansible on your own system (they assume Git is already installed and set up on Ansible host):
 
 1. Clone the NetBox Zero to Hero Git repository and change into the Ansible directory:
 
@@ -13,18 +13,19 @@ cd netbox-zero-to-hero/ansible
 python3 -m venv .
 source bin/activate
 ```
-3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), and Ansible: 
+3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), Ansible and the NetBox modules for Ansible using Ansible Collections:
 ```
-python3 -m pip install --upgrade pip
+python3 -m pip install
 pip3 install pynetbox
 pip3 install ansible
+ansible-galaxy collection install netbox.netbox
 ```
 4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks):
 ```
 export NETBOX_TOKEN=< YOUR_API_TOKEN >
 export NETBOX_API=< YOUR_NETBOX_URL >
 ```
-1. When you have finished working deactivate the Python virtual environment:
+5. When you have finished working deactivate the Python virtual environment:
 ```
 deactivate
 ```

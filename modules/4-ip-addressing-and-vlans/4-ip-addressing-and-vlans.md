@@ -32,34 +32,9 @@ The software versions used in the video for this module are:
 - `pynetbox 6.6.2`
 
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps (they assume Git is already installed and set up on Ansible host):
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](../../ansible/ansible-setup.md) to set up Ansible on your owns system - it takes less than 5 minutes! (they assume Git is already installed and set up on Ansible host):
 
-1. Clone the NetBox Zero to Hero Git repository and change into the Ansible directory:
-
-```
-git clone https://github.com/richbibby-NS1/netbox-zero-to-hero.git
-cd netbox-zero-to-hero/ansible
-```
-
-2. Create a new Python Virtual Environment and activate it: 
-```
-python3 -m venv .
-source bin/activate
-```
-3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), Ansible and the NetBox modules for Ansible using Ansible Collections:
-```
-python3 -m pip install
-pip3 install pynetbox
-pip3 install ansible
-ansible-galaxy collection install netbox.netbox
-```
-4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks):
-```
-export NETBOX_TOKEN=< YOUR_API_TOKEN >
-export NETBOX_API=< YOUR_NETBOX_URL >
-```
-
-## NetBox For IPAM
+## Using NetBox For IPAM
 From the NetBox documentation: 
 
 >### IP Address Management
@@ -72,7 +47,7 @@ Regional Internet Registries (**IRRs**), such as ARIN, RIPE, APNIC control the a
 
 Aggregates are assigned to RIRs, and typically, an aggregate will correspond to either an allocation of public (globally routable) IP space granted by a regional authority, or a private (internally-routable) designation.
 
-For our fictional organization we will be defining RFC 1918 Private Address space for IPv4, which has the following Aggregates assigned to it: 
+Our fictional organization will be using RFC 1918 Private Address space for IPv4, which has the following Aggregates assigned to it: 
 
 -  10.0.0.0/8
 -  172.16.0.0/12
@@ -89,53 +64,58 @@ Our fictional organization will be using a 'SuperNet' Prefix of **192.168.0.0/22
 These are individual IP addresses along with their subnet mask, that are automatically arranged beneath their parent prefixes. 
 
 ## Prefix and VLAN Roles
-Roles define the function of a prefix or VLAN - for example you might define separate Voice and Data roles for your prefixes and VLANs. 
+Roles define the function of a prefix or VLAN - for example you might define separate Voice and WiFi roles for your prefixes and VLANs. The following roles will be used by our fictional organization: 
+
+- Branch_Data
+- Branch_Voice
+- Branch_WiFi
+- Guest_WiFi
+- Network_Management
+- Point_to_Point
 
 ## VLAN Groups
 VLAN groups can be used to organize your VLANs in a way that suits your organization, and their scope can be a particular region, site group, site, location, rack, cluster group, or cluster. 
 
-Our fictional organization will be using a VLAN group called **AUBRI01** which will be scoped to the AUBRI01 Site. This means that any VLAN assigned from this group will be tied to devices and VM's within the AUBRI01 Site. 
+Our fictional organization will be using a VLAN group called **Brisbane_VLANS** which will be scoped to the site level. This means that any VLAN assigned from this group will be tied to devices and VM's within the scoped site. 
 
 ## The Project - New Branch Site IPAM Data
-Our fictional organization will be using the following IPAM data for the new site in Brisbane (AUBRI01)
+Our fictional organization will be using the following IPAM data for the new site in Brisbane: 
 
 ### Brisbane Prefixes and VLANs
 All prefixes will be the next available, and allocated dynamically in NetBox from the **192.168.0.0/22** Supernet using an Ansible playbook.
 
 | VLAN Name | VLAN ID | VLAN Group | Role | Prefix Length |
-| :--- | :--- | :--- | :--- | :--- |
-| AUBRI01_DATA | 10 | AUBRI01 | Data | /25 | 
-| AUBRI01_VOICE | 20 | AUBRI01 | Voice | /25 | 
-| AUBRI01_BRANCH_WIFI | 30 | AUBRI01 | Branch Wifi | /25 | 
-| AUBRI01_GUEST_WIFI | 40 | AUBRI01 | Guest Wifi | /25 | 
-| AUBRI01_MGMT | 50 | AUBRI01 | Management | /26 | 
-| AUBRI01_P2P | 60 | AUBRI01 | Data | /30 | 
+| :--- | :---: | :--- | :--- | :---: |
+| DATA | 10 | Brisbane | Branch_Data | /25 | 
+| VOICE | 20 | Brisbane | Branch_Voice | /25 | 
+| B_WIFI | 30 | Brisbane | Branch_WiFi | /25 | 
+| G_WIFI | 40 | Brisbane | Guest Wifi | /25 | 
+| NETMAN | 50 | Brisbane | Network_Management | /26 | 
+| P2P | 60 | Brisbane | Point_to_Point | /30 | 
 
 ### Brisbane IPv4 Addresses
-All addresses will be the next available, and allocated dynamically from the corresponding Prefix using an Ansible playbook. The list of devices and interfaces to be assigned IP addresses is as follows: 
+All IP addresses will be the next available, and allocated dynamically from the corresponding Prefix using an Ansible playbook. The list of devices and interfaces to be assigned IP addresses is as follows: 
 
-| Device | Interface | VLAN |
+| Device | Interface | VLAN ID |
 | --- | --- | --- | 
-| AUBRI01-RTR-1 | GigabitEthernet0 | AUBRI01_MGMT (50) |
-| AUBRI01-RTR-1 | GigabitEthernet0/0/0 | AUBRI01_P2P (60) |
-| AUBRI01-SW-1|  me0 | AUBRI01_MGMT (50) |
-| AUBRI01-SW-1 | ge-0/0/0 | AUBRI01_P2P (60) |
-| AUBRI01-SW-1 | vlan.10 | AUBRI01_DATA (10) |
-| AUBRI01-SW-1 | vlan.20 | AUBRI01_VOICE (20) |
-| AUBRI01-SW-1 | vlan.30 | AUBRI01_BRANCH_WIFI (30) |
-| AUBRI01-SW-1 | vlan.40 | AUBRI01_GUEST_WIFI (40) |
-| AUBRI01-SW-1 | vlan.50 | AUBRI01_MGMT (50) |
-| AUBRI01-SW-1 | vlan.60 | AUBRI01_P2P (60) |
-| AUBRI01-AP-1 |  main | AUBRI01_MGMT (50) |
-| AUBRI01-AP-2 |  main | AUBRI01_MGMT (50) |
-| AUBRI01-CON-1 | Ethernet | AUBRI01_MGMT (50) |
+| AUBRI01-RTR-1 | GigabitEthernet0 | 50 |
+| AUBRI01-RTR-1 | GigabitEthernet0/0/0 | 60 |
+| AUBRI01-SW-1|  me0 | 50 |
+| AUBRI01-SW-1 | ge-0/0/0 | 60 |
+| AUBRI01-SW-1 | vlan.10 | 10 |
+| AUBRI01-SW-1 | vlan.20 | 20 |
+| AUBRI01-SW-1 | vlan.30 | 30 |
+| AUBRI01-SW-1 | vlan.40 | 40 |
+| AUBRI01-SW-1 | vlan.50 | 50 |
+| AUBRI01-SW-1 | vlan.60 | 60 |
+| AUBRI01-AP-1 |  main | 50 |
+| AUBRI01-AP-2 |  main | 50|
+| AUBRI01-CON-1 | Ethernet | 50 |
 
 ## Video - Adding IPAM Data Into NetBox
-The video demo will now show you how to .... As always the best way to understand the power of NetBox is to dive right in, so let's get started!
+OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with the IPAM data using Ansible. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along, don't forget to use the Ansible Playbooks used for adding device types.
-
-[![Adding Devices Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
+[![Adding IPAM Data Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
 OK, so now you know how to ...... in the next module you will learn how to....
 

@@ -1,9 +1,9 @@
 ---
 ipam_roles:
 
-  - name: Data
-  - name: Voice  
-  - name: Branch Wifi
-  - name: Guest Wifi
-  - name: Management
-  - name: p2p
+  - name: Branch_Data
+  - name: Branch_Voice  
+  - name: Branch_Wifi
+  - name: Guest_Wifi
+  - name: Network_Management
+  - name: Point_to_Point

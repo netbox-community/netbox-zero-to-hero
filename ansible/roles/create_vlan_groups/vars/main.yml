@@ -1,6 +1,6 @@
 ---
 vlan_groups:
 
-  - name: AUBRI01
+  - name: Brisbane_VLANS
     scope_type: dcim.site
     scope: AUBRI01
