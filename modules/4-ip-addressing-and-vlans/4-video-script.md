@@ -66,7 +66,7 @@ OK, great so the next playbook in the collection is going to create some virtual
 
 And the last playbook to run is the one to assign individual IP addresses from the prefixes we already created, to interfaces on our devices. Again this one will take the first available IP address when it is executed.
 
-so that is 'ansible-playbook assign_ip_addresses.yml' and you can see this is looping over all the interfaces that we want to assign IP addresses for including the new RVI interfaces we just set up on the switch. And that brings the whole IPAM piece together down to the individual IP address. 
+so that is 'ansible-playbook assign_ip_addresses.yml' and you can see this is looping over all the interfaces that we want to assign IP addresses for including the new RVI interfaces we just set up on the switch. And that brings the whole IPAM piece for the new Brisbane site, together down to the individual IP address. 
 
 So, flip back to the web interface and check the results - starting with the prefixes, the supernet of 192.168.0.0/22 now has 6 child prefixes, and if you click on 192.168.2.0/26 for example this is network management prefix. This is assigned to the NETMAN VLAN 50, in the Brisbane_VLANS group. There are 6 IP addresses in use and you click the first one it has been assigned to interface me0 on the switch AUBRI01-SW-1.
 
