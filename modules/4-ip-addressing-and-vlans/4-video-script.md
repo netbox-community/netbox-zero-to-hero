@@ -4,7 +4,6 @@ For this demo I am using a docker instance of NetBox running locally on my lapto
 
 In this video our network engineer Susan, will populate NetBox with the IP addressing and VLAN data for the planned new Brisbane branch office. To do this Susan is using the Ansible Automation Platform and in particular the Ansible Galaxy collection for NetBox. Again you will find links to all of these resources used in the accompanying Git repository. 
 
-## Set Up
 OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the IPAM section in the centre of the home page. Susan has already followed the set up instructions for Ansible, has activated a new new virtual environment, and has set her environment variables up for the API URL and the API TOKEN. please do check the instructions in the course notes if you need help with this initial set up of Ansible. 
 
 So, if you familiar with Ansible - it has a featured called 'roles' which allows you to structure your playbooks in a very nice way - for example if I expand the roles directory, you'll see it contains subdirectories for each of the roles we have playbooks for - for example if you expand the assign_ip_addresses role, it has 2 further directories - tasks, and vars. within tasks there is a file called main.yaml - 
@@ -57,9 +56,24 @@ OK so, next click Prefix and VLAN roles - so there are the roles we created. Cli
 
 So far, so good! and now that we have the main IPAM data populated including the Supernet - we need to add the prefixes - and there is a separate playbook to do that called 'create_prefixes' and if we look at that one it has a single play, that calls the 'create_prefixes' role. 
 
-So if you got to the role and open the main.yaml file in the tasks directory you can see that this playbook using the netbox prefixes ansible module, and looping over a list of key/value pairs for each prefix we need to create  - but note the extra parameter - first_available.....
+So if you go to the role and open the main.yaml file in the tasks directory you can see that this playbook is using the netbox prefixes ansible module, and looping over a list of key/value pairs for each prefix we need to create  - but note the extra parameter here - first_available - with  value of yes. this tells netbox to assign the first available prefix. and if you look at the data this playbook is looping over you can see that the data dictionaries consist of the parent prefix (which is the supernet for Brisbane), the prefix length, the site the tenant and the VLAN. 
 
+So run this playbook to create the prefixes, with the command 'nsible-playbook create_prefixes.yml'
 
+and this completes OK - remember with this one as it is requesting the next available prefix each time - every time you you run it, it will try to allocate a new prefix, so you would not run this one multiple times. 
 
+OK, great so the next playbook in the collection is going to create some virtual interfaces for each of the vlans on the access switch - so we can then assign them IP addresses.  so to run this one it is ansible-playbook create_vlan_interfaces.yml. and again this one is looping over a list of dictionaries defining the interfaces. and that has completed OK. 
 
-So, I hope that has been a useful overview of how to ......, and hopefully you had fun following along on your own NetBox instance! Thanks for watching.
+And the last playbook to run is the one to assign individual IP addresses from the prefixes we already created, to interfaces on our devices. Again this one will take the first available IP address when it is executed.
+
+so that is 'ansible-playbook assign_ip_addresses.yml' and you can see this is looping over all the interfaces that we want to assign IP addresses for including the new RVI interfaces we just set up on the switch. And that brings the whole IPAM piece together down to the individual IP address. 
+
+So, flip back to the web interface and check the results - starting with the prefixes, the supernet of 192.168.0.0/22 now has 6 child prefixes, and if you click on 192.168.2.0/26 for example this is network management prefix. This is assigned to the NETMAN VLAN 50, in the Brisbane_VLANS group. There are 6 IP addresses in use and you click the first one it has been assigned to interface me0 on the switch AUBRI01-SW-1.
+
+if you click the device name and then interfaces. you also see see the IP address that was assigned to interface ge-0/0/0, then if you click on page 3 of the results you can see the other IP address assignments including the ones to the newly created virtual routed interfaces for each vlan. 
+
+So finally, click back on the home page and now you san see that there are now 3 aggregates, 7 prefixes, 12 IP addresses and 6 VLANS. 
+
+So, I hope that has been a useful overview of how populate IPAM data using the Ansible Galaxy collection for NetBox. Without diving too deep into Ansible (this a netbox course after all) I hope you can see how easy it is to get started with Ansible and also how it can be integrated with NetBox. 
+
+This kind of integration opens up so many possibilities for what you can do with NetBox as yuo single source of truth for your network automation efforts - and will be using Ansible again in later modules of this course. So once again, thanks for watching!
