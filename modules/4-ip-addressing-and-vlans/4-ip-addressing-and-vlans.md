@@ -89,7 +89,7 @@ All prefixes will be the next available, and allocated dynamically in NetBox fro
 | DATA | 10 | Brisbane_VLANS | Branch_Data | /25 | 
 | VOICE | 20 | Brisbane_VLANS | Branch_Voice | /25 | 
 | B_WIFI | 30 | Brisbane_VLANS | Branch_WiFi | /25 | 
-| G_WIFI | 40 | Brisbane_VLANS | Guest Wifi | /25 | 
+| G_WIFI | 40 | Brisbane_VLANS | Guest_WiFi | /25 | 
 | NETMAN | 50 | Brisbane_VLANS | Network_Management | /26 | 
 | P2P | 60 | Brisbane_VLANS | Point_to_Point | /30 | 
 
