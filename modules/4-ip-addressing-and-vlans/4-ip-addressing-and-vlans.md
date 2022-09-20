@@ -32,7 +32,7 @@ The software versions used in the video for this module are:
 - `pynetbox 6.6.2`
 
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps (they assume Git is already installed and set up on the system):
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these steps (they assume Git is already installed and set up on Ansible host):
 
 1. Clone the NetBox Zero to Hero Git repository and change into the Ansible directory:
 
@@ -81,9 +81,9 @@ For our fictional organization we will be defining RFC 1918 Private Address spac
 ## Prefixes and IP Ranges
 IP subnets are defined within an aggregate. **Prefixes** extend the hierarchy by nesting within one another. (For example, 192.168.123.0/24 will appear within 192.168.0.0/16.) Each prefix can be assigned a functional role as well as an operational status.
 
-**IP Range** - are arbitrary ranges of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
+**IP Range** - these are are arbitrary ranges of individual IP addresses within a prefix, all sharing the same mask. Ranges are commonly affiliated with DHCP scopes, but can be used for any similar purpose.
 
-Our fictional organization will be using a 'SuperNet' Prefix of **192.168.0.0/22** for the planned new office site in Brisbane, and this will be further divided into smaller, individual prefixes. When populating NetBox with this data we will request the next available prefixes based on prefix length requirements. 
+Our fictional organization will be using a 'SuperNet' Prefix of **192.168.0.0/22** for the planned new office site in Brisbane, and this will be further divided into smaller, individual prefixes. When populating NetBox with this data the Ansible playbook will request the next available prefix based on prefix length requirements. 
 
 ## IP Addresses
 These are individual IP addresses along with their subnet mask, that are automatically arranged beneath their parent prefixes. 
