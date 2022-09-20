@@ -15,7 +15,7 @@ source bin/activate
 ```
 3. Upgrade PIP (Python package manager) and install Pynetbox (NetBox API client library), Ansible and the NetBox modules for Ansible using Ansible Collections:
 ```
-python3 -m pip install
+python3 -m pip install --upgrade pip
 pip3 install pynetbox
 pip3 install ansible
 ansible-galaxy collection install netbox.netbox

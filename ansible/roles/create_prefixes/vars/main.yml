@@ -47,4 +47,4 @@ prefixes:
     prefix_length: 30
     site: AUBRI01
     tenant: Consulting
-    vlan: Point_to_Point
+    vlan: P2P
