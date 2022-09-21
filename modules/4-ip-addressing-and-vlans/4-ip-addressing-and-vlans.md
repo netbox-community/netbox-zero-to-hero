@@ -119,7 +119,7 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 [![Adding IPAM Data Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
-In this module you have learned how NetBox Models IPAM data, and how to get started with the Ansible and in particular the collection of NetBox Ansible modules. In the next module you will learn how to....
+In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. In the next module you will learn how to....
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
