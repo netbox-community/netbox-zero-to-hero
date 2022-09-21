@@ -32,7 +32,7 @@ The software versions used in the video for this module are:
 - `pynetbox 6.6.2`
 
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](../../ansible/ansible-setup.md) to set up Ansible on your own system - it takes less than 5 minutes!
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](../../ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
 
 ## Using NetBox For IPAM
 From the NetBox documentation: 
