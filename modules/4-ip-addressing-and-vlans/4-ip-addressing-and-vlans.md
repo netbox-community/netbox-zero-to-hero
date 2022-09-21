@@ -12,7 +12,7 @@ By the end of this module you will be able to:
 ## Why Integrate NetBox with Ansible? 
 From the [Ansible](https://www.ansible.com/use-cases/network-automation) website: 
 >
->Ansible Automation Platform is a single, flexible automation technology that can be used across diverse network devices and other IT domains, making it easy to automate entire network and IT processes.
+>Ansible® is an open sourceIT automation tool that automates provisioning, configuration management, application deployment, orchestration, and many other manual IT processes.Ansible Automation Platform is a single, flexible automation technology that can be used across diverse network devices and other IT domains, making it easy to automate entire network and IT processes.
 
 Of course, you could add IPAM data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become tedious and is error prone. Integrating NetBox with Ansible is quick and easy, and within a few minutes you can be running Ansible playbooks to Create, Read, Update and Delete (CRUD operations in computer programming terms) NetBox data programmatically via the REST API.
 
@@ -43,9 +43,9 @@ From the NetBox documentation:
 IPAM data is hierarchical in nature and NetBox reflects this: 
 
 ## RIRs and Aggregates
-Regional Internet Registries (**IRRs**), such as ARIN, RIPE, APNIC control the allocation of globally-routable address space. Internal IP address space (eg. RFC 1918) is also treated as an RIR within NetBox, and users can can create whatever RIRs they like. 
+Regional Internet Registries (**RIRs**), such as ARIN, RIPE, APNIC control the allocation of globally-routable address space. Internal IP address space (eg. RFC 1918) is also treated as an RIR within NetBox, and users can can create whatever RIRs they like. 
 
-Aggregates are assigned to RIRs, and typically, an aggregate will correspond to either an allocation of public (globally routable) IP space granted by a regional authority, or a private (internally-routable) designation.
+**Aggregates** are assigned to RIRs, and typically, an aggregate will correspond to either an allocation of public (globally routable) IP space granted by a regional authority, or a private (internally-routable) designation.
 
 Our fictional organization will be using RFC 1918 Private Address space for IPv4, which has the following Aggregates assigned to it: 
 
@@ -117,11 +117,9 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 [![Adding IPAM Data Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
-OK, so now you know how to ...... in the next module you will learn how to....
+In this module you have learned how NetBox Models IPAM data, and how to get started with the Ansible and in particular the collection of NetBox Ansible modules. In the next module you will learn how to....
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
-- [NetBox REST API Overview](https://docs.netbox.dev/en/stable/integrations/rest-api/)
-- [Zero to Hero Postman collection](../../postman/NetBox-Zero-to-Hero.postman_collection.json) 
-- [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
+- [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
