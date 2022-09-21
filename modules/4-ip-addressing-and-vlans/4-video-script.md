@@ -8,23 +8,23 @@ OK, so we are logged into NetBox as Susan, and as you can see there is no data y
 
 So, if you not familiar with Ansible - it has a featured called 'roles' which allows you to structure your playbooks in a very nice way - for example if I expand the roles directory, you'll see it contains subdirectories for each of the roles we have playbooks for - for example if you expand the assign_ip_addresses role, it has 2 further directories - tasks, and vars. within tasks there is a file called main.yaml - 
 
-this is whats known as a playbook in ansible terms. it has a name, and then then on line 3 you san see it is using the netbox_ip_address module. This module then takes data in the form of a dictionary in lines 4 through to 7. Lines 4 & 5 are simply the netbox API and api token that Ansible will lookup from the environment variables on the local system. Note that anything with in quotes and double curly braces is a variable that ansible will look up at time the playbook is executed. 
+this is whats known as a playbook in ansible terms. it has a name, and then then on line 3 you san see it is using the netbox_ip_address module. This module then takes data in the form of a dictionary in lines 4 through to 7. Lines 4 & 5 are simply the netbox API and api token variables that Ansible will lookup from the environment on the local system. Note that anything within quotes and double curly braces is a variable that ansible will look up at time the playbook is executed. 
 
 Line 6 is another dictionary of key value pairs, which I will come to in a second. line 7 is the state which is set to 'present' meaning that the ansible playbook will ensure that this data exists in NetBox when it runs - another state you could use here would be 'absent' meaning that the data would be removed from Netbox in that case. 
 
-Lines 8 to 11 are ansible's loop mechanism - which tell's it to loop over all the items in the data dictionary when it runs. Notice that line 8 tells the the playbook to loop over the variable called ip_addresses - and this is found in the file called main.yml in the vars directory in the assign_ip_addresses role. So if you take a look at that yuo can see this again is a data dictionary in yaml format, which has key/value pairs for each of the IP addresses we are going to add. 
+Lines 8 to 11 are ansible's loop mechanism - which tell's it to loop over all the items in the data dictionary when it runs. Notice that line 8 tells the the playbook to loop over the variable called ip_addresses - and this is found in the file called main.yml in the vars directory, in the assign_ip_addresses role. So if you take a look at that you can see that this again is a data dictionary in yaml format, which has key/value pairs for each of the IP addresses we are going to add. 
 
-Breaking down the first one - the assigned object is the device and interface that we are assigning an IP address to. Then the prefix that we are requesting an IP address from, along with the status in this case as new site is not live yet so it is planned, and the tenant - which is the Consulting department.
+Breaking down the first one - the assigned object is the device and interface that we are assigning the IP address to. Then the prefix that we are requesting an IP address from, along with the status - in this case as the new site is not live yet, the status is planned, and lastly the tenant - which is the Consulting department.
 
 So, the playbook will loop over this list of ip_address assignments until it has processed them all.  Now there are other data parameters that you might want to include when adding an IP address and you can refer to the documentation for the ansible collection for more information and examples. 
 
 (open https://docs.ansible.com/ansible/latest/collections/netbox/netbox/) 
 
-you can scroll down and find the module you are looking, in this case its the netbox_ip_address module and here is the full list of parameters and some example playbook code. 
+you can scroll down and find the module you are looking, in this case its the netbox_ip_address module and here is the full list of parameters and some example playbook code too. 
 
 Now each of the roles we have defined is structured in exactly the same way as this one - so feel free to explore the rest of them yourself in the roles directory. (click on and expand create_vlan_groups)
 
-OK, so to call all the playbooks that we need to run to populate the IPAM data needed, you need to run the main playbook called 'populate_netbox_ipam.yml' so lets just run through what that does (open file)
+OK, so to run all these playbooks to populate the IPAM data, you need to run the main playbook called 'populate_netbox_ipam.yml' so lets just run through what that does (open file)
 
 So Ansible is all about playbooks and this playbook has a number of plays in it - each one calling one of the roles we have just looked at - and the playbook will execute each play in order.  Breaking this down further we can see that play 1 is calling the 'create_rirs' role - which as we know is going to add the RFC 1918 RIR into netbox. The other parameters in each play are: 
 
@@ -36,7 +36,7 @@ This means that the playbook is being executed on the local machine and not conn
 
 Ok, and then the rest of the playbook has plays 2- through 6, which call the other roles that we need to run to populate the IPAM data in NetBox. 
 
-OK so this is all great, but you must be thinking 'can you just run the playbook and get to the good part!' OK, to do that, you switch to terminal and enter the command
+OK so this is all great, but you must be thinking 'can you just run the playbook now and get to the good part!' OK, to do that, you switch to terminal and enter the command
 
 'ansible-playbook populate_netbox_ipam.yml' and hit enter to kick off the playbook run....
 
@@ -76,4 +76,6 @@ So finally, click back on the home page and now you san see that there are now 3
 
 So, I hope that has been a useful overview of how populate IPAM data using the Ansible Galaxy collection for NetBox. Without diving too deep into Ansible (this a netbox course after all) I hope you can see how easy it is to get started with Ansible and also how it can be integrated with NetBox. 
 
-This kind of integration opens up so many possibilities for what you can do with NetBox as yuo single source of truth for your network automation efforts - and will be using Ansible again in later modules of this course. So once again, thanks for watching!
+This kind of integration opens up so many possibilities for what you can do with NetBox as your single source of truth for your network automation efforts - and we will be using Ansible again in later modules of this course. 
+
+So once again, thanks for watching!
