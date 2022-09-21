@@ -2,7 +2,7 @@
 
 Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (our awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
 
-In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible Automation Platform](https://www.ansible.com/) and in particular the collection of [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
+In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible Automation Platform](https://www.ansible.com/) and in particular the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
 
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
@@ -119,9 +119,12 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 [![Adding IPAM Data Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
-In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. In the next module you will learn how to....
+In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. If you have any questions on how to use Ansible with NetBox then there is a dedicated Slack channel #ansible on netdev-community.slack.com so don't hesitate to pop on over there and join in the discussion!
+
+In the next module you will learn how to....
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
-- [NetBox Ansible modules](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
+- [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
+- [NetBox Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
