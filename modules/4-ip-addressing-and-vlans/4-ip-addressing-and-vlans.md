@@ -117,7 +117,7 @@ All IP addresses assigned will be the next available, and allocated dynamically 
 ## Video - Adding IPAM Data Into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with the IPAM data using Ansible. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-[![Adding IPAM Data Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
+[![Adding IPAM Data Into NetBox](../../images/4-ip-addressing-and-vlans.png)](https://youtu.be/XCwO6RGpBpI) 
 
 In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. If you have any questions on how to use Ansible with NetBox then there is a dedicated Slack channel **#ansible** on [netdev-community.slack.com](https://netdev-community.slack.com/) so don't hesitate to pop on over there and join in the discussion!
 
