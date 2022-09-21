@@ -2,7 +2,7 @@ Hello and welcome to this video for module 4 of the NetBox Zero to Hero training
 
 For this demo I am using a docker instance of NetBox running locally on my laptop. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you spin up your own instance of NetBox, along with a link to the notes that accompany this video module. 
 
-In this video our network engineer Susan, will populate NetBox with the IP addressing and VLAN data for the planned new Brisbane branch office. To do this Susan is using the Ansible Automation Platform and in particular the Ansible Galaxy collection for NetBox. Again you will find links to all of these resources used in the accompanying Git repository. 
+In this video our network engineer Susan, will populate NetBox with the IP addressing and VLAN data for the planned new Brisbane branch office. To do this Susan is using the Ansible Automation Platform and in particular the Ansible Galaxy collection for NetBox. Again you will find links to all of these resources in the accompanying Git repository. 
 
 OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the IPAM section in the centre of the home page. Susan has already followed the set up instructions for Ansible, has activated a new new virtual environment, and has set her environment variables up for the API URL and the API TOKEN. please do check the instructions in the course notes if you need help with this initial set up of Ansible. 
 
