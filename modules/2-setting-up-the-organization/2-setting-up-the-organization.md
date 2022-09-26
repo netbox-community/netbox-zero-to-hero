@@ -1,6 +1,6 @@
 # Introduction
 
-Hello and welcome to module 2 of the NetBox 'Zero-to-Hero' course. In [Module 1: Introduction](modules/1-Introduction/1-introduction.md) you learned the features of NetBox, and had a guided tour of both the Web Interface and the REST API. In this module we will expand on this by adding the Organizational data for our fictional consulting firm, into NetBox. 
+Hello and welcome to module 2 of the NetBox 'Zero-to-Hero' course. In [Module 1: Introduction](../1-Introduction/1-introduction.md) you learned the features of NetBox, and had a guided tour of both the Web Interface and the REST API. In this module we will expand on this by adding the Organizational data for our fictional consulting firm, into NetBox. 
 
 By the end of this module you will be able to:  
 - Describe how NetBox models the organization using tenant groups, tenants, regions, site groups, sites, locations, racks and contacts
