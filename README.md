@@ -66,9 +66,7 @@ So, with that said, lets dive in!
 - Reports
 
 ### Module 12: Automate All the Things!
-- Automated Device Config Generation (pull device vars and feed into Jinja2 templates) 
-OR
-- Dynamic Inventory to be consumed by automation (Nornir ?) 
+- Automated Device Config Generation 
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
