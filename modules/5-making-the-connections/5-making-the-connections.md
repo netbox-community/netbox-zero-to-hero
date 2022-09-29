@@ -5,14 +5,9 @@ Hello and welcome to module 5 of the NetBox 'Zero-to-Hero' course. In [Module 4:
 In this module, Eric will be adding the cables and connections required to hook the devices in the new Brisbane branch office network together. 
 
 By the end of this module you will be able to:
-- Describe how NetBox models connections and cables
-- Add individual connections and cables using the Web Interface
-- Run a simple [python](https://www.python.org/) script to add multiple connections and cables via the NetBox REST API
-
-## Why Use a Python Script to add data to NetBox? 
-Of course, you can add data manually via the Web Interface (and the demo video will show you how to do this), but when you are dealing with a lot of data that can quickly become tedious and is error prone. Using scripts is a great way accurately and consistently upload data into NetBox data programmatically via the REST API.
-
-Also, as any Network Engineer / IT Pro looking to stay ahead of the game knows, adding some Python scripting knowledge to your armory is a BIG win! 
+- Describe how NetBox models Cables and Connections
+- Use the web interface to bulk upload data for Cables and Connections
+- Use the web interface to view the Cables, Interface and Console connections
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
@@ -22,27 +17,44 @@ If you'd like to follow along with the examples used in this course, it's super 
 
 The software versions used in the video for this module are: 
 - `NetBox v3.3.2`
-- `Python 3.8.9`
-
-## Installing Python
-If you need to install Python to run the example upload script, then head over [here](https://www.python.org/downloads/) first and download the version you require for your OS. 
 
 ## Modelling Cables and Connections in NetBox
 
-## The Project - New Brisbane site Cables and Connections
+From the [docs](https://docs.netbox.dev/en/stable/features/devices-cabling/#cables)
+>NetBox models cables as connections among certain types of device components and other objects. Each cable can be assigned a type, color, length, and label. NetBox will enforce basic sanity checks to prevent invalid connections. (For example, a network interface cannot be connected to a power outlet.)
+>
+>Either end of a cable may terminate to multiple objects of the same type. For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
 
-| VLAN Name | VLAN ID | VLAN Group | Role | Prefix Length |
-| :--- | :---: | :--- | :--- | :---: |
+## The Project - New Brisbane site Cables, Interface and Console Connections
+Eric has planned the following cabling schedule for the new Brisbane site, and this needs to be added to NetBox. The ISP connection cables will be added in a later module, and the Wireless Access Points will be connected to data outlets in the office space.
 
+### Device to Device Interface connections
+
+| Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
+| --- | --- | --- | --- | :---: | :---: | :---: |
+| AUBRI01-RTR-1 | GigabitEthernet0 | AUBRI01-SW-1 | ge-0/0/47 | CAT6 | Red | 0.5M |
+| AUBRI01-RTR-1 | GigabitEthernet0/0/0 | AUBRI01-SW-1 | ge-0/0/0 | CAT6 | Red | 0.5M | 
+| AUBRI01-CON-1 | Ethernet | AUBRI01-SW-1 | ge-0/0/46 | CAT6 | Red | 0.5M |
+
+### Device to Console Server connections
+| Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
+| --- | --- | --- | --- | :---: | :---: | :---: |
+| AUBRI01-RTR-1 | con 0 | AUBRI01-CON-1 | ttyS1 | CAT6 | Blue | 1M |
+| AUBRI01-RTR-1 | Console | AUBRI01-CON-1 | ttyS2 | CAT6 | Blue | 1M |
+
+### Switch to Patch Panel Connections 
+| Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
+| --- | --- | --- | --- | :---: | :---: | :---: |
+| AUBRI01-SW-1 | ge-0/0/10 - 24 | AUBRI1-PAN-1 | 01 - 25 | CAT6 | Purple | 0.5M
+ 
 ## Video - Adding Cables and Connections into NetBox
-OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with ........
-As always the best way to understand the power of NetBox is to dive right in, so let's get started!
+OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Cables, Interface and Console connections, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
 <!-- link to video here -->
 
-In this module you have learned how NetBox Models ?, how to ?, and ?. 
+In this module you have learned how NetBox Models Cables, Interface and Console connections, and how to bulk upload them via the web interface.
 
-In the next module you will learn how to....
+In the next module you will learn how to model the Wireless LAN networks in NetBox
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
