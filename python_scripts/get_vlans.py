@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-url = "https://richdemo.euw1v1.netboxapp.com:443/api/ipam/vlans/?brief=1"
+url = "https://netbox:443/api/ipam/vlans/?brief=1"
 
 payload = ""
 headers = {

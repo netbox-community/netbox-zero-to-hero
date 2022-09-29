@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-url = "https://richdemo.euw1v1.netboxapp.com:443/api/wireless/wireless-lan-groups/"
+url = "https://netbox:443/api/wireless/wireless-lan-groups/"
 
 payload = json.dumps({
   "name": "Asia_Pacific_WLANs",
