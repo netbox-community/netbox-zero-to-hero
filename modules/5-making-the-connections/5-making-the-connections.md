@@ -6,7 +6,7 @@ In this module, Eric will be adding the cables and connections required to hook 
 
 By the end of this module you will be able to:
 - Describe how NetBox models Cables and Connections
-- Use the web interface to bulk upload data for Cables and Connections
+- Use the web interface to bulk upload data for Cables and Connections from a CSV file
 - Use the web interface to view the Cables, Interface and Console connections
 
 ## Get Hands On
@@ -29,6 +29,7 @@ From the [docs](https://docs.netbox.dev/en/stable/features/devices-cabling/#cabl
 Eric has planned the following cabling schedule for the new Brisbane site, and this needs to be added to NetBox. The ISP connection cables will be added in a later module, and the Wireless Access Points will be connected to data outlets in the office space.
 
 ### Device to Device Interface connections
+These cables will interconnect network devices over Ethernet interfaces. For example a direct connection from the WAN Router to the Access Switch.
 
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
 | --- | --- | --- | --- | :---: | :---: | :---: |
@@ -37,18 +38,24 @@ Eric has planned the following cabling schedule for the new Brisbane site, and t
 | AUBRI01-CON-1 | Ethernet | AUBRI01-SW-1 | ge-0/0/46 | CAT6 | Red | 0.5M |
 
 ### Device to Console Server connections
+These cables will connect the console port on WAN Router and Switch to Console server ports. These connections will be used for remote out-of-band access to the devices should it be required.
+
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
 | --- | --- | --- | --- | :---: | :---: | :---: |
 | AUBRI01-RTR-1 | con 0 | AUBRI01-CON-1 | ttyS1 | CAT6 | Blue | 1M |
-| AUBRI01-RTR-1 | Console | AUBRI01-CON-1 | ttyS2 | CAT6 | Blue | 1M |
+| AUBRI01-SW-1 | Console | AUBRI01-CON-1 | ttyS2 | CAT6 | Blue | 1M |
 
 ### Switch to Patch Panel Connections 
+These cables will connect from the Access Switch Ethernet interfaces to the front ports of the UTP Patch Panel. The rear ports of the patch panel will have the CAT6 structured cabling for the office space terminated onto them, and they would connect out to the data outlets in the office space (the rear port to outlet cables will not be modelled in the demo, but the process to do so is identical). 
+
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
 | --- | --- | --- | --- | :---: | :---: | :---: |
-| AUBRI01-SW-1 | ge-0/0/10 - 24 | AUBRI1-PAN-1 | 01 - 25 | CAT6 | Purple | 0.5M
+| AUBRI01-SW-1 | ge-0/0/10 - 24 | AUBRI1-PAN-1 | 01 -  | CAT6 | Purple | 0.5M
  
 ## Video - Adding Cables and Connections into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Cables, Interface and Console connections, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
+
+If you are following along you can find the [CSV data](csv_data/)in course Git Repository.
 
 <!-- link to video here -->
 

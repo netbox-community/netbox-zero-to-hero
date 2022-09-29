@@ -1,0 +1,22 @@
+side_a_device,side_a_type,side_a_name,side_b_device,side_b_type,side_b_name,type,status,tenant,color,length,length_unit
+AUBRI01-RTR-1,dcim.interface,GigabitEthernet0,AUBRI01-SW-1,dcim.interface,ge-0/0/47,cat6,planned,Consulting,ff0000,0.5,m
+AUBRI01-RTR-1,dcim.interface,GigabitEthernet0/0/0,AUBRI01-SW-1,dcim.interface,ge-0/0/0,cat6,planned,Consulting,ff0000,0.5,m
+AUBRI01-CON-1,dcim.interface,Ethernet,AUBRI01-SW-1,dcim.interface,ge-0/0/46,cat6,planned,Consulting,ff0000,0.5,m
+AUBRI01-RTR-1,dcim.consoleport,con 0,AUBRI01-CON-1,dcim.consoleserverport,ttyS1,cat6,planned,Consulting,4287f5,1,m
+AUBRI01-SW-1,dcim.consoleport,Console,AUBRI01-CON-1,dcim.consoleserverport,ttyS2,cat6,planned,Consulting,4287f5,1,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/10,AUBRI01-PAN-1,dcim.frontport,01,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/11,AUBRI01-PAN-1,dcim.frontport,02,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/12,AUBRI01-PAN-1,dcim.frontport,03,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/13,AUBRI01-PAN-1,dcim.frontport,04,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/14,AUBRI01-PAN-1,dcim.frontport,05,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/15,AUBRI01-PAN-1,dcim.frontport,06,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/16,AUBRI01-PAN-1,dcim.frontport,07,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/17,AUBRI01-PAN-1,dcim.frontport,08,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/18,AUBRI01-PAN-1,dcim.frontport,09,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/19,AUBRI01-PAN-1,dcim.frontport,10,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/20,AUBRI01-PAN-1,dcim.frontport,11,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/21,AUBRI01-PAN-1,dcim.frontport,12,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/22,AUBRI01-PAN-1,dcim.frontport,13,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/23,AUBRI01-PAN-1,dcim.frontport,14,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/24,AUBRI01-PAN-1,dcim.frontport,15,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/25,AUBRI01-PAN-1,dcim.frontport,16,cat6,planned,Consulting,ce42f5,0.5,m

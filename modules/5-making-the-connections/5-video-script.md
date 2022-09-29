@@ -1,81 +1,37 @@
-Hello and welcome to this video for module 4 of the NetBox Zero to Hero training course. If you haven't already checked out the earlier modules yet then you can find the link to them in the notes below to get started. 
+Hello and welcome to this video for module 5 of the NetBox Zero to Hero training course. If you haven't already checked out the earlier modules yet then you can find the link to them in the notes below to get started. 
 
 For this demo I am using a docker instance of NetBox running locally on my laptop. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you spin up your own instance of NetBox, along with a link to the notes that accompany this video module. 
 
-In this video our network engineer Susan, will populate NetBox with the IP addressing and VLAN data for the planned new Brisbane branch office. To do this Susan is using the Ansible Automation Platform and in particular the Ansible Galaxy collection for NetBox. Again you will find links to all of these resources in the accompanying Git repository. 
+In this video our network engineer Eric, will populate NetBox with the Cables, Interface and Console connections data for the planned new Brisbane branch office. To do this Eric will upload the data from a CSV file. The file contains all the details of each of the cables that need to be added into the NetBox database. 
 
-OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the IPAM section in the centre of the home page. Susan has already followed the set up instructions for Ansible, has activated a new new virtual environment, and has set her environment variables up for the API URL and the API TOKEN. please do check the instructions in the course notes if you need help with this initial set up of Ansible. 
+OK, so we are logged into NetBox as Eric, and as you can see there is no data yet in the Connections section, under Cables. Before doing the bulk upload of cables from the CSV file just take a look at how you would do this for a single cable. 
 
-So, if you not familiar with Ansible - it has a featured called 'roles' which allows you to structure your playbooks in a very nice way - for example if I expand the roles directory, you'll see it contains subdirectories for each of the roles we have playbooks for - for example if you expand the assign_ip_addresses role, it has 2 further directories - tasks, and vars. within tasks there is a file called main.yaml - 
+Click on Devices and then select the WAN router and then click on Interfaces. To connect a cable between interface GigabitEthernet0/0/0 and the switch, click on the green 'connect cable' icon, and then select interface. So now you have the A side already populated, on the B-Sid of the connection from the drop-down select the switch and then the interface. 
 
-this is whats known as a playbook in ansible terms. it has a name, and then then on line 3 you san see it is using the netbox_ip_address module. This module then takes data in the form of a dictionary in lines 4 through to 7. Lines 4 & 5 are simply the netbox API and api token variables that Ansible will lookup from the environment on the local system. Note that anything within quotes and double curly braces is a variable that ansible will look up at time the playbook is executed. 
+Notice that Either end of a cable may terminate to multiple objects of the same type. (click another intetface) For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
 
-Line 6 is another dictionary of key value pairs, which I will come to in a second. line 7 is the state which is set to 'present' meaning that the ansible playbook will ensure that this data exists in NetBox when it runs - another state you could use here would be 'absent' meaning that the data would be removed from Netbox in that case. 
+OK, then below this you define the cable - starting the status (click planned) - and note that this is the only required field here - then the type of cable - you can select from various types of copper, fibre and power cables. so select CAT6 for this one.  select the tenancy......give it a label if you like, select a colour (red), the cable length for example 1 metre, and then select any tags you might have created. 
 
-Lines 8 to 11 are ansible's loop mechanism - which tell's it to loop over all the items in the data dictionary when it runs. Notice that line 8 tells the the playbook to loop over the variable called ip_addresses - and this is found in the file called main.yml in the vars directory, in the assign_ip_addresses role. So if you take a look at that you can see that this again is a data dictionary in yaml format, which has key/value pairs for each of the IP addresses we are going to add. 
+Then simply click connect. and now you can see the connection details here and you can also get a visual trace of the cable - which is fantastic when you need to troubleshoot a physical connection, you can instantly see from here what it should be. Once again here NetBox is defining what the *intent* of the network is. 
 
-Breaking down the first one - the assigned object is the device and interface that we are assigning the IP address to. Then the prefix that we are requesting an IP address from, along with the status - in this case as the new site is not live yet, the status is planned, and lastly the tenant - which is the Consulting department.
+OK, delete this example cable, by clicking. connections - cables, and then select it and delete it. 
 
-So, the playbook will loop over this list of ip_address assignments until it has processed them all.  Now there are other data parameters that you might want to include when adding an IP address and you can refer to the documentation for the ansible collection for more information and examples. 
+Great - OK so obviously adding a large number of cables in this way would be tedious and error prone, so click on the 'import' icon, and here is the bulk import screen and in the CSV filed options you can see the required and optional fields for a successful import. 
 
-(open https://docs.ansible.com/ansible/latest/collections/netbox/netbox/) 
+Now this time Eric is going to upload a file rather than paste in the data. so here is the file to be used. There is the header for all the fields being and the data for each cable below it. For example, the first cable has the side A device which is the router, the type is an interface, and it is interface gigabit ethernet 0m. On the B side, this cable is connecting to the switch interface ge-0/0/47 - te type is CAT, status is planned, the tenant is the consulting department, and this is a red cable that's half a metre long. 
 
-you can scroll down and find the module you are looking, in this case its the netbox_ip_address module and here is the full list of parameters and some example playbook code too. 
+then the other cables are the console port connections, and then further down are the connections from the access switch ports to the front ports of the patch panel.
 
-Now each of the roles we have defined is structured in exactly the same way as this one - so feel free to explore the rest of them yourself in the roles directory. (click on and expand create_vlan_groups)
+so, back in the web interface, click on CSV File Upload, and then choose file, select the file 'Brisbane_Cables.csv' and then click submit. And a couple of seconds later the import of those 21 cables is complete. 
 
-OK, so to run all these playbooks to populate the IPAM data, you need to run the main playbook called 'populate_netbox_ipam.yml' so lets just run through what that does (open file)
+Click 'view all' to see the full list of cables. Click on Interface Connections to view specifically the interfaces that are now connected. and click on Console connections to view those too. 
 
-So Ansible is all about playbooks and this playbook has a number of plays in it - each one calling one of the roles we have just looked at - and the playbook will execute each play in order.  Breaking this down further we can see that play 1 is calling the 'create_rirs' role - which as we know is going to add the RFC 1918 RIR into netbox. The other parameters in each play are: 
+then click on an individual device, for example the switch, and look at the interfaces tab - as well as the first interface that is connected to the router, you have the interfaces from ge-0/0/10 down that connect to the patch panel. so click one of those cables to see the details, and the A and B ends are defined, and you can see it is a purple cat 6 cable that is 50cm long. 
 
-- connection: local 
-- hosts: localhost
-- gather_facts: False
+Just go back to the device again and click on the icon to do a cable trace, and you now get the nice visual of the cable connection. and you can view and visualize all of the other cables that have just been added in the same way. 
 
-This means that the playbook is being executed on the local machine and not connecting to any remote hosts, and as such we do not need to gather any facts about the local machine when the playbook executes. 
+So, now that Eric has added all the required cables he can share this information from NetBox with the cabling contractor when the time comes for the installation! 
 
-Ok, and then the rest of the playbook has plays 2- through 6, which call the other roles that we need to run to populate the IPAM data in NetBox. 
-
-OK so this is all great, but you must be thinking 'can you just run the playbook now and get to the good part!' OK, to do that, you switch to terminal and enter the command
-
-'ansible-playbook populate_netbox_ipam.yml' and hit enter to kick off the playbook run....
-
-and you can see how te playbook runs through each of the plays, that call the roles to be executed. And that completed OK, so running though the output from the top you can safely ignore the warning about groups names. You can see that all the plays have completed and for each play there is a list of each item that was loped over from the data in the vars/main.yaml file for each role. 
-
-For example there was only a single RIR created - RFC 1918, but there were 3 aggregates created. moving there are the Prefix and VLAN roles, the Supernet prefix, the vlan group, and the vlans. When you see output in yellow like this it means that Ansible changed something when it was required. In this case the requirement was for all of the items to be present in the NetBox database, and as they were not already present then Ansible created them. and at the bottom in the play recap it states that there were 6 changes - 1 for each of the plays. 
-
-One term you will hear a lot with Ansible is 'idempotency' which essentially means that the result of a successfully performed request is independent of the number of times it is executed. So in our cae this means that we can run the playbook again and it will not make any more changes to NetBox as the data we wanted to add is now present. 
-
-And we can prove this by running the playbook again, and as it completes notice how the output is now green meaning that Ansible knows that the data is already present in NetBox so it does not make any more changes, and in the play recap you can see there were no changes made. 
-
-OK, so flip on over back to the NetBox wen interface and hit refresh. and we can see there is now some IP data in there! dig in a little to explore what's there starting with RIRs - there is RFC 1918, and it has 3 aggregates. 192.168.0.0/16 now has a prefix and some utilization. so click on that and then prefixes
-
-there is the Brisbane site supernet with a reserved status - and note how the remaining IP space has been carved up automatically ready fro future use. 
-
-OK so, next click Prefix and VLAN roles - so there are the roles we created. Click on VLAN Groups, and there is the Brisbane_VLANS group and it has a scope of the AUBRI01 site and it has the 6 VLANS that were also created by Ansible. 
-
-So far, so good! and now that we have the main IPAM data populated including the Supernet - we need to add the prefixes - and there is a separate playbook to do that called 'create_prefixes' and if we look at that one it has a single play, that calls the 'create_prefixes' role. 
-
-So if you go to the role and open the main.yaml file in the tasks directory you can see that this playbook is using the netbox prefixes ansible module, and looping over a list of key/value pairs for each prefix we need to create  - but note the extra parameter here - first_available - with  value of yes. this tells netbox to assign the first available prefix. and if you look at the data this playbook is looping over you can see that the data dictionaries consist of the parent prefix (which is the supernet for Brisbane), the prefix length, the site the tenant and the VLAN. 
-
-So run this playbook to create the prefixes, with the command 'nsible-playbook create_prefixes.yml'
-
-and this completes OK - remember with this one as it is requesting the next available prefix each time - every time you you run it, it will try to allocate a new prefix, so you would not run this one multiple times. 
-
-OK, great so the next playbook in the collection is going to create some virtual interfaces for each of the vlans on the access switch - so we can then assign them IP addresses.  so to run this one it is ansible-playbook create_vlan_interfaces.yml. and again this one is looping over a list of dictionaries defining the interfaces. and that has completed OK. 
-
-And the last playbook to run is the one to assign individual IP addresses from the prefixes we already created, to interfaces on our devices. Again this one will take the first available IP address when it is executed.
-
-so that is 'ansible-playbook assign_ip_addresses.yml' and you can see this is looping over all the interfaces that we want to assign IP addresses for including the new RVI interfaces we just set up on the switch. And that brings the whole IPAM piece for the new Brisbane site, together down to the individual IP address. 
-
-So, flip back to the web interface and check the results - starting with the prefixes, the supernet of 192.168.0.0/22 now has 6 child prefixes, and if you click on 192.168.2.0/26 for example this is network management prefix. This is assigned to the NETMAN VLAN 50, in the Brisbane_VLANS group. There are 6 IP addresses in use and you click the first one it has been assigned to interface me0 on the switch AUBRI01-SW-1.
-
-if you click the device name and then interfaces. you also see see the IP address that was assigned to interface ge-0/0/0, then if you click on page 3 of the results you can see the other IP address assignments including the ones to the newly created virtual routed interfaces for each vlan. 
-
-So finally, click back on the home page and now you san see that there are now 3 aggregates, 7 prefixes, 12 IP addresses and 6 VLANS. 
-
-So, I hope that has been a useful overview of how populate IPAM data using the Ansible Galaxy collection for NetBox. Without diving too deep into Ansible (this a netbox course after all) I hope you can see how easy it is to get started with Ansible and also how it can be integrated with NetBox. 
-
-This kind of integration opens up so many possibilities for what you can do with NetBox as your single source of truth for your network automation efforts - and we will be using Ansible again in later modules of this course. 
+So, I hope that has been a useful overview of how populate populate NetBox with your Cables, Interface and Console connections. And hopefully you now have a clear understanding of how NetBox models this kind of data. 
 
 So once again, thanks for watching!
