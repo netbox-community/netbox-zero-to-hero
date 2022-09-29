@@ -55,7 +55,7 @@ These cables will connect from the Access Switch Ethernet interfaces to the fron
 ## Video - Adding Cables and Connections into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Cables, Interface and Console connections, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along you can find the [CSV data](csv_data/)in course Git Repository.
+If you are following along you can find the [CSV data](csv_data/) in course Git Repository.
 
 <!-- link to video here -->
 
