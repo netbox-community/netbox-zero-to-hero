@@ -1,4 +1,4 @@
-# NetBox ‘Zero-To-Hero’ Course
+`# NetBox ‘Zero-To-Hero’ Course
 
 ## Introduction
 Hello and welcome to this short course designed to take new NetBox users from 'Zero to Hero'. We are excited to have you here! 
@@ -37,15 +37,17 @@ So, with that said, lets dive in!
 - Use the web interface to bulk upload data for the organization
 
 ### [Module 3: Adding the Kit](modules/3-adding-the-kit/3-adding-the-kit.md)
-- Model the Manufacturers, Device Types, Platforms, Device Roles and Devices
+- Add Manufacturers, Device Types, Platforms, Device Roles and Devices
 - Use Postman to make REST API calls into NetBox to add devices
   
 ### [Module 4: IP Addressing and VLANs](modules/4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md)
-- Model IPAM (IP Address Management) Data - RIRs, Aggregates, Prefixes, IP Addresses and VLANs
+- Add IPAM (IP Address Management) Data - RIRs, Aggregates, Prefixes, IP Addresses and VLANs
 - Integrate NetBox with Ansible, and run playbooks to populate the NetBox database with IPAM data
 
-### Module 5: Making the Connections
-- Cables, Interface, console and power connections
+### [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md)
+- Add the Cables, Interface, console and power connections
+- Use the web interface to bulk upload data for Cables and Connections
+- Use the web interface to view the Cables, Interface and Console connections
 
 ### Module 6: Setting up the WiFi
 - Wireless LANs
