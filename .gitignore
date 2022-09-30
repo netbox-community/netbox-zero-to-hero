@@ -4,4 +4,3 @@ lib/
 include/
 bin/
 .env
-python_scripts/
