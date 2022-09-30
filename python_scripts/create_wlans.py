@@ -16,10 +16,10 @@ nb_protocol = 'http'
 nb_host = 'netbox'
 nb_port = '8000'
 
-# Build the URL for the API Call
+# Build the URL for the API request
 url = nb_protocol+'://'+nb_host+':'+nb_port+"/api/wireless/wireless-lans/"
 
-
+# Set the payload and headers for the API request
 payload = json.dumps([
   {
     "ssid": "B_WIFI",
@@ -47,6 +47,7 @@ headers = {
   'Authorization': 'Token '+ token
 }
 
+# Send the API request and display the result in pretty json format
 r = requests.request("POST", url, headers=headers, data=payload)
 pretty_json = json.loads(r.text)
 print (json.dumps(pretty_json, indent=4))
