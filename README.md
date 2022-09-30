@@ -1,4 +1,4 @@
-`# NetBox ‘Zero-To-Hero’ Course
+# NetBox ‘Zero-To-Hero’ Course
 
 ## Introduction
 Hello and welcome to this short course designed to take new NetBox users from 'Zero to Hero'. We are excited to have you here! 
