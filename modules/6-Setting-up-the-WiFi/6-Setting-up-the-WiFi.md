@@ -22,7 +22,6 @@ If you'd like to follow along with the examples used in this course, it's super 
 The software versions used in the video for this module are: 
 - `NetBox v3.3.2`
 - `Python 3.8.9`
-- `python-dotenv v0.21.0`
 
 ## Setting Up Your Python Environment
 Follow these [simple steps](../../python_scripts/readme.md) to set up Python on your own system, so you can follow along running the python scripts.
@@ -47,8 +46,14 @@ If you are following along you can find the [python scripts](../../python_script
 
 In this module you have learned how NetBox Models Wireless LANs, and how to add Wireless LAN data using simple Python scripts.
 
+## Challenge - Improve the Python Scripts
+If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data?  Or you could try moving the json data into a separate file and get your script to loop over the json data when it runs. 
+
+It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the NetBox Zero to Hero channel on the DevNet slack community and join in the discussion!
+
 In the next module you will learn how to...
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
+- [NetBox Zero To Zero Slack Channel]()

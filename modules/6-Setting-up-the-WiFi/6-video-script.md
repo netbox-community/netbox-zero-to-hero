@@ -1,39 +1,53 @@
-Hello and welcome to this video for module 5 of the NetBox Zero to Hero training course. If you haven't already checked out the earlier modules yet then you can find the link to them in the notes below to get started. 
+Hello and welcome to this video for module 6 of the NetBox Zero to Hero training course. If you haven't already checked out the earlier modules yet then you can find the link to them in the notes below to get started. 
 
 For this demo I am using a docker instance of NetBox running locally on my laptop. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you spin up your own instance of NetBox, along with a link to the notes that accompany this video module. 
 
-In this video our network engineer Eric, will populate NetBox with the Cables, Interface and Console connections data for the planned new Brisbane branch office. To do this Eric will upload the data from a CSV file. The file contains all the details of each of the cables that need to be added into the NetBox database. 
+In this video our network engineer Susan, will populate NetBox with the Wireless LAN data for the planned new Brisbane branch office. To do this Susan is going to use some simple python scripts. Again you will find links to all of these resources in the accompanying Git repository. 
 
-OK, so we are logged into NetBox as Eric, and as you can see there is no data yet in the Connections section, under Cables. Before doing the bulk upload of cables from the CSV file just take a look at how you would do this for a single cable. 
+OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the Wireless section of the home page. Susan has already followed the set up instructions for Python, and has activated a new new virtual environment. Please do check the instructions in the course notes if you need help with this initial set up of Python. 
 
-Click on Devices and then select the WAN router and then click on Interfaces. To connect a cable between interface GigabitEthernet0/0/0 and the switch, click on the green 'connect cable' icon, and then select interface. So now you have the A side already populated, on the B-Sid of the connection from the drop-down select the switch and then the interface. 
+So, in VS Code let's explore the Python scripts. The first task is to create the new Wireless LAN Group, and the script for this is called 'create_wlan_group.py. So starting at top, we are importing the 'requests' module which is used to make the API calls. Next is the json module that is used to work with data in json format, and then the 'os' and 'dotenv' modules allow the script to access the local system environment.  
 
-Notice that Either end of a cable may terminate to multiple objects of the same type. (click another intetface) For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
+Line 7 loads the .env file so that the API token can be read by the script. line 12 creates a variable called 'token' and sets the value from 'api_token'. which has already been added to the .env file (show file). 
 
-OK, then below this you define the cable - starting the status (click planned) - and note that this is the only required field here - then the type of cable - you can select from various types of copper, fibre and power cables. so select CAT6 for this one.  select the tenancy......give it a label if you like, select a colour (red), the cable length for example 1 metre, and then select any tags you might have created. 
+Lines 15-17 set some variables for the netbox system that you are connecting to and you can adjust these to match your own system. Line 20 take these variables and use their values to build the URL for the API requests. And as this script is going to create a new wireless LAN group then the API endpoint is api/wireless/wireless-lan-groups. 
 
-Then simply click connect. and now you can see the connection details here and you can also get a visual trace of the cable - which is fantastic when you need to troubleshoot a physical connection, you can instantly see from here what it should be. Once again here NetBox is defining what the *intent* of the network is. 
+Lines 23 to 26 define the payload that is going to be sent in the API request - in this case there is a name, a slug and a description for new group that represents the Wireless networks in the Asia Pacific region.
 
-OK, delete this example cable, by clicking. connections - cables, and then select it and delete it. 
+Lines 28 thru 31 define the headers being used , which should be familiar to you now if you have watched earlier videos in this course. You can see on line 30 the variable for the API token is being used without the token itself needing appear in the code. 
 
-Great - OK so obviously adding a large number of cables in this way would be tedious and error prone, so click on the 'import' icon, and here is the bulk import screen and in the CSV filed options you can see the required and optional fields for a successful import. 
+Then finally lines 34 thru 36 make the API call using the python requests module. there is a new variable created called response which has a value of the API request made using the requests module. This consists of the request type which is a POST, the URL, the headers, and the data payload. 
 
-Now this time Eric is going to upload a file rather than paste in the data. So here is the file to be used...(show file in Git Repo) 
+Lines 35 and 36 take the response, which is what has been returned back from the NetBox server and prints it using some indentation to make it more human readable. 
 
-There is the header for all the fields being and the data for each cable below it. For example, the first cable has the side A device which is the router, the type is an interface, and it is interface gigabit ethernet 0m. On the B side, this cable is connecting to the switch interface ge-0/0/47 - te type is CAT, status is planned, the tenant is the consulting department, and this is a red cable that's half a metre long. 
+Ok, so do run this go to the terminal and from the virtual environment enter 'python3' followed by the name of the script, which is create_wlan_group.py' and hit enter. and the script has run in less that a second, and has printed the response in nicely formatted json. There is now a wireless LAN group called Asia_Pacific_WLANs, and it has an ID of 1. 
 
-then the other cables are the console port connections, and then further down are the connections from the access switch ports to the front ports of the patch panel.
+To View this in the NetBox Web interface, just flip back and then click on Wireless and then Wireless LAN groups. and there is the new group. 
 
-so, back in the web interface, click on CSV File Upload, and then choose file, select the file 'Brisbane_Cables.csv' and then click submit. And a couple of seconds later the import of those 21 cables is complete. 
+Perfect. OK so the next task is to add the actual Wireless LAN's themselves. The script to do this is called, you guessed it - create_wlans.py. and is identical to the first script apart from 2 things - in line 20 the API end point is now /api/wireless/wireless-lans and the payload is a list containing the details for both of the new SSID's. 
 
-Click 'view all' to see the full list of cables. Click on Interface Connections to view specifically the interfaces that are now connected. and click on Console connections to view those too. 
+Now you will have noticed also that the payload contains ID values for the group, the vlan and the tenant. Now on our demo you could easily find these values from the web interface - but you could also use python scripts to get these values. So to get the ID of the wireless lan group - there is another script called get_wlan_groups - which uses a GET request that you can see on line 30 to the wireless-lans-groups API end point using the brief format. So, running that returns the group and you can see the ID of 1. 
 
-then click on an individual device, for example the switch, and look at the interfaces tab - as well as the first interface that is connected to the router, you have the interfaces from ge-0/0/10 down that connect to the patch panel. so click one of those cables to see the details, and the A and B ends are defined, and you can see it is a purple cat 6 cable that is 50cm long. 
+To get the ID's of the vlans and the tenants, just run the get_vlans.py script which returns the list of vlans. 
 
-Just go back to the device again and click on the icon to do a cable trace, and you now get the nice visual of the cable connection. and you can view and visualize all of the other cables that have just been added in the same way. 
+(run script)
 
-So, now that Eric has added all the required cables he can share this information from NetBox with the cabling contractor when the time comes for the installation! 
+and this shows vlan ID's of 3 for the branch wifi VLAN and 4 for the guest wifi VLAN. 
 
-So, I hope that has been a useful overview of how populate populate NetBox with your Cables, Interface and Console connections. And hopefully you now have a clear understanding of how NetBox models this kind of data. 
+and then the get_tenants.py script to return the list of tenants.
 
-So once again, thanks for watching!
+(run script)
+
+and there is the ID of 5 for the Consulting tenant. 
+
+So, now we have the values for the ID's needed to create the wireless LANs, all that remains is to run the script to add them. So, run the command 'python3 create_wlans.py' and there you go - you can see the nicely formatted json output of the response from the NetBox server. 
+
+To View the result of this in NetBox Web interface, just flip back and then click on Wireless LANs, and there they are. Both SSID' are members of the 'Asia_Pacific_WLANs' group, and click on the Branch office wifi for example and you can see all the details of the SSID, including the group, the vlan and the tenant, along with the authentication settings, which is awesome!  
+
+So, I hope that has been a useful overview of how add Wireless LAN data using some really simple Python scripts to interact with the NetBox REST API. Without diving too deep into Python, I hope you can see how easy it is to get started with some basic scripts to save you time and reduce errors when adding data into NetBox. 
+
+Interacting programmatically with the NetBox REST API using Python also opens up so many possibilities for using NetBox as your single source of truth for your network automation efforts going forward.
+
+If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data, or move the json data into a separate file and get your script to loop over it when it runs. It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the NetBox Zero to Hero channel on the DevNet slack community and join in the discussion!
+
+So I hope you enjoyed that, and once again, thanks for watching!

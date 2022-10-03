@@ -48,6 +48,6 @@ headers = {
 }
 
 # Send the API request and display the result in pretty json format
-r = requests.request("POST", url, headers=headers, data=payload)
-pretty_json = json.loads(r.text)
+response = requests.request("POST", url, headers=headers, data=payload)
+pretty_json = json.loads(response.text)
 print (json.dumps(pretty_json, indent=4))
