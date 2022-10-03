@@ -9,7 +9,7 @@ By the end of this module you will be able to:
 - Use simple python scripts to read data from and write data to the NetBox database via the REST API
 
 ## Why Use Python Scripts With NetBox? 
-If you have been through the previous modules of this course you will know that it's easy to add data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become both tedious and error prone. Using simple python scripts has the advantages of saving you time and reduce errors. 
+If you have been through the previous modules of this course you will know that it's easy to add data manually via the Web Interface, but when you are dealing with a lot of data that manual process can quickly become both tedious and error prone. Using simple python scripts has the advantages of saving you time and reducing errors. 
 
 Getting started with Python is super easy and a lot of fun too! The [scripts](../../python_scripts/) included in the Git repository for this course will get you up and running quickly and within a few minutes you can be interacting with the NetBox database programmatically via the REST API.
 
