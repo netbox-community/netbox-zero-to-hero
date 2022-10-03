@@ -16,19 +16,19 @@ source bin/activate
 ```
 pip3 install python-dotenv
 ```
-5. Install the `requests' module which is used to make the API requests
+5. Install the `requests` module which is used to make the API requests
 ```
 pip3 install requests
 ```   
-6. Rename file `.env.example` to `.env` **Important** - remember to add .env to your .gitignore file to avoid uploading the file with your api token in it to your Git repository if you are pushing code back to your own public Git repository. 
+6. Rename file `.env.example` to `.env` **Important** - remember to add`.env` to your `.gitignore` file to avoid uploading the file with your api token in it to your Git repository, if you are pushing code back to your own public Git repository. 
 ```
 mv .env.example .env
 ```
-7. Edit the file `.env` and ddd your API token
+7. Edit the file `.env` and add your API token
 ``` 
 api_token = "<YOUR NETBOX API TOKEN>"
 ```
-8. When you have finished working with the scripts, deactivate the Python virtual environment:
+8. When you have finished working with the scripts, deactivate the Python Virtual Environment:
 ```
 deactivate
 ```

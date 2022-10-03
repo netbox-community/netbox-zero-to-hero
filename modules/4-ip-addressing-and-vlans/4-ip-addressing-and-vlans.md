@@ -16,7 +16,7 @@ From the [Ansible](https://www.ansible.com/use-cases/network-automation) website
 
 >Ansible Automation Platform is a single, flexible automation technology that can be used across diverse network devices and other IT domains, making it easy to automate entire network and IT processes.
 
-Of course, you could add IPAM data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become tedious and is error prone. Integrating NetBox with Ansible is quick and easy, and within a few minutes you can be running Ansible playbooks to Create, Read, Update and Delete (CRUD operations in computer programming terms) NetBox data programmatically via the REST API.
+Of course, you could add IPAM data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become both tedious and error prone. Integrating NetBox with Ansible is quick and easy, and within a few minutes you can be running Ansible playbooks to Create, Read, Update and Delete (CRUD operations in computer programming terms) NetBox data programmatically via the REST API.
 
 Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical for managing modern networks, so by adding some Ansible knowledge to your armory, you will stay ahead of the game!
 
@@ -28,10 +28,10 @@ If you'd like to follow along with the examples used in this course, it's super 
 
 The software versions used in the video for this module are: 
 - `NetBox v3.3.2`
-- `Python 3.8.9`
-- `ansible-core 2.13.4`
-- `ansible package 6.4.0`
-- `pynetbox 6.6.2`
+- `Python v3.8.9`
+- `ansible-core v2.13.4`
+- `ansible package v6.4.0`
+- `pynetbox v6.6.2`
 
 ## Installing Ansible
 Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](../../ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
