@@ -65,7 +65,7 @@ If you are following along, don't forget to use the [Postman collection](../../p
 
 [![Adding Devices Into NetBox](../../images/3-adding-the-kit.png)](https://youtu.be/dA3LZiV7UIg) 
 
-OK, so now you know how to add your devices into NetBox, in the next module you will learn how to....TBC
+In this module you learned how to add devices into NetBox, making use of the NetBox REST API and a Postman collection. In [Module 4: IP Addressing and VLANs](../4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md),  Susan will use the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox) to populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. 
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
