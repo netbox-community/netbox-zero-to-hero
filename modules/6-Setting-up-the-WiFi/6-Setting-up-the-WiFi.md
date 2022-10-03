@@ -42,7 +42,7 @@ Susan has planned the following Wireless LANs for the new Brisbane site, and thi
 ## Video - Adding Wireless LANs to NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Wireless LAN data, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along you can find the [python scripts](../../python_scripts/) in course Git Repository.
+If you are following along you can find the [python scripts](../../python_scripts/) in the course Git Repository and you can use these as a starting point for building your collection of Python scripts for NetBox. 
 
 <!-- link to video here -->
 
