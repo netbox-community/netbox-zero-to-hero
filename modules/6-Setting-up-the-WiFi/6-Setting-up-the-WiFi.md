@@ -1,3 +1,5 @@
+# NetBox Zero To Hero - Module 6 - Setting Up The WiFi
+
 # Introduction
 
 Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md),  Eric added the cables and connections required to hook the devices in the new Brisbane branch office network together.  In this module, Susan will be adding the required Wireless LANs, and using some simple Python scripts to interact with the NetBox REST API.  
