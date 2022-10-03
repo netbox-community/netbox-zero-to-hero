@@ -1,8 +1,7 @@
 ## Setting Up Your Python Environment
-If you don't already have Python installed on your system, then download it from [here](https://www.python.org/downloads/). Then follow these steps to clone the Git repository for this course and set up a Python virtual environment to run the scripts in (they assume you also have [Git](https://github.com/git-guides/install-git) installed):
+If you don't already have Python installed on your system, then download it from [here](https://www.python.org/downloads/). Then follow these steps to clone the Git repository for this course and set up a Python Virtual Environment to run the scripts in (they assume you also have [Git](https://github.com/git-guides/install-git) installed):
 
 1. Clone the NetBox Zero to Hero Git repository and change into the `python_scripts` directory:
-
 ```
 git clone https://github.com/richbibby-NS1/netbox-zero-to-hero.git
 cd netbox-zero-to-hero/python_scripts

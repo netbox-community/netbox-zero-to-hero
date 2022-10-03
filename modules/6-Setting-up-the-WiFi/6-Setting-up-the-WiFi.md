@@ -27,26 +27,27 @@ The software versions used in the video for this module are:
 ## Setting Up Your Python Environment
 Follow these [simple steps](../../python_scripts/readme.md) to set up Python on your own system, so you can follow along running the python scripts.
 
-## Modelling ..... in NetBox
+## Modelling Wireless LANs in NetBox
+You can model Wireless LANs (and Wireless point-to-point links) in NetBox just as you can model physical cabled networks. You can create self-nesting Wireless LAN Groups, and can also (optionally) bind Wireless LANs to particular VLANs. You can also (optionally) define the authentication parameters - Type, Cipher and PSK, for each SSID (Service Set Identifier).
 
-### WiFi Networks
-blah blah
+## The Project - New Brisbane site Wireless LANs
+Susan has planned the following Wireless LANs for the new Brisbane site, and this needs to be added to NetBox. 
 
-| Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
-| --- | --- | --- | --- | :---: | :---: | :---: |
+| SSID | Description | WLAN Group | VLAN ID | Auth Type | Auth Cipher | Auth PSK |
+| --- | --- | --- | :---: | --- | :---: | --- |
+| B_WIFI | Branch Office Wifi | Asia_Pacific_WLANs | 30 | wpa-enterprise | aes | 5up3r5ecr3tK3y |
+| G_WIFI | Guest Wifi | Asia_Pacific_WLANs | 40 | wpa-enterprise | aes | M3g45ecr3tK3y |
 
-
-
-## Video - .....into NetBox
-OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with ...., and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
+## Video - Adding Wireless LANs to NetBox
+OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Wireless LAN data, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
 If you are following along you can find the [python scripts](../../python_scripts/) in course Git Repository.
 
 <!-- link to video here -->
 
-In this module you have learned how NetBox Models Wireless LANs, and how to add using simple Python scripts.
+In this module you have learned how NetBox Models Wireless LANs, and how to add Wireless LAN data using simple Python scripts.
 
-In the next module you will learn how to......
+In the next module you will learn how to...
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
