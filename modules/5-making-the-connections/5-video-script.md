@@ -6,25 +6,25 @@ In this video our network engineer Eric, will populate NetBox with the Cables, I
 
 OK, so we are logged into NetBox as Eric, and as you can see there is no data yet in the Connections section, under Cables. Before doing the bulk upload of cables from the CSV file just take a look at how you would do this for a single cable. 
 
-Click on Devices and then select the WAN router and then click on Interfaces. To connect a cable between interface GigabitEthernet0/0/0 and the switch, click on the green 'connect cable' icon, and then select interface. So now you have the A side already populated, on the B-Sid of the connection from the drop-down select the switch and then the interface. 
+Click on Devices and then select the WAN router and then click on Interfaces. To connect a cable between interface GigabitEthernet0/0/0 and the switch, click on the green 'connect cable' icon, and then select interface. So now you have the A side already populated, on the B-Side of the connection from the drop-down select the switch and then the interface. 
 
-Notice that Either end of a cable may terminate to multiple objects of the same type. (click another intetface) For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
+Notice that Either end of a cable may terminate to multiple objects of the same type. (click another interface) For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
 
 OK, then below this you define the cable - starting the status (click planned) - and note that this is the only required field here - then the type of cable - you can select from various types of copper, fibre and power cables. so select CAT6 for this one.  select the tenancy......give it a label if you like, select a colour (red), the cable length for example 1 metre, and then select any tags you might have created. 
 
-Then simply click connect. and now you can see the connection details here and you can also get a visual trace of the cable - which is fantastic when you need to troubleshoot a physical connection, you can instantly see from here what it should be. Once again here NetBox is defining what the *intent* of the network is. 
+Then simply click create. and now you can see the connection details here and you can also get a visual trace of the cable - which is fantastic when you need to troubleshoot a physical connection, you can instantly see from here what it should be. Once again, here NetBox as the Source Of Truth is defining what the *intent* of the network is. 
 
 OK, delete this example cable, by clicking. connections - cables, and then select it and delete it. 
 
 Great - OK so obviously adding a large number of cables in this way would be tedious and error prone, so click on the 'import' icon, and here is the bulk import screen and in the CSV filed options you can see the required and optional fields for a successful import. 
 
-Now this time Eric is going to upload a file rather than paste in the data. So here is the file to be used...(show file in Git Repo) 
+Now this time Eric is going to upload a file rather than paste in the data. So here is the file to be used, and you will find this in the Git repository for this course (show file in Git Repo).
 
-There is the header for all the fields being and the data for each cable below it. For example, the first cable has the side A device which is the router, the type is an interface, and it is interface gigabit ethernet 0m. On the B side, this cable is connecting to the switch interface ge-0/0/47 - te type is CAT, status is planned, the tenant is the consulting department, and this is a red cable that's half a metre long. 
+There is the header for all the fields being and the data for each cable below it. For example, the first cable has the side A device which is the router, the type is an interface, and it is interface gigabit ethernet 0. On the B side, this cable is connecting to the switch interface ge-0/0/47 - the type is CAT6, the status is planned, the tenant is the consulting department, and this is a red cable that's half a metre long. 
 
 then the other cables are the console port connections, and then further down are the connections from the access switch ports to the front ports of the patch panel.
 
-so, back in the web interface, click on CSV File Upload, and then choose file, select the file 'Brisbane_Cables.csv' and then click submit. And a couple of seconds later the import of those 21 cables is complete. 
+so, back in the web interface, click on CSV File Upload, and then choose file, select the file 'Brisbane_Cables.csv'. click upload, and then click submit. And a couple of seconds later the import of all 23 cables is complete. 
 
 Click 'view all' to see the full list of cables. Click on Interface Connections to view specifically the interfaces that are now connected. and click on Console connections to view those too. 
 
