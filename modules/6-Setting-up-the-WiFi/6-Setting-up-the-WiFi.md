@@ -2,7 +2,7 @@
 
 # Introduction
 
-Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md),  Eric added the cables and connections required to hook the devices in the new Brisbane branch office network together.  In this module, Susan will be adding the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API.  
+Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md),  Eric added the cables and connections required to connect the devices in the new Brisbane branch office network together.  In this module, Susan will be adding the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API.  
 
 By the end of this module you will be able to:
 - Describe how NetBox models Wireless LANs
