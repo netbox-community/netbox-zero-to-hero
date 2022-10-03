@@ -1,4 +1,4 @@
-# NetBox Zero To Hero - Module 6 - Setting Up The WiFi
+# Module 6 - Setting Up The WiFi
 
 # Introduction
 
