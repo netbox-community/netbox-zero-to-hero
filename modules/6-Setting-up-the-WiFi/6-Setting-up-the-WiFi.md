@@ -1,10 +1,10 @@
 # Introduction
 
-Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md),  Eric added the cables and connections required to hook the devices in the new Brisbane branch office network together.  In this module, Susan will be adding Wireless LANs, and will be making use of simple Python scripts to interact with the NetBox REST API.  
+Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md),  Eric added the cables and connections required to hook the devices in the new Brisbane branch office network together.  In this module, Susan will be adding the required Wireless LANs, and using some simple Python scripts to interact with the NetBox REST API.  
 
 By the end of this module you will be able to:
 - Describe how NetBox models Wireless LANs
-- Use simple python scripts to read from and add data to the NetBox database 
+- Use simple python scripts to read from and add data to the NetBox database via the REST API
 
 ## Why Use Python Scripts With NetBox? 
 If you have been through the previous modules of this course you will know that it's easy to add data manually via the Web Interface, but when you are dealing with a lot of data that can quickly become tedious and is error prone. Using simple python scripts can both save you time and reduce errors. 
