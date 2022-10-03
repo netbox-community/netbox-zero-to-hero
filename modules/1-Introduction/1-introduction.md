@@ -1,5 +1,4 @@
-# Module 1 - Introduction To The Web Interface and REST API
-# Introduction
+# Module 1 - Introduction 
 
 Hello and welcome to the first module in this NetBox 'Zero-to-Hero' course. By the end of this module you will be able to:  
 
@@ -15,7 +14,7 @@ It’s worth noting that NetBox is designed to show the *desired* state of a net
 NetBox is thriving as an open source tool, with over 11,000 [GitHub](https://github.com/netbox-community/netbox) stars, 1,800 forks, and a vibrant [user community](https://github.com/netbox-community/netbox/discussions). NetBox is currently deployed on thousands of networks around the world, representing a diverse mix of use cases, market verticals, and places along the automation journey. The user base spans some of the world’s largest and most complex telecommunications networks to smaller networks of 
 just a few devices.
 
-**Feedback from Jeremy here that needs addressing: some feedback on module 1: you might want to provide more context around what NetBox is and what it's used for, with some real-world examples illustrating how it fills IPAM/DCIM roles**
+<!-- Feedback from Jeremy here that needs addressing: some feedback on module 1: you might want to provide more context around what NetBox is and what it's used for, with some real-world examples illustrating how it fills IPAM/DCIM roles** -->
 
 From the [Official NetBox Documentation](https://docs.netbox.dev/en/stable/): 
 > ### The Premiere Network Source of Truth
