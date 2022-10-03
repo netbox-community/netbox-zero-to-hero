@@ -47,7 +47,7 @@ These cables will connect the console port on WAN Router and Switch to Console s
 | AUBRI01-SW-1 | Console | AUBRI01-CON-1 | ttyS2 | CAT6 | Blue | 1M |
 
 ### Switch to Patch Panel Connections 
-These cables will connect from the Access Switch Ethernet interfaces to the front ports of the UTP Patch Panel. The rear ports of the patch panel will have the CAT6 structured cabling for the office space terminated onto them, and they will connect out to the data outlets in the office (the rear port to outlet cables will not be modelled in the demo, but the process to do so is identical). The Wireless Access Points will be connected to data outlets in the office space.
+These cables will connect 18 Access Switch Ethernet interfaces to the front ports of the UTP Patch Panel. The rear ports of the patch panel will have the CAT6 structured cabling for the office space terminated onto them, and they will connect out to the data outlets in the office (the rear port to outlet cables will not be modelled in the demo, but the process to do so is identical). The Wireless Access Points will be connected to data outlets in the office space.
 
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
 | --- | --- | --- | --- | :---: | :---: | :---: |
