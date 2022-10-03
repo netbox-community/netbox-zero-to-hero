@@ -49,8 +49,10 @@ So, with that said, lets dive in!
 - Use the web interface to bulk upload data for Cables and Connections
 - Use the web interface to view the Cables, Interface and Console connections
 
-### Module 6: Setting up the WiFi
-- Wireless LANs
+### [Module 6: Setting up the WiFi](modules/6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md)
+- Add Wireless LANs
+- Use simple Python scripts to interact with the NetBox REST API to add Wireless LANs
+- Use the web interface to view Wireless LAN information
 
 ### Module 7: What About Virtualization? 
 - Clusters, VMs 
