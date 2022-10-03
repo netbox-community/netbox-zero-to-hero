@@ -62,7 +62,7 @@ If you are following along you can find the [CSV data](csv_data/) in course Git 
 
 In this module you have learned how NetBox models Cables, Interface and Console connections, and how to bulk upload them via the web interface. 
 
-In [Module 6: Setting up the WiFi](modules/6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), you will learn how to add the Wireless LANs for the new Brisbane office, using simple Python scripts to interact with the NetBox REST API. 
+In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), you will learn how to add the Wireless LANs for the new Brisbane office, using simple Python scripts to interact with the NetBox REST API. 
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
