@@ -1,4 +1,4 @@
-# Module 4 - IP Addressing And VLANS
+# Module 4 - IP Addressing and VLANS
 # Introduction
 
 Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (our awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
