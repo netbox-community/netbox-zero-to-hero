@@ -1,3 +1,4 @@
+# Module 3 - Adding the Kit
 # Introduction
 
 Hello and welcome to module 3 of the NetBox 'Zero-to-Hero' course. In [Module 2: Setting up the Organization](../2-setting-up-the-organization/2-setting-up-the-organization.md) you learned how to model an organization within NetBox, and how to use the Web Interface to both manually create individual objects, and bulk import objects using CSV-formatted data. 
