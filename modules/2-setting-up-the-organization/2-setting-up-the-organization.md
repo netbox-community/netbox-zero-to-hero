@@ -55,7 +55,7 @@ With that said, let's get started!
 
 [![Setting Up The Organization](../../images/2-organization.png)](https://youtu.be/Qv1xkyS81v4) 
 
-In this module you learned how to set up your organization's data in NetBox using the Web Interface. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox. 
+In this module you learned how to set up your organization's data in NetBox using the Web Interface. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection to make REST API calls to NetBox. 
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
