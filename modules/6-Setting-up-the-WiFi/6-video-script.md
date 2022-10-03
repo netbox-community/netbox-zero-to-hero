@@ -20,7 +20,7 @@ Then finally lines 34 thru 36 make the API call using the python requests module
 
 Lines 35 and 36 take the response, which is what has been returned back from the NetBox server and prints it using some indentation to make it more human readable. 
 
-Ok, so do run this go to the terminal and from the virtual environment enter 'python3' followed by the name of the script, which is create_wlan_group.py' and hit enter. and the script has run in less that a second, and has printed the response in nicely formatted json. There is now a wireless LAN group called Asia_Pacific_WLANs, and it has an ID of 1. 
+Ok, so do run this go to the terminal and from the virtual environment enter 'python3' followed by the name of the script, which is create_wlan_group.py' and hit enter. and the script has run in less than a second, and has printed the response in nicely formatted json. There is now a wireless LAN group called Asia_Pacific_WLANs, and it has an ID of 2. 
 
 To View this in the NetBox Web interface, just flip back and then click on Wireless and then Wireless LAN groups. and there is the new group. 
 

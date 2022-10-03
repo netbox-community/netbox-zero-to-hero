@@ -1,8 +1,9 @@
+# Module 5 - Making The Connections
 # Introduction
 
 Hello and welcome to module 5 of the NetBox 'Zero-to-Hero' course. In [Module 4: IP Addressing and VLANs](../4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md),  Susan used the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox) to populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. 
 
-In this module, Eric will be adding the cables and connections required to hook the devices in the new Brisbane branch office network together. 
+In this module, Eric will be adding the cables and connections required to connect the devices in the new Brisbane branch office network together. 
 
 By the end of this module you will be able to:
 - Describe how NetBox models Cables and Connections
@@ -25,8 +26,8 @@ From the [docs](https://docs.netbox.dev/en/stable/features/devices-cabling/#cabl
 >
 >Either end of a cable may terminate to multiple objects of the same type. For example, a network interface can be connected via a fiber optic cable to two discrete ports on a patch panel (each port attaching to an individual fiber strand in the patch cable).
 
-## The Project - New Brisbane site Cables, Interface and Console Connections
-Eric has planned the following cabling schedule for the new Brisbane site, and this needs to be added to NetBox. The ISP connection cables will be added in a later module, and the Wireless Access Points will be connected to data outlets in the office space.
+## The Project - New Brisbane Site Cables, Interface and Console Connections
+Eric has planned the following cabling schedule for the new Brisbane site, and this needs to be added to NetBox. The ISP connection cables will be added in a later module. 
 
 ### Device to Device Interface connections
 These cables will interconnect network devices over Ethernet interfaces. For example a direct connection from the WAN Router to the Access Switch.
@@ -46,11 +47,11 @@ These cables will connect the console port on WAN Router and Switch to Console s
 | AUBRI01-SW-1 | Console | AUBRI01-CON-1 | ttyS2 | CAT6 | Blue | 1M |
 
 ### Switch to Patch Panel Connections 
-These cables will connect from the Access Switch Ethernet interfaces to the front ports of the UTP Patch Panel. The rear ports of the patch panel will have the CAT6 structured cabling for the office space terminated onto them, and they would connect out to the data outlets in the office space (the rear port to outlet cables will not be modelled in the demo, but the process to do so is identical). 
+These cables will connect from the Access Switch Ethernet interfaces to the front ports of the UTP Patch Panel. The rear ports of the patch panel will have the CAT6 structured cabling for the office space terminated onto them, and they will connect out to the data outlets in the office (the rear port to outlet cables will not be modelled in the demo, but the process to do so is identical). The Wireless Access Points will be connected to data outlets in the office space.
 
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
 | --- | --- | --- | --- | :---: | :---: | :---: |
-| AUBRI01-SW-1 | ge-0/0/10 - 24 | AUBRI1-PAN-1 | 01 -  | CAT6 | Purple | 0.5M
+| AUBRI01-SW-1 | ge-0/0/10 - 27 | AUBRI1-PAN-1 | 01 - 18 | CAT6 | Purple | 0.5M
  
 ## Video - Adding Cables and Connections into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Cables, Interface and Console connections, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!

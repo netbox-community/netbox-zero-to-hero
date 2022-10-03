@@ -20,3 +20,5 @@ AUBRI01-SW-1,dcim.interface,ge-0/0/22,AUBRI01-PAN-1,dcim.frontport,13,cat6,plann
 AUBRI01-SW-1,dcim.interface,ge-0/0/23,AUBRI01-PAN-1,dcim.frontport,14,cat6,planned,Consulting,ce42f5,0.5,m
 AUBRI01-SW-1,dcim.interface,ge-0/0/24,AUBRI01-PAN-1,dcim.frontport,15,cat6,planned,Consulting,ce42f5,0.5,m
 AUBRI01-SW-1,dcim.interface,ge-0/0/25,AUBRI01-PAN-1,dcim.frontport,16,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/26,AUBRI01-PAN-1,dcim.frontport,17,cat6,planned,Consulting,ce42f5,0.5,m
+AUBRI01-SW-1,dcim.interface,ge-0/0/27,AUBRI01-PAN-1,dcim.frontport,18,cat6,planned,Consulting,ce42f5,0.5,m
