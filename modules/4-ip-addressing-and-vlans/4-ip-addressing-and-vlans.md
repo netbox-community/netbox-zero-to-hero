@@ -122,7 +122,7 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. If you have any questions on how to use Ansible with NetBox then there is a dedicated Slack channel **#ansible** on [netdev-community.slack.com](https://netdev-community.slack.com/) so don't hesitate to pop on over there and join in the discussion!
 
-In [Module 5: Making the Connections](modules/5-making-the-connections/5-making-the-connections.md), Eric will add the cables and connections for the new Brisbane branch office network, using the web interface to bulk upload data from a CSV file.
+In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md), Eric will add the cables and connections for the new Brisbane branch office network, using the web interface to bulk upload data from a CSV file.
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
