@@ -44,7 +44,7 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 If you are following along you can find the [python scripts](../../python_scripts/) in the course Git Repository and you can use these as a starting point for building your collection of Python scripts for NetBox. 
 
-<!-- link to video here -->
+[![Setting Up The WiFi](../../images/6-setting-up-the-wifi.png)](https://youtu.be/rewxPa58VCw)
 
 In this module you have learned how NetBox Models Wireless LANs, and how to add Wireless LAN data using simple Python scripts.
 
