@@ -1,4 +1,4 @@
-# NetBox ‘Zero-To-Hero’ Course
+# NetBox - Zero To Hero Course
 
 ## Introduction
 Hello and welcome to this short course designed to take new NetBox users from 'Zero to Hero'. We are excited to have you here! 
@@ -12,7 +12,7 @@ The goals of this course are as follows:
 ## Course Format
 The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company. 
 
-Each module includes a video teaching you how to interact with NetBox both via the Web UI and programmatically using the REST API. You can follow along with your own instance of NetBox, and all code used to interact with the REST API will be available in a Git repo and Postman collection, so you will have a fully working code base which you can clone to get you started!
+Each module includes a video teaching you how to interact with NetBox either via the Web UI or programmatically using the REST API. You can follow along with your own instance of NetBox, and all the code is available in the accompanying [Git Repository](https://github.com/richbibby-NS1/netbox-zero-to-hero) - including a [Postman Collection](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/postman), [Ansible Playbooks](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/ansible) and [Python Scripts](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/python_scripts) - so you will have a fully working code base which you can clone to get you started on your way to becoming a NetBox Hero!
 
 ## Example Scenario
 The fictional scenario that will be used throughout this course to demonstrate NetBox features is: 
@@ -20,7 +20,7 @@ The fictional scenario that will be used throughout this course to demonstrate N
 - The organization is a small consulting firm, with a small IT team 
 - The network consists of two Data Centers, plus multiple branch office locations around the world 
 - Susan and Eric are awesome Network Engineers with a burning desire to introduce this amazing 'NetDevOps' stuff they keep hearing about (so they can do less work but still wow the bosses!)
-- The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and a Wireless Access Point
+- The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and Wireless Access Points
 - Susan and Eric are going to use NetBox every step of the way to help deliver the project on time and also to power some network automation to get the devices configured error free (this has long been a problem for them with new sites taking hours and even days to stand up!)
 
 So, with that said, lets dive in!
@@ -54,25 +54,26 @@ So, with that said, lets dive in!
 - Use simple Python scripts to interact with the NetBox REST API to add Wireless LANs
 - Use the web interface to view Wireless LAN information
 
-### Module 7: What About Virtualization? 
+### Module 7: Automate All the Things!
+- Automated Device Config Generation 
+  
+### Module 8: What About Virtualization? 
 - Clusters, VMs 
 
-### Module 8: Powering Up 
+### Module 9: Powering Up 
 - Power Feeds, Power Panels
 
-### Module 9: Is the Internet Down? 
+### Module 10: Is the Internet Down? 
 - Providers, circuit types, circuits
 
-### Module 10: Adding Some Customization 
+### Module 11: Adding Some Customization 
 - Custom Fields, Bandwidth Use on port (link to monitoring graph)
 
-### Module 11: The Boss is Asking for a Report (another easy win!) 
+### Module 12: The Boss is Asking for a Report (another easy win!) 
 - Reports
-
-### Module 12: Automate All the Things!
-- Automated Device Config Generation 
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox GitHub](https://github.com/netbox-community/netbox)
 - [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)
+- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1
