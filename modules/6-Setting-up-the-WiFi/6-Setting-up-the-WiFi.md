@@ -46,6 +46,7 @@ If you are following along you can find the [python scripts](https://github.com/
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rewxPa58VCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Summary
 In this module you have learned how NetBox Models Wireless LANs, and how to add Wireless LAN data using simple Python scripts.
 
 ## Challenge - Improve the Python Scripts
