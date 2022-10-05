@@ -46,14 +46,18 @@ If you are following along you can find the [python scripts](https://github.com/
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rewxPa58VCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Summary
 In this module you have learned how NetBox Models Wireless LANs, and how to add Wireless LAN data using simple Python scripts.
 
 ## Challenge - Improve the Python Scripts
-If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data?  Or you could try moving the json data into a separate file and get your script to loop over the json data when it runs. 
+If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data? Or you could try moving the json data into a separate file and get your script to loop over the json data when it runs. 
 
-It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the NetBox Zero to Hero channel on the DevNet slack community and join in the discussion!
+It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community and join in the discussion!
 
 In the next module you will learn how to automate the generation of device configurations, by using Ansible to pull data from NetBox and render the configuration files from Jinja2 templates. 
+
+## Join the Discussion
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
