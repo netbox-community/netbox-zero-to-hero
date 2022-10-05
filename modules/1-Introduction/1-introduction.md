@@ -76,6 +76,7 @@ For now, let's take a quick tour of the REST API in this short video, which will
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gsarb0elmoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Summary
 In this module you have learned what NetBox is along with it's main features and benefits. You also learned how to navigate around the Web Interface and explored the REST API, and how to use it to programmatically interact with NetBox.
 
 In [Module 2: Setting up the Organization](../2-setting-up-the-organization/2-setting-up-the-organization.md) you will learn how to model an organization within NetBox, and how to use the Web Interface to both manually create individual objects, and bulk import objects using CSV-formatted data. 
