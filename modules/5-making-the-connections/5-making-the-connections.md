@@ -56,10 +56,11 @@ These cables will connect 18 Access Switch Ethernet interfaces to the front port
 ## Video - Adding Cables and Connections into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Cables, Interface and Console connections, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along you can find the [CSV data](csv_data/) in course Git Repository. 
+If you are following along you can find the [CSV data](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/modules/5-making-the-connections/csv_data) in course Git Repository. 
 
-[![Making The connections](../../images/5-making-the-connections.png)](https://youtu.be/FTjqGPS2oSo)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FTjqGPS2oSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Summary
 In this module you have learned how NetBox models Cables, Interface and Console connections, and how to bulk upload them via the web interface. 
 
 In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), you will learn how to add the Wireless LANs for the new Brisbane office, using simple Python scripts to interact with the NetBox REST API. 
@@ -67,3 +68,4 @@ In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiF
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
+- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1
