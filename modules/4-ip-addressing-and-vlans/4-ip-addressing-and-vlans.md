@@ -8,7 +8,7 @@ In this module Susan (the other member of the Network Engineering dream team) wi
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
 - Integrate NetBox with Ansible and run playbooks to populate the NetBox database
-- Get started with a set of [Ansible playbooks](../../ansible/) for NetBox that can be easily adapted and extended to suit your own requirements 
+- Get started with a set of [Ansible playbooks](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/ansible) for NetBox that can be easily adapted and extended to suit your own requirements 
 
 ## Why Integrate NetBox with Ansible? 
 From the [Ansible](https://www.ansible.com/use-cases/network-automation) website: 
@@ -35,7 +35,7 @@ The software versions used in the video for this module are:
 - `pynetbox v6.6.2`
 
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](../../ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/richbibby-NS1/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
 
 ## Using NetBox For IPAM
 From the NetBox documentation: 
@@ -118,8 +118,9 @@ All IP addresses assigned will be the next available, and allocated dynamically 
 ## Video - Adding IPAM Data Into NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with the IPAM data using Ansible. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-[![IP Addressing and VLANs](../../images/4-ip-addressing-and-vlans.png)](https://youtu.be/XCwO6RGpBpI) 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XCwO6RGpBpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Summary 
 In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. If you have any questions on how to use Ansible with NetBox then there is a dedicated Slack channel **#ansible** on [netdev-community.slack.com](https://netdev-community.slack.com/) so don't hesitate to pop on over there and join in the discussion!
 
 In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md), Eric will add the cables and connections for the new Brisbane branch office network, using the web interface to bulk upload data from a CSV file.
@@ -129,3 +130,4 @@ In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-c
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 - [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
 - [NetBox Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
+- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1

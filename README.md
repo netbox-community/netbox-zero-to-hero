@@ -54,22 +54,22 @@ So, with that said, lets dive in!
 - Use simple Python scripts to interact with the NetBox REST API to add Wireless LANs
 - Use the web interface to view Wireless LAN information
 
-### Module 7: Automate All the Things!
+### Module 7: Automate All the Things! (coming soon)
 - Automated Device Config Generation 
   
-### Module 8: What About Virtualization? 
+### Module 8: What About Virtualization? (coming soon)
 - Clusters, VMs 
 
-### Module 9: Powering Up 
+### Module 9: Powering Up (coming soon)
 - Power Feeds, Power Panels
 
-### Module 10: Is the Internet Down? 
+### Module 10: Is the Internet Down? (coming soon)
 - Providers, circuit types, circuits
 
-### Module 11: Adding Some Customization 
+### Module 11: Adding Some Customization (coming soon)
 - Custom Fields, Bandwidth Use on port (link to monitoring graph)
 
-### Module 12: The Boss is Asking for a Report (another easy win!) 
+### Module 12: The Boss is Asking for a Report (another easy win!) (coming soon)
 - Reports
 
 ## Useful Links
