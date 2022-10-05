@@ -56,7 +56,12 @@ With that said, let's get started!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Lit6H8XF2d0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
-In this module you learned how to set up your organization's data in NetBox using the Web Interface. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection to make REST API calls to NetBox. 
+In this module you learned how to set up your organization's data in NetBox using the Web Interface. 
+
+In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection to make REST API calls to NetBox. 
+
+## Join the Discussion
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
