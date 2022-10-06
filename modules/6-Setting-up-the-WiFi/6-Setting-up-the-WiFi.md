@@ -11,7 +11,7 @@ By the end of this module you will be able to:
 ## Why Use Python Scripts With NetBox? 
 If you have been through the previous modules of this course you will know that it's easy to add data manually via the Web Interface, but when you are dealing with a lot of data that manual process can quickly become both tedious and error prone. Using simple python scripts has the advantages of saving you time and reducing errors. 
 
-Getting started with Python is super easy and a lot of fun too! The [scripts](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/python_scripts) included in the Git repository for this course will get you up and running quickly and within a few minutes you can be interacting with the NetBox database programmatically via the REST API.
+Getting started with Python is super easy and a lot of fun too! The [scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) included in the Git repository for this course will get you up and running quickly and within a few minutes you can be interacting with the NetBox database programmatically via the REST API.
 
 Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical for managing modern networks, so by adding some basic Python coding skills to your armory, you will set yourself up for long term career success!
 
@@ -26,7 +26,7 @@ The software versions used in the video for this module are:
 - `Python v3.8.9`
 
 ## Setting Up Your Python Environment
-Follow these [simple steps](https://github.com/richbibby-NS1/netbox-zero-to-hero/blob/main/python_scripts/readme.md) to set up Python on your own system, so you can follow along running the python scripts.
+Follow these [simple steps](https://github.com/netbox-community/netbox-zero-to-hero/blob/main/python_scripts/readme.md) to set up Python on your own system, so you can follow along running the python scripts.
 
 ## Modelling Wireless LANs in NetBox
 You can model Wireless LANs (and Wireless point-to-point links) in NetBox just as you can model physical cabled networks. You can create self-nesting Wireless LAN Groups, and can also (optionally) bind Wireless LANs to particular VLANs. You can also (optionally) define the authentication parameters - Type, Cipher and PSK, for each SSID (Service Set Identifier).
@@ -42,7 +42,7 @@ Susan has planned the following Wireless LANs for the new Brisbane site, and thi
 ## Video - Adding Wireless LANs to NetBox
 OK, so that's the planning and design work done - now onto the demo! This video will step you through how to populate NetBox with Wireless LAN data, and then to view that data in the Web Interface. As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along you can find the [python scripts](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/python_scripts) in the course Git Repository and you can use these as a starting point for building your collection of Python scripts for NetBox. 
+If you are following along you can find the [python scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) in the course Git Repository and you can use these as a starting point for building your collection of Python scripts for NetBox. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rewxPa58VCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -52,12 +52,12 @@ In this module you have learned how NetBox Models Wireless LANs, and how to add 
 ## Challenge - Improve the Python Scripts
 If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data? Or you could try moving the json data into a separate file and get your script to loop over the json data when it runs. 
 
-It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community and join in the discussion!
+It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack and join in the discussion!
 
 In the next module you will learn how to automate the generation of device configurations, by using Ansible to pull data from NetBox and render the configuration files from Jinja2 templates. 
 
 ## Join the Discussion
-If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)

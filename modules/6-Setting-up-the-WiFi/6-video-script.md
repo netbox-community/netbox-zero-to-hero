@@ -48,6 +48,6 @@ So, I hope that has been a useful overview of how add Wireless LAN data using so
 
 Interacting programmatically with the NetBox REST API using Python also opens up so many possibilities for using NetBox as your single source of truth for your network automation efforts going forward.
 
-If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data, or move the json data into a separate file and get your script to loop over it when it runs. It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the NetBox Zero to Hero channel on the DevNet slack community and join in the discussion!
+If you fancy a challenge why not develop these simple scripts further and improve them? Maybe you could create a Python function to add the data, or move the json data into a separate file and get your script to loop over it when it runs. It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the NetBox Zero to Hero channel on the NetDev Community Slack and join in the discussion!
 
 So I hope you enjoyed that, and once again, thanks for watching!

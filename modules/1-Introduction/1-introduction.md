@@ -82,7 +82,7 @@ In this module you have learned what NetBox is along with it's main features and
 In [Module 2: Setting up the Organization](../2-setting-up-the-organization/2-setting-up-the-organization.md) you will learn how to model an organization within NetBox, and how to use the Web Interface to both manually create individual objects, and bulk import objects using CSV-formatted data. 
 
 ## Join the Discussion
-If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
