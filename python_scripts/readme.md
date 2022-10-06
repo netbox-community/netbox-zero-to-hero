@@ -3,7 +3,7 @@ If you don't already have Python installed on your system, then download it from
 
 1. Clone the NetBox Zero to Hero Git repository and change into the `python_scripts` directory:
 ```
-git clone https://github.com/richbibby-NS1/netbox-zero-to-hero.git
+git clone https://github.com/netbox-community/netbox-zero-to-hero.git
 cd netbox-zero-to-hero/python_scripts
 ```
 

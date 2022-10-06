@@ -4,7 +4,7 @@ Ansible runs on Linux based systems, and is installed as a Python package. Follo
 1. Clone the NetBox Zero to Hero Git repository and change into the Ansible directory:
 
 ```
-git clone https://github.com/richbibby-NS1/netbox-zero-to-hero.git
+git clone https://github.com/netbox-community/netbox-zero-to-hero.git
 cd netbox-zero-to-hero/ansible
 ```
 

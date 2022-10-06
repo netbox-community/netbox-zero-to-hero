@@ -49,7 +49,7 @@ TLE will use 2 contact groups - IT, which contains Susan and Eric and Facilities
 ## Video - Setting Up The Organization
 As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the objects for the fictional TLE Consulting organization. Also, as TLE's awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch network in Brisbane, Australia, they will also add the information for this new site to kick off the project.
 
-If you are following along you can find the [CSV data](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/modules/2-setting-up-the-organization/csv_data) in course Git Repository.
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/2-setting-up-the-organization/csv_data) in course Git Repository.
 
 With that said, let's get started! 
 
@@ -61,7 +61,7 @@ In this module you learned how to set up your organization's data in NetBox usin
 In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection to make REST API calls to NetBox. 
 
 ## Join the Discussion
-If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)

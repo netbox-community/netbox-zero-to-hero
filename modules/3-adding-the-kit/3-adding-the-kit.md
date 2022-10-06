@@ -22,8 +22,8 @@ If you'd like to follow along with the examples used in this course, it's super 
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox   
 
 The NetBox version used in the video for this module is v3.3.2, and the following course materials used in the demo are available: 
-- [Postman Collection](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/postman) for making API calls
-- [YAML files](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/modules/3-adding-the-kit/yaml_data) used for device types
+- [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making API calls
+- [YAML files](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/3-adding-the-kit/yaml_data) used for device types
 
 ## Devices
 Devices are a key part of NetBox - after all NetBox is a tool for modeling network infrastructure. A device can be any piece of physical hardware installed within your network, such as a server, router, or switch, and may optionally be mounted within a rack. Within each device, resources such as network interfaces and console ports are modeled as discrete components, which may optionally be grouped into modules.
@@ -61,7 +61,7 @@ Our fictional organization has standardized on the following network devices for
 ## Video - Adding Devices Into NetBox
 The video demo will now show you how to add all of the device data into NetBox mainly using the REST API (the device types will be uploaded manually as YAML files). As always the best way to understand the power of NetBox is to dive right in, so let's get started!
 
-If you are following along, don't forget to use the [Postman Collection](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/postman) for making the API calls and the [YAML files](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/modules/3-adding-the-kit/yaml_data) used for adding device types.
+If you are following along, don't forget to use the [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making the API calls and the [YAML files](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/3-adding-the-kit/yaml_data) used for adding device types.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dA3LZiV7UIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -71,7 +71,7 @@ In this module you learned how to add devices into NetBox, making use of the Net
 In [Module 4: IP Addressing and VLANs](../4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md),  Susan will use the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox) to populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. 
 
 ## Join the Discussion
-If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)

@@ -8,7 +8,7 @@ In this module Susan (the other member of the Network Engineering dream team) wi
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
 - Integrate NetBox with Ansible and run playbooks to populate the NetBox database
-- Get started with a set of [Ansible playbooks](https://github.com/richbibby-NS1/netbox-zero-to-hero/tree/main/ansible) for NetBox that can be easily adapted and extended to suit your own requirements 
+- Get started with a set of [Ansible playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) for NetBox that can be easily adapted and extended to suit your own requirements 
 
 ## Why Integrate NetBox with Ansible? 
 From the [Ansible](https://www.ansible.com/use-cases/network-automation) website: 
@@ -35,7 +35,7 @@ The software versions used in the video for this module are:
 - `pynetbox v6.6.2`
 
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/richbibby-NS1/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/netbox-community/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
 
 ## Using NetBox For IPAM
 From the NetBox documentation: 
@@ -126,7 +126,7 @@ In this module you have learned how NetBox Models IPAM data, how to integrate Ne
 In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md), Eric will add the cables and connections for the new Brisbane branch office network, using the web interface to bulk upload data from a CSV file.
 
 ## Join the Discussion
-If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the DevNet slack community!
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
