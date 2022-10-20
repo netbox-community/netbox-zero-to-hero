@@ -1,5 +1,4 @@
 ---
-
 - name: Generate Device Configuration
   connection: local
   hosts: device_roles_access_switch, device_roles_wan_router

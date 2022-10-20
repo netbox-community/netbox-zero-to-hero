@@ -178,7 +178,7 @@ The data that will be pulled from NetBox to inject into the templates when they 
 **Disclaimer** *The configurations generated in this demo are not production ready by any stretch, and are purely used to illustrate how to extract the data from NetBox as your network source of truth to be consumed by an automation tool (Ansible in this case) to generate example configs. You would need to extend the templates so suit your own device types and configuration requirements, but you can certainly use them as a starting point.*
 
 ## Video - Automating Device Configurations with NetBox and Ansible
-OK, so with all that said - let's get to the fun stuff!! This video will step you through how the whole process from setting up NetBox as the source for the Ansible Inventory through generating the finished configuration files. 
+OK, so with all that said - let's get to the fun stuff!! This video will step you through the whole process from setting up NetBox as the source for the Ansible Inventory through to generating the finished configuration files. 
 
 If you are following along you can find the [Ansible playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) in the course Git Repository and you can use these as a starting point for building your collection of playbooks for NetBox. 
 
@@ -188,7 +188,7 @@ If you are following along you can find the [Ansible playbooks](https://github.c
 In this module you have learned how to set up Ansible to use NetBox as the source for it's Dynamic Inventory, and how to use Ansible to extract device data from NetBox and use this to automate the generation of device configuration files using Jinja templates. 
 
 ## Challenge - Improve The Jinja Templates
-If you fancy a challenge why not develop these playbooks and templates further and improve them? Maybe you could make them more efficient, or you could try using Nornir or Python instead of Ansible to pull data from NetBox and render the configs.
+If you fancy a challenge why not develop these playbooks and templates further and improve them? Maybe you could add descriptions for the switch interfaces and add that logic to the JunOS templates? Maybe you could make them more efficient, or you could try using Nornir or Python instead of Ansible to pull data from NetBox and render the configs.
 
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
