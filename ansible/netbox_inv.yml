@@ -1,5 +1,6 @@
 plugin: netbox.netbox.nb_inventory
 validate_certs: False
-config_context: False
+# config_context: True
 group_by: 
  - device_roles
+ - sites
