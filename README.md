@@ -57,8 +57,10 @@ So, with that said, lets dive in!
 - Use simple Python scripts to interact with the NetBox REST API to add Wireless LANs
 - Use the web interface to view Wireless LAN information
 
-### Module 7: Automate All the Things! (coming soon)
-- Automated Device Config Generation 
+### [Module 7: Automate All the Things!](modules/7-automate-all-the-things/7-automate-all-the-things.md)
+- Set up Ansible to use NetBox as the source for it's Dynamic Inventory
+- Use Ansible to make API calls to the NetBox REST API to extract the required data for the device configurations
+- Use Ansible to automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables
   
 ### Module 8: What About Virtualization? (coming soon)
 - Clusters, VMs 
