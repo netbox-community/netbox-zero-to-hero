@@ -59,8 +59,8 @@ So, with that said, lets dive in!
 
 ### [Module 7: Automate All the Things!](modules/7-automate-all-the-things/7-automate-all-the-things.md)
 - Set up Ansible to use NetBox as the source for it's Dynamic Inventory
-- Use Ansible to make API calls to the NetBox REST API to extract the required data for the device configurations
-- Use Ansible to automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables
+- Use Ansible to extract the required data from NetBox for the device configurations
+- Use Ansible to automate the generation of device configurations using Jinja templates
   
 ### Module 8: What About Virtualization? (coming soon)
 - Clusters, VMs 

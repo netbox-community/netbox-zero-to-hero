@@ -30,7 +30,7 @@ pip3 install netaddr
 ```
 
 ## Using NetBox Ansible Inventory Plugin
-You can use NetBox as the source for the Ansible Inventory (the list of devices you are are automating against), and to use this the file `ansible.cfg' has the following line added:
+You can use NetBox as the source for the Ansible Inventory (the list of devices you are are automating against), and to use this the file `ansible.cfg` has the following line added:
 ```
 inventory = ./netbox_inv.yml
 ```
@@ -155,7 +155,7 @@ The configuration context that Eric is using contains the following data, and it
     ]
 }
 ```
-This data will be returned in the REST API calls made to NetBox and can then be used in the configuration templates along with all other the device data pulled from NetBox. 
+This data will be returned in the REST API calls made to NetBox and can then be used in the configuration templates along with all the other device data pulled from NetBox. 
 
 ## The Project - Automating the New Brisbane Device Configurations
 Eric has created 3 Jinja [templates](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible/templates/): 
@@ -163,7 +163,7 @@ Eric has created 3 Jinja [templates](https://github.com/netbox-community/netbox-
 - `juniper-junos.j2` - for the Juniper Access Switch
 - `juniper-junos-set.j2` - for the Juniper Access Switch but using the Set command format
 
-The data that will be pulled from NetBox to inject into to templates when they are rendered by Ansible is: 
+The data that will be pulled from NetBox to inject into the templates when they are rendered by Ansible is: 
 - hostname
 - ip name servers
 - ntp servers
@@ -175,10 +175,10 @@ The data that will be pulled from NetBox to inject into to templates when they a
   - 802.1Q mode and VLANs (if L2)
 - VLANS
 
-**Disclaimer** *The configurations generated in this demo are not production ready by any stretch, and are purely used to illustrate how to extract the data from NetBox as your network source of truth to be consumed by an automation tool (Ansible in this case) to generate example configs. You would need to extend the templates so suit your own device types and configuration requirements.*
+**Disclaimer** *The configurations generated in this demo are not production ready by any stretch, and are purely used to illustrate how to extract the data from NetBox as your network source of truth to be consumed by an automation tool (Ansible in this case) to generate example configs. You would need to extend the templates so suit your own device types and configuration requirements, but you can certainly use them as a starting point.*
 
-## Video - 
-OK, so with all that said - let's get to the fun stuff!! This video will step you through how the whole process from setting up NetBox as the source for the Ansible Inventory through to the finished configuration files. 
+## Video - Automating Device Configurations with NetBox and Ansible
+OK, so with all that said - let's get to the fun stuff!! This video will step you through how the whole process from setting up NetBox as the source for the Ansible Inventory through generating the finished configuration files. 
 
 If you are following along you can find the [Ansible playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) in the course Git Repository and you can use these as a starting point for building your collection of playbooks for NetBox. 
 
@@ -194,6 +194,7 @@ If you fancy a challenge why not develop these playbooks and templates further a
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 
 ## Useful Links
+- [Zero To Hero Git Repo](https://github.com/netbox-community/netbox-zero-to-hero)
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 - [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1
