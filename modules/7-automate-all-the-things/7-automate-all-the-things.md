@@ -5,15 +5,15 @@
 Hello and welcome to module 7 of the NetBox 'Zero-to-Hero' course. In [Module 6: Setting up the WiFi](modules/6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), Susan added the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API. In this Module, Eric will use Ansible to extract data from NetBox and then use that data to automate the creation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
 
 By the end of this module you will be able to:
-- Set up Ansible to use NetBox as the source for it's Dynamic Inventory
-- Use Ansible to make API calls to the NetBox REST API to extract the required data for the device configurations
+- Set up Ansible to use NetBox as the source of it's Dynamic Inventory
+- Use Ansible to REST API calls to NetBox and extract the required data to build the device configurations
 - Use Ansible to automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
 1.  Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker) - This is the quickest way to get your own dedicated NetBox instance going and it only takes a few minutes to spin up on your laptop!
 2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
-3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox   
+3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are: 
 - `NetBox v3.3.2`
@@ -116,7 +116,7 @@ Jinja templates also have powerful features like loops, logic operators, and str
 {% endif %}
 {%- endfor %}   
 ```
-To explain whats happening here - it loops over all of the interface names `intf.name`, looking for interface names containing the text `vlan`. Then for each of these it loops over all the `ip_addresses` and if the `ip.assigned_object_name` is equal to `intf.name`, then it will insert the value it has for the `unit` name by splitting `intf.name` on the `.` and using the 2nd element of the resulting list (lists in Python start at 0) as the value. Then finally it inserts the value of `ip.address` into the variable for the IP v4 address. 
+To explain whats happening here - for each interface `intf`, if the interface name `intf.name` contains the the text `vlan`, then for each of the `ip_addresses` if the `ip.assigned_object_name` is equal to the name of the interface `intf.name`, then insert the value it has for the `unit` name by splitting the `intf.name` at the dot `.` and using the 2nd element of the resulting list (lists in Python start at 0) as the value. Then finally add the value of the `ip.address` into the variable place-holder for the IPv4 address. 
 
 This results in the following configuration snippet being rendered for the interface `vlan.50`:
 ```
@@ -155,7 +155,7 @@ The configuration context that Eric is using contains the following data, and it
     ]
 }
 ```
-This data will be returned in the REST API calls made to NetBox and can then be used in the configuration templates along with all the other device data pulled from NetBox. 
+This data will be returned in the responses to the calls made by Ansible to NetBox REST API endpoints, and can then be injected dynamically into the Jinja configuration templates, along with all the other device data pulled from NetBox. 
 
 ## The Project - Automating the New Brisbane Device Configurations
 Eric has created 3 Jinja [templates](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible/templates/): 
@@ -185,7 +185,7 @@ If you are following along you can find the [Ansible playbooks](https://github.c
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
-In this module you have learned how to set up Ansible to use NetBox as the source for it's Dynamic Inventory, and how to use Ansible to extract device data from NetBox and use this to automate the generation of device configuration files using Jinja templates. 
+In this module you have learned how to set up Ansible to use NetBox as the source of truth for it's Dynamic Inventory, and how to use Ansible to extract device data from NetBox and use this to automate the generation of device configuration files using Jinja templates. 
 
 ## Challenge - Improve The Jinja Templates
 If you fancy a challenge why not develop these playbooks and templates further and improve them? Maybe you could add descriptions for the switch interfaces and add that logic to the JunOS templates? Maybe you could make them more efficient, or you could try using Nornir or Python instead of Ansible to pull data from NetBox and render the configs.
