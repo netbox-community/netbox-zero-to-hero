@@ -182,7 +182,7 @@ OK, so with all that said - let's get to the fun stuff!! This video will step yo
 
 If you are following along you can find the [Ansible playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) in the course Git Repository and you can use these as a starting point for building your collection of playbooks for NetBox. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aHx9EpCvi2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 In this module you have learned how to set up Ansible to use NetBox as the source of truth for it's Dynamic Inventory, and how to use Ansible to extract device data from NetBox and use this to automate the generation of device configuration files using Jinja templates. 
