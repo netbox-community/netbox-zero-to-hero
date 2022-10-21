@@ -48,7 +48,6 @@
           accept: "application/json"
           Authorization: "Token {{ netbox_token }}"
   register: vlans
-  when: "'SW' in inventory_hostname"
 
 # Uncomment for debugging the JSON Data registered by a play
 # Change the var value to whatever you need eg. var: ip_addresses.json.results
@@ -75,4 +74,4 @@
   template:
       src: "templates/{{ platforms[0] }}-set.j2"
       dest: "{{ configs_directory }}/{{ inventory_hostname }}/{{ inventory_hostname }}.set"
-  when: "'SW' in inventory_hostname"
+  when: platforms[0] == 'juniper-junos'
