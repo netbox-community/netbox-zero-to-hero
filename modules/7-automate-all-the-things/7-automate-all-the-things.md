@@ -6,8 +6,8 @@ Hello and welcome to module 7 of the NetBox 'Zero-to-Hero' course. In [Module 6:
 
 By the end of this module you will be able to:
 - Set up Ansible to use NetBox as the source of it's Dynamic Inventory
-- Use Ansible to REST API calls to NetBox and extract the required data to build the device configurations
-- Use Ansible to automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables
+- Write Ansible playbooks to make REST API calls to NetBox and extract the required data to build the device configurations
+- Automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
