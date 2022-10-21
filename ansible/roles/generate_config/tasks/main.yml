@@ -1,0 +1,77 @@
+---
+- name: 1 - Get Devices
+  uri:
+      url: "{{ netbox_url }}api/dcim/devices/?name={{ inventory_hostname }}"
+      method: GET
+      return_content: yes
+      headers:
+          accept: "application/json"
+          Authorization: "Token {{ netbox_token }}"
+  register: device
+  
+- name: 2 - Get Interfaces
+  uri:
+      url: "{{ netbox_url }}api/dcim/interfaces/?device={{ inventory_hostname }}&limit=0"
+      method: GET
+      return_content: yes
+      headers:
+          accept: "application/json"
+          Authorization: "Token {{ netbox_token }}"
+  register: interfaces
+
+- name: 3 - Get IP Addresses
+  uri:
+      url: "{{ netbox_url }}api/ipam/ip-addresses/?device={{ inventory_hostname }}"
+      method: GET
+      return_content: yes
+      headers:
+          accept: "application/json"
+          Authorization: "Token {{ netbox_token }}"
+  register: ip_addresses
+
+- name: 4 - Get Site Details
+  uri:
+      url: "{{ netbox_url }}api/dcim/sites/?name={{ device.json.results[0]['site']['name'] }}"
+      method: GET
+      return_content: yes
+      headers:
+          accept: "application/json"
+          Authorization: "Token {{ netbox_token }}"
+  register: site
+
+- name: 5 - Get List of VLANs for Site {{ device.json.results[0]['site']['name'] }}
+  uri:
+      url: "{{ netbox_url }}api/ipam/vlans/?site_id={{ site.json.results[0]['id'] }}"
+      method: GET
+      return_content: yes
+      headers:
+          accept: "application/json"
+          Authorization: "Token {{ netbox_token }}"
+  register: vlans
+
+# Uncomment for debugging the JSON Data registered by a play
+# Change the var value to whatever you need eg. var: ip_addresses.json.results
+# - name: Display Json Data
+#   ansible.builtin.debug:
+#     var: interfaces.json.results
+
+# Uncomment to display the Ansible Host Vars for a host 
+# - name: Display all variables/facts known for a host
+#   ansible.builtin.debug:
+#     var: hostvars[inventory_hostname]
+
+- name: 6 - Create temporary folder for Device Configs
+  file:
+    dest: "{{ configs_directory }}/{{ inventory_hostname }}"
+    state: directory
+
+- name: 7 - Create configuration files
+  template:
+      src: "templates/{{ platforms[0] }}.j2"
+      dest: "{{ configs_directory }}/{{ inventory_hostname }}/{{ inventory_hostname }}.conf"
+
+- name: JUNOS BONUS PLAY!! - Create Junos config using Set Commands
+  template:
+      src: "templates/{{ platforms[0] }}-set.j2"
+      dest: "{{ configs_directory }}/{{ inventory_hostname }}/{{ inventory_hostname }}.set"
+  when: platforms[0] == 'juniper-junos'

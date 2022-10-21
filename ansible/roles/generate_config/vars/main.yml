@@ -1,0 +1,4 @@
+---
+netbox_url: "{{ lookup('ansible.builtin.env', 'NETBOX_API') }}"
+netbox_token: "{{ lookup('ansible.builtin.env', 'NETBOX_TOKEN') }}"
+configs_directory: configs

@@ -1,0 +1,111 @@
+#jinja2: lstrip_blocks: True
+system {
+      host-name {{ device.json.results[0]['name'] }};
+    }
+    name-server {
+    {% for name_server in device.json.results[0].config_context['name-servers'] %}
+        {{ name_server }};
+    {% endfor %}
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        {% for syslog_server in device.json.results[0].config_context['syslog-servers'] %}
+        host {{ syslog_server }} {
+            any any;
+            daemon info;
+        }
+        {% endfor %}
+        file messages {
+            any notice;
+        }
+        file cli-commands {
+            interactive-commands any; 
+            explicit-priority;
+        }
+        time-format millisecond;
+    }
+    ntp {
+      {% for ntp_server in device.json.results[0].config_context['ntp-servers'] %}
+        server {{ ntp_server }};
+      {% endfor %}
+    }  
+}
+vlans {
+    {% for vlan in vlans.json.results %}
+    {{ vlan.name }} { 
+        vlan-id {{ vlan.vid }};
+        l3-interface vlan.{{ vlan.vid }};
+  }
+    {% endfor %}
+}
+interfaces {
+    ge-0/0/0 {
+          unit 0 {
+              family inet {
+                  address {{ device.json.results[0]['primary_ip']['address'] }};
+              }
+          }
+    }
+{% for intf in interfaces.json.results %}
+{% if intf.untagged_vlan %}
+    {{ intf.name }} {
+        unit 0 {
+            family ethernet-switching {
+                port-mode access;
+                vlan {
+                    members {{ intf.untagged_vlan.name }};
+                }
+            }
+        } 
+    }
+{% elif intf.mode %}
+    {{ intf.name }} {
+        unit 0 {
+            family ethernet-switching {
+                port-mode trunk;
+                vlan {
+                    members all;
+                }
+            }
+        } 
+    }
+{% endif %}
+{% endfor %} 
+{%- for intf in interfaces.json.results %}    
+  {%- for ip in ip_addresses.json.results %}
+    {%- if ip.assigned_object.name == intf.name and 'me' in intf.name %}
+    {{ intf.name }} {
+        unit 0 {
+            family inet {
+                address {{ ip.address }};
+            }
+        }
+    }
+      {%- endif %}
+    {%- endfor %} 
+{%- endfor %}
+
+{%- for intf in interfaces.json.results %}
+{% if 'vlan' in intf.name %} 
+    vlan {
+    {% for ip in ip_addresses.json.results %}
+      {%- if ip.assigned_object.name == intf.name %}
+        unit {{ intf.name.split('.')[1] }}  {
+            family inet {
+                address {{ ip.address }};
+            }
+        }
+    }
+      {%- endif %}
+    {% endfor %}
+{% endif %}
+{%- endfor %}  
+}
+snmp { 
+    location {{ site.json.results[0]['region']['name'] }} [{{ site.json.results[0]['latitude'] }},{{ site.json.results[0]['longitude'] }}]; 
+    community {{ device.json.results[0].config_context['snmp-ro-community']}} { 
+        authorization read-only; 
+        }
+}

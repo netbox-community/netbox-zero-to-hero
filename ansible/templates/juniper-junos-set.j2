@@ -1,0 +1,45 @@
+#jinja2: lstrip_blocks: True
+set system host-name {{ device.json.results[0]['name'] }}
+{% for name_server in device.json.results[0].config_context['name-servers'] %}
+set system name-server {{ name_server }}
+{% endfor %}
+set system syslog user * any emergency
+{% for syslog_server in device.json.results[0].config_context['syslog-servers'] %}
+set system syslog host {{ syslog_server }} any any
+{% endfor %}
+set system syslog file messages any warning
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+{% for ntp_server in device.json.results[0].config_context['ntp-servers'] %}
+set system ntp server {{ ntp_server }}
+{% endfor %}
+set system snmp location {{ site.json.results[0]['region']['name'] }} [{{ site.json.results[0]['latitude'] }},{{ site.json.results[0]['longitude'] }}]
+set system snmp community {{ device.json.results[0].config_context['snmp-ro-community']}} authorization read-only
+{%- for vlan in vlans.json.results %} 
+set vlans {{ vlan.name }} vlan-id {{ vlan.vid }} l3-interface vlan.{{ vlan.vid }}
+{%- endfor %}
+{%- for intf in interfaces.json.results %}
+{%- if 'ge' in intf.name or 'me' in intf.name %} 
+  {%- for ip in ip_addresses.json.results %}
+    {%- if ip.assigned_object.name == intf.name %} 
+set interfaces {{ intf.name }} unit 0 family inet address {{ ip.address }}
+    {%- endif %}
+  {%- endfor %} 
+{%- endif %}
+{%- endfor %} 
+{%- for intf in interfaces.json.results %}
+{%- if 'vlan' in intf.name %} 
+  {%- for ip in ip_addresses.json.results %}
+    {%- if ip.assigned_object.name == intf.name %} 
+set interfaces vlan unit {{ intf.name.split('.')[1] }} family inet address {{ ip.address }}
+    {%- endif %}
+  {%- endfor %} 
+{%- endif %}
+{%- endfor %} 
+{% for intf in interfaces.json.results %}
+  {% if intf.untagged_vlan %}
+set interfaces {{ intf.name }} unit 0 family ethernet-switching port-mode access vlan members {{ intf.untagged_vlan.name }}
+  {% elif intf.mode %}
+set interfaces {{ intf.name }} unit 0 family ethernet-switching port-mode trunk vlan members all
+  {% endif %}
+{% endfor %} 

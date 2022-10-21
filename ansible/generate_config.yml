@@ -1,0 +1,9 @@
+---
+- name: Generate Device Configuration
+  connection: local
+  hosts: device_roles_access_switch, device_roles_wan_router
+  gather_facts: False
+
+  roles:
+    - role: generate_config
+      tags: generate_config 
