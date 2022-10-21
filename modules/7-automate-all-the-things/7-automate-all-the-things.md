@@ -86,9 +86,11 @@ There are some great Jinja tutorials for network automation out there such as [t
 ```
 We can then use the following in a Jinja template to render a config snippet that has a variable for the device hostname: 
 ```
+{% raw %}
 !
 hostname {{ device.json.results[0]['name'] }}
 !
+{% endraw %}
 ```
 The first word `hostname` is the static content of the config, applicable to all devices and the text between the curly braces {{ }} is the variable. The value being injected dynamically into the template variable is the value of the `name` key from the json results returned by the request. The end result of this is the final rendered configuration snippet:
 ```
