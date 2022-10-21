@@ -102,6 +102,7 @@ hostname AUBRI01-RTR-1
 Jinja templates also have powerful features like loops, logic operators, and string manipulation. Take this JunOS interface template for example:
 
 ```
+{% raw %}
 {%- for intf in interfaces.json.results %}
 {% if 'vlan' in intf.name %} 
     vlan {
@@ -117,6 +118,7 @@ Jinja templates also have powerful features like loops, logic operators, and str
     {% endfor %}
 {% endif %}
 {%- endfor %}   
+{% endraw %}
 ```
 To explain whats happening here - for each interface `intf`, if the interface name `intf.name` contains the the text `vlan`, then for each of the `ip_addresses` if the `ip.assigned_object_name` is equal to the name of the interface `intf.name`, then insert the value it has for the `unit` name by splitting the `intf.name` at the dot `.` and using the 2nd element of the resulting list (lists in Python start at 0) as the value. Then finally add the value of the `ip.address` into the variable place-holder for the IPv4 address. 
 
