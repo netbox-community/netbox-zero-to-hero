@@ -24,9 +24,9 @@ Great. Next add some helpful interface descriptions to the router interfaces, by
 
 Do the same for GigabitEthernet0/0/1, and add a description of '--> ISP Router', then save. And lastly for GigabitEthernet0 click edit and then add '--> AUBRI01-SW-1 ge-0/0/47' the description for this interface, and click save. 
 
-Great, so that's our interface descriptions set up for the router, next add the 802.1Q settings that need to be configured for some of the switch interfaces. go to devices and select the switch, then click on interfaces and scroll down to ge-0/0/10 - select it and then also select down to ge-0/0/16, then scroll down and click edit - this allows us to do a bulk edit of all the selected interfaces - scroll down to 802.1Q switching and select the node to be access, the vlan group to be Brisbane VLANs, and the untagged vlan to be the Data vlan - with a vlan ID of 10. 
+Great, so that's our interface descriptions set up for the router, next add the 802.1Q settings that need to be configured for some of the switch interfaces. go to devices and select the switch, then click on interfaces and scroll down to ge-0/0/10 - select it and then also select down to ge-0/0/17, then scroll down and click edit - this allows us to do a bulk edit of all the selected interfaces - scroll down to 802.1Q switching and select the node to be access, the vlan group to be Brisbane VLANs, and the untagged vlan to be the Data vlan - with a vlan ID of 10. 
 
-then click apply and then select interfaces 0/0/12 to 23, and click edit, and make these interfaces untagged for vlan 20 - the voice VLAN.  then click apply and interfaces 26 and 27 - as these ports are gong to connect to the wireless access points they need to be trunk ports, so select tagged (all) and click apply.
+then click apply and then select interfaces 0/0/18 to 25, and click edit, and make these interfaces untagged for vlan 20 - the voice VLAN.  then click apply and then select interfaces 26 and 27 - and as these ports are going to connect to the wireless access points they need to be trunk ports, so select tagged (all) and click apply.
 
 OK so now we have defined some additional device data, we can can use Ansible to generate configurations for the router and the switch. Firstly check that the NetBox dynamic inventory for ansible is working - in VS code you can see the settings for this in the ansible.cfg file. Line 2 specifies that Ansible should use the the file called netbox_inv.yml so if we open that file you can see on line 1 it is using the netbox inventory plugin for Ansible and that on lines 4 and 5 we have asked for the devices to be grouped firstly by device role and then by sites. You can tailor this to however you need your ansible hosts to be grouped - just check the link to the plugin documentation in the course notes for this module. 
 
@@ -92,9 +92,9 @@ GigabitEthernet0/0/0 --> AUBRI01-SW-1 ge-0/0/0
 GigabitEthernet0/0/1 --> ISP Router
 GigabitEthernet0 --> AUBRI01-SW-1 ge-0/0/47
 
-Set switch ports 10-16 to 802.1Q Mode Access for vlan 10 of Brisbane_VLANS
-Set switch ports 17-23 to 802.1Q Mode Access for vlan 20 of Brisbane_VLANS
-set switch ports 24-25 to 802.1Q Mode Tagged for all  of Brisbane_VLANS
+Set switch ports 10-17 to 802.1Q Mode Access for vlan 10 of Brisbane_VLANS
+Set switch ports 18-25 to 802.1Q Mode Access for vlan 20 of Brisbane_VLANS
+set switch ports 26-27 to 802.1Q Mode Tagged for all  of Brisbane_VLANS
 Set switch ports 46-47 to 802.1Q Mode Access for vlan 50 of Brisbane_VLANS
 
 Add config context:
