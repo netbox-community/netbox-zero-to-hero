@@ -18,7 +18,7 @@ ip_addresses:
   - assigned_object:
       device: AUBRI01-SW-1
       name: vlan.10
-    prefix: 192.168.0.128/25
+    prefix: 192.168.0.0/25
     status: Reserved
     tenant: Consulting
 
