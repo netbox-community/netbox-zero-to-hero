@@ -62,9 +62,9 @@ These cables will connect the physical servers to the local access switch:
 | AUBRI01-VSP-1 | iLO | AUBRI01-SW-1 | ge-0/0/44 | CAT6 | Green | 2M |
 | AUBRI01-VSP-1 | Gig-E 1 | AUBRI01-SW-1 | ge-0/0/1 | CAT6 | Green | 2M |
 | AUBRI01-VSP-1 | Gig-E 2 | AUBRI01-SW-1 | ge-0/0/2 | CAT6 | Green | 2M |
-| AUBRI01-VSP-2 | iLO | AUBRI01-SW-1 | ge-0/0/44 | CAT6 | Green | 2M |
+| AUBRI01-VSP-2 | iLO | AUBRI01-SW-1 | ge-0/0/45 | CAT6 | Green | 2M |
 | AUBRI01-VSP-2 | Gig-E 1 | AUBRI01-SW-1 | ge-0/0/3 | CAT6 | Green | 2M |
-| AUBRI01-VSP-2 | Gig-E 2 | AUBRI01-SW-1 | ge-0/0/3 | CAT6 | Green | 2M |
+| AUBRI01-VSP-2 | Gig-E 2 | AUBRI01-SW-1 | ge-0/0/4 | CAT6 | Green | 2M |
 
 ### Virtual Machine
 The VM for the Database server is specified as follows: 
