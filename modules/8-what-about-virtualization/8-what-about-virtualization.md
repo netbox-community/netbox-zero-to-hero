@@ -2,13 +2,14 @@
 
 # Introduction
 
-Hello and welcome to module 8 of the NetBox 'Zero-to-Hero' course. In [Module 7: Automate All the Things!](../7-automate-all-the-things/7-automate-all-the-things.md), Eric used Ansible to extract data from NetBox and then use that data to automate the creation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office. The IT Manager has now decided that as there are going to be two data scientists working out of the Brisbane office, it makes sense to have a Database server located on premises there.  
+Hello and welcome to module 8 of the NetBox 'Zero-to-Hero' course. In [Module 7: Automate All the Things!](../7-automate-all-the-things/7-automate-all-the-things.md), Eric used Ansible to extract data from NetBox and then use that data to automate the creation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office. 
 
-In this module, Susan will add the required physical servers for the VMWare Vsphere cluster, create the cluster and add the Virtual Machine that will run the PostgreSQL server. She will do all this via the Web Interface. 
+The IT Manager has now decided that as there are going to be two data scientists working out of the new Brisbane office, it makes sense to have a Database server located on premises there, along with a local file and print server. In this video, Network Engineer Susan will add the required physical servers for the VMware vSphere cluster, create the cluster and add the Virtual Machines for the servers. She will also define the services including the protocol and port numbers that will be running on the VM servers, and all of this will be done via the web interface.
 
 By the end of this module you will be able to:
 - Describe how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's and VM Interfaces  
-- Use the web interface to manually add Virtualization data, including bulk uploading larger amounts of data where required
+- Describe how to model network applications associated with devices and/or virtual machines, along with specific IP addresses
+- Use the web interface to manually add Virtualization and service data, including bulk uploading larger amounts of data where required
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
@@ -22,6 +23,7 @@ The software versions used in the video for this module are:
 ## Virtualization In NetBox
 
 From the [docs](https://docs.netbox.dev/en/stable/features/virtualization/)
+>### Virtualization 
 >Virtual machines and clusters can be modeled in NetBox alongside physical infrastructure. IP addresses and other resources are assigned to these objects just like physical objects, providing a seamless integration between physical and virtual networks.
 >
 >### Clusters
@@ -29,6 +31,11 @@ From the [docs](https://docs.netbox.dev/en/stable/features/virtualization/)
 >
 >### Virtual Machines
 >A virtual machine is a virtualized compute instance. These behave in NetBox very similarly to device objects, but without any physical attributes. For example, a VM may have interfaces assigned to it with IP addresses and VLANs, however its interfaces cannot be connected via cables (because they are virtual). Each VM may also define its compute, memory, and storage resources as well.
+>
+>### Service Mapping
+>NetBox models network applications as discrete service objects associated with devices and/or virtual machines, and optionally with specific IP addresses attached to those parent objects. These can be used to catalog the applications running on your network for reference by other objects or integrated tools.
+>
+>To model services in NetBox, begin by creating a service template defining the name, protocol, and port number(s) on which the service listens. This template can then be easily instantiated to "attach" new services to a device or virtual machine. 
 
 ## The Project - Adding The Virtualization Cluster and Database Server VM
 Susan has designed the following solution for the new Database server in Brisbane:
@@ -59,10 +66,10 @@ The Physical servers for the cluster will be mounted in the Brisbane rack (AUBRI
 These cables will connect the physical servers to the local access switch:
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length 
 | --- | --- | --- | --- | :---: | :---: | :---: |
-| AUBRI01-VSP-1 | iLO | AUBRI01-SW-1 | ge-0/0/44 | CAT6 | Green | 2M |
+| AUBRI01-VSP-1 | iLO | AUBRI01-SW-1 | ge-0/0/44 | CAT6 | Blue | 2M |
 | AUBRI01-VSP-1 | Gig-E 1 | AUBRI01-SW-1 | ge-0/0/1 | CAT6 | Green | 2M |
 | AUBRI01-VSP-1 | Gig-E 2 | AUBRI01-SW-1 | ge-0/0/2 | CAT6 | Green | 2M |
-| AUBRI01-VSP-2 | iLO | AUBRI01-SW-1 | ge-0/0/45 | CAT6 | Green | 2M |
+| AUBRI01-VSP-2 | iLO | AUBRI01-SW-1 | ge-0/0/45 | CAT6 | Blue | 2M |
 | AUBRI01-VSP-2 | Gig-E 1 | AUBRI01-SW-1 | ge-0/0/3 | CAT6 | Green | 2M |
 | AUBRI01-VSP-2 | Gig-E 2 | AUBRI01-SW-1 | ge-0/0/4 | CAT6 | Green | 2M |
 
@@ -70,18 +77,19 @@ These cables will connect the physical servers to the local access switch:
 The VM for the Database server is specified as follows: 
 | Name | Platform | Memory | Disk | CPUs | Services | VM Interface
 | --- | --- | --- | ---| --- | --- | --- |
-| AUBRI01-SQL-01 | Ubuntu 22.10 | 128 GB | 200 GB | 32 | PostgreSQL - tcp/5432, SSH - tcp/22 | eth0 (access vlan 10) |
+| AUBRI01-SQL-01 | Ubuntu 22.10 | 128 GB | 200 GB | 32 | tcp/5432, tcp/22 | eth0 (tagged vlan 10) |
+| AUBRI01-WIN-01 | Windows Server 2022 | 64 GB | 128 GB | 8 | tcp/139, tcp/445 | eth0 (tagged vlan 10) |
 
  
 ## Video - NetBox Adding Virtualization Clusters and Virtual Machines
-OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from .... through to ....
+OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the required physical servers for the VMware vSphere cluster, creating the cluster, through to adding the Virtual Machines and the application services. 
 
-If you are following along you can find the...... 
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualizations/csv_data) for the new devices and cables in the course Git Repository. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/??????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
-In this module you have learned how to ....
+In this module you have learned how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's and VM Interfaces. You also learned how to model network services and associate them with devices or VM's, and specific IP addresses. 
 
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).

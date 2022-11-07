@@ -194,6 +194,8 @@ In this module you have learned how to set up Ansible to use NetBox as the sourc
 ## Challenge - Improve The Jinja Templates
 If you fancy a challenge why not develop these playbooks and templates further and improve them? Maybe you could add descriptions for the switch interfaces and add that logic to the JunOS templates? Maybe you could make them more efficient, or you could try using Nornir or Python instead of Ansible to pull data from NetBox and render the configs.
 
+In [Module 8: What About Virtualization?](../8-what-about-virtualization/8-what-about-virtualization.md) you will learn how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's and VM Interfaces. You will also learn how to model network services and associate them with devices or VM's, along with specific IP addresses. 
+
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 
