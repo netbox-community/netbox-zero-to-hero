@@ -62,8 +62,10 @@ So, with that said, lets dive in!
 - Write Ansible playbooks to make REST API calls to NetBox and extract the data to build the device configurations
 - Automate the generation of device configurations using Jinja templates, passing in the data from NetBox
   
-### Module 8: What About Virtualization? (coming soon)
-- Clusters, VMs 
+### [Module 8: What About Virtualization?](modules/8-what-about-virtualization/8-what-about-virtualization.md)
+- Describe how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VMs and VM Interfaces  
+- Describe how to model network services associated with devices and/or virtual machines, along with specific IP addresses
+- Use the web interface to manually add Virtualization and service data, including bulk uploading larger amounts of data where required
 
 ### Module 9: Powering Up (coming soon)
 - Power Feeds, Power Panels
