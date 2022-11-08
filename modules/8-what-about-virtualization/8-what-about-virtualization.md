@@ -84,12 +84,12 @@ The VMs are specified as follows:
 | AUBRI01-WIN-01 | Windows Server 2022 | 64 GB | 128 GB | 8 | tcp/139, tcp/445 | eth0 (tagged vlan 10) |
 
  
-## Video - NetBox Adding Virtualization Clusters and Virtual Machines
+## Video - Adding Virtualization Clusters and Virtual Machines
 OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the required physical servers for the VMware vSphere cluster, creating the cluster, through to adding the Virtual Machines and the application services. 
 
 If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualizations/csv_data) for the new devices and cables in the course Git Repository. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/??????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D5iDdjZMUeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 In this module you have learned how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's and VM Interfaces. You also learned how to model network services and associate them with devices or VM's, and specific IP addresses. 
