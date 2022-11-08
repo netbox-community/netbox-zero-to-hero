@@ -44,11 +44,13 @@ From the [docs](https://docs.netbox.dev/en/stable/features/ipam/#:~:text=an%20au
 Susan has designed the following solution for the new Database server in Brisbane:
 
 ### VM Cluster
+
 | Cluster Name | Cluster Type | Devices | Device Type |
 | --- | --- | --- | ---|
 | AUBRI01-VSPHERE-1 | VMware vSphere | AUBRI01-VSP-1, AUBRI01-VSP-2 | HPE ProLiant DL380 Gen9 |
 
 ### Device Interfaces
+
 | Device | Interface | 802.1Q Mode | LAG Interface |
 | --- | --- | --- | --- |
 | AUBRI01-VSP-1 | iLO | Access (vlan 50) | N/A |  
@@ -60,6 +62,7 @@ Susan has designed the following solution for the new Database server in Brisban
  
 ### Rack Positions
 The Physical servers for the cluster will be mounted in the Brisbane rack (AUBRI01-RK-01) as follows:  
+
 | Device | Rack Location (RUs) |
 | --- | --- |
 | AUBRI01-VSP-1 | 1-2 |
@@ -67,6 +70,7 @@ The Physical servers for the cluster will be mounted in the Brisbane rack (AUBRI
 
 ### Server to Switch Connections
 These cables will connect the physical servers to the local access switch:
+
 | Device A | Interface A | Device B | Interface B | Cable Type | Cable Color | Cable Length |
 | --- | --- | --- | --- | :---: | :---: | :---: |
 | AUBRI01-VSP-1 | iLO | AUBRI01-SW-1 | ge-0/0/44 | CAT6 | Blue | 2M |
@@ -78,6 +82,7 @@ These cables will connect the physical servers to the local access switch:
 
 ### Virtual Machines
 The VMs are specified as follows: 
+
 | Name | Platform | Memory | Disk | CPUs | Services | VM Interface
 | --- | --- | --- | --- | --- | --- | --- |
 | AUBRI01-SQL-01 | Ubuntu 22.10 | 128 GB | 200 GB | 32 | tcp/5432, tcp/22 | eth0 (tagged vlan 10) |
