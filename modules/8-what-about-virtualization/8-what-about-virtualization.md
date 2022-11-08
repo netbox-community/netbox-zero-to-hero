@@ -34,7 +34,7 @@ From the [docs](https://docs.netbox.dev/en/stable/features/virtualization/)
 >### Virtual Machines
 >A virtual machine is a virtualized compute instance. These behave in NetBox very similarly to device objects, but without any physical attributes. For example, a VM may have interfaces assigned to it with IP addresses and VLANs, however its interfaces cannot be connected via cables (because they are virtual). Each VM may also define its compute, memory, and storage resources as well.
 
-### Service Mapping In NetBox
+## Service Mapping In NetBox
 
 From the [docs](https://docs.netbox.dev/en/stable/features/ipam/#:~:text=an%20authoritative%20RIR.-,Service%20Mapping,-NetBox%20models%20network)
 >NetBox models network applications as discrete service objects associated with devices and/or virtual machines, and optionally with specific IP addresses attached to those parent objects. These can be used to catalog the applications running on your network for reference by other objects or integrated tools.
