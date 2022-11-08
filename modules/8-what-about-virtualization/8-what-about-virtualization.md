@@ -33,15 +33,16 @@ From the [docs](https://docs.netbox.dev/en/stable/features/virtualization/)
 >
 >### Virtual Machines
 >A virtual machine is a virtualized compute instance. These behave in NetBox very similarly to device objects, but without any physical attributes. For example, a VM may have interfaces assigned to it with IP addresses and VLANs, however its interfaces cannot be connected via cables (because they are virtual). Each VM may also define its compute, memory, and storage resources as well.
->
+
 ### Service Mapping In NetBox
+
 From the [docs](https://docs.netbox.dev/en/stable/features/ipam/#:~:text=an%20authoritative%20RIR.-,Service%20Mapping,-NetBox%20models%20network)
 >NetBox models network applications as discrete service objects associated with devices and/or virtual machines, and optionally with specific IP addresses attached to those parent objects. These can be used to catalog the applications running on your network for reference by other objects or integrated tools.
 >
 >To model services in NetBox, begin by creating a service template defining the name, protocol, and port number(s) on which the service listens. This template can then be easily instantiated to "attach" new services to a device or virtual machine. 
 
 ## The Project - Adding The Virtualization Cluster and Virtual Machines
-Susan has designed the following solution for the new Database server in Brisbane:
+Susan has designed the following solution for the new Virtual Servers in Brisbane:
 
 ### VM Cluster
 
@@ -66,7 +67,7 @@ The Physical servers for the cluster will be mounted in the Brisbane rack (AUBRI
 | Device | Rack Location (RUs) |
 | --- | --- |
 | AUBRI01-VSP-1 | 1-2 |
-| AUBRI01-VSP-1 | 3-4 |
+| AUBRI01-VSP-2 | 3-4 |
 
 ### Server to Switch Connections
 These cables will connect the physical servers to the local access switch:
@@ -92,7 +93,7 @@ The VMs are specified as follows:
 ## Video - Adding Virtualization Clusters and Virtual Machines
 OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the required physical servers for the VMware vSphere cluster, creating the cluster, through to adding the Virtual Machines and the application services. 
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualizations/csv_data) for the new devices and cables in the course Git Repository. 
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualization/csv_data) for the new devices and cables in the course Git Repository. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D5iDdjZMUeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
