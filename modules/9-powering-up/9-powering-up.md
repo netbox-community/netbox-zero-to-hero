@@ -1,4 +1,4 @@
-# Module 8 - What About Virtualization?
+# Module 9 -  Powering Up!
 
 # Introduction
 
