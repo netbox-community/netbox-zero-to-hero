@@ -1,0 +1,7 @@
+side_a_device,side_a_type,side_a_name,side_b_device,side_b_type,side_b_name,type,status,tenant,color,length,length_unit
+AUBRI01-VSP-1,dcim.interface,iLO,AUBRI01-SW-1,dcim.interface,ge-0/0/44,cat6,planned,Consulting,4287f5,2,m
+AUBRI01-VSP-1,dcim.interface,Gig-E 1,AUBRI01-SW-1,dcim.interface,ge-0/0/1,cat6,planned,Consulting,00ff00,2,m
+AUBRI01-VSP-1,dcim.interface,Gig-E 2,AUBRI01-SW-1,dcim.interface,ge-0/0/2,cat6,planned,Consulting,00ff00,2,m
+AUBRI01-VSP-2,dcim.interface,iLO,AUBRI01-SW-1,dcim.interface,ge-0/0/45,cat6,planned,Consulting,4287f5,2,m
+AUBRI01-VSP-2,dcim.interface,Gig-E 1,AUBRI01-SW-1,dcim.interface,ge-0/0/3,cat6,planned,Consulting,00ff00,2,m
+AUBRI01-VSP-2,dcim.interface,Gig-E 2,AUBRI01-SW-1,dcim.interface,ge-0/0/4,cat6,planned,Consulting,00ff00,2,m
