@@ -35,6 +35,8 @@ From the [docs](https://docs.netbox.dev/en/stable/features/power-tracking/)
 >A power feed represents a discrete power circuit originating from an upstream power panel. Each power feed can be assigned a name, operational status, and various electrical characteristics such as supply (AC or DC), voltage, amperage, and so on.
 >
 >A device power port can be connected to a power feed via a cable. Only one port can be connected to a feed: Where multiple devices draw power from the same feed, a power distribution unit (PDU) must be modeled as an individual device mapping a power port to multiple power outlets to which the downstream devices can connect
+>
+>Each power feed in NetBox is assigned a type: primary or redundant. This allows easily modeling redundant power distribution topologies. In scenarios involving only a single, non-redundant power supply, mark all power feeds as primary.
 
 ## The Project - Adding The Facility Power Panels, Feeds and PDUs
 Eric has designed the following solution for power in the new Brisbane Comms Room:
@@ -51,7 +53,7 @@ There are two power panels provided by the facilities management company:
 Each power panel supplies a single power feed (discrete circuit) to the comms room rack as follows: 
 
 | Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amperage | Phase | 
-| --- | --- | --- | --- | -- | --- | --- | --- |
+| --- | --- | --- | --- | :---: | :---: | :---: | :---: |
 | AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | Single | 
 | AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Secondary | AC | 200 | 16 | Single | 
 
@@ -59,7 +61,7 @@ Each power panel supplies a single power feed (discrete circuit) to the comms ro
 Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and will connected to the power feeds via a single power port, and each PDU has eight C13 power outlets that can be connected to device power supplies:
 
 | PDU Name | Rack Location | 
-| --- | --- |
+| --- | :---: |
 | AUBRI01-PDU-1 | 11 (rear) |
 | AUBRI01-PDU-2 | 12 (rear) |
 
@@ -67,7 +69,7 @@ Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and 
 The following cables will be added for power connections between the devices and the PDUs:
 
 | Device | Power Port | PDU | Power Outlet |
-| --- | --- | --- | --- | 
+| --- | :---: | --- | --- | 
 | AUBRI01-SW-1 | PSU0 | AUBRI01-PDU-1 | Outlet 1 |
 | AUBRI01-SW-1 | PSU1 | AUBRI01-PDU-2 | Outlet 1 |
 | AUBRI01-CON-1 | ps1 | AUBRI01-PDU-1 | Outlet 2 |
@@ -81,7 +83,7 @@ The following cables will be added for power connections between the devices and
 The following cables will be added for power connections between the PDUs and the power feeds:
 
 | PDU | Power Port | Power Feed | Power Panel | 
-| --- | --- | --- | --- | 
+| --- | :---: | --- | --- | 
 | AUBRI01-PDU-1 | 1 | AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | 
 | AUBRI01-PDU-2 | 1 | AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | 
 
