@@ -67,8 +67,10 @@ So, with that said, lets dive in!
 - Describe how to model network services associated with devices and/or virtual machines, along with specific IP addresses
 - Use the web interface to manually add Virtualization and service data, including bulk uploading larger amounts of data where required
 
-### Module 9: Powering Up (coming soon)
-- Power Feeds, Power Panels
+### [Module 9: Powering Up](modules/9-powering-up/9-powering-up.md)
+- Describe how NetBox models facility power as discrete power panels and feeds.
+- Understand how to add Power Distribution Units (PDUs) to supply power to individual devices
+- Use the web interface to manually add all data relating to facility power including bulk uploading cable connections from CSV data
 
 ### Module 10: Is the Internet Down? (coming soon)
 - Providers, circuit types, circuits
