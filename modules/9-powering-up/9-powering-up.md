@@ -50,7 +50,7 @@ There are two power panels provided by the facilities management company:
 ### Power Feeds
 Each power panel supplies a single power feed (discrete circuit) to the comms room rack as follows: 
 
-| Feed Name | Power Panel | Rack | type | Supply | Voltage | Amperage | Phase | 
+| Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amperage | Phase | 
 | --- | --- | --- | --- | -- | --- | --- | --- |
 | AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | Single | 
 | AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Secondary | AC | 200 | 16 | Single | 
