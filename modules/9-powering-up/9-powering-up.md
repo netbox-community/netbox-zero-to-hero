@@ -38,7 +38,7 @@ From the [docs](https://docs.netbox.dev/en/stable/features/power-tracking/)
 >
 >Each power feed in NetBox is assigned a type: primary or redundant. This allows easily modeling redundant power distribution topologies. In scenarios involving only a single, non-redundant power supply, mark all power feeds as primary.
 
-## The Project - Adding The Facility Power Panels, Feeds and PDUs
+## The Project - Adding the Facility Power Panels, Feeds and PDUs
 Eric has designed the following solution for power in the new Brisbane Comms Room:
 
 ### Power Panels
@@ -50,15 +50,15 @@ There are two power panels provided by the facilities management company:
 | AUBRI01-PWR-PAN-2 | Comms Room |
 
 ### Power Feeds
-Each power panel supplies a single power feed (discrete circuit) to the comms room rack as follows: 
+Each power panel supplies a single power feed (discrete circuit) to the Comms room rack as follows: 
 
 | Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amperage | Phase | 
 | --- | --- | --- | --- | :---: | :---: | :---: | :---: |
 | AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | Single | 
-| AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Secondary | AC | 200 | 16 | Single | 
+| AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Redundant | AC | 200 | 16 | Single | 
 
 ### Power Distribution Units (PDUs)
-Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and will connected to the power feeds via a single power port, and each PDU has eight C13 power outlets that can be connected to device power supplies:
+Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and will connect to the power feeds via a single power port, and each PDU has eight C13 power outlets that can be connected to device power supplies:
 
 | PDU Name | Rack Location | 
 | --- | :---: |
@@ -69,7 +69,7 @@ Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and 
 The following cables will be added for power connections between the devices and the PDUs:
 
 | Device | Power Port | PDU | Power Outlet |
-| --- | :---: | --- | --- | 
+| --- | :---: | --- | :---: | 
 | AUBRI01-SW-1 | PSU0 | AUBRI01-PDU-1 | Outlet 1 |
 | AUBRI01-SW-1 | PSU1 | AUBRI01-PDU-2 | Outlet 1 |
 | AUBRI01-CON-1 | ps1 | AUBRI01-PDU-1 | Outlet 2 |
@@ -90,7 +90,7 @@ The following cables will be added for power connections between the PDUs and th
 ## Video - Adding The Facility Power Panels, Feeds and PDUs
 OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the ....., creating the ......, through to adding the ...... 
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the Device to PDU cable connections in the course Git Repository. 
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDUs and the power cable connections in the course Git Repository. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
