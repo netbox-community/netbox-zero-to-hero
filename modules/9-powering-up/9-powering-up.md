@@ -22,7 +22,7 @@ The software versions used in the video for this module are:
 
 ## Power Tracking In NetBox
 
-From the [docs](https://docs.netbox.dev/en/stable/features/power-tracking/)
+From the [official NetBox docs](https://docs.netbox.dev/en/stable/features/power-tracking/)
 >### Power Tracking
 >As part of its DCIM feature set, NetBox supports modeling facility power as discrete power panels and feeds. These are most commonly used to document power distribution within a data center, but can serve more traditional environments as well.
 >
@@ -54,8 +54,8 @@ Each power panel supplies a single power feed (discrete circuit) to the Comms ro
 
 | Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amperage | Phase | 
 | --- | --- | --- | --- | :---: | :---: | :---: | :---: |
-| AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | Single | 
-| AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Redundant | AC | 200 | 16 | Single | 
+| AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | Three-phase | 
+| AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Redundant | AC | 200 | 16 | Three-phase | 
 
 ### Power Distribution Units (PDUs)
 Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and will connect to the power feeds via a single power port, and each PDU has eight C13 power outlets that can be connected to device power supplies:
@@ -86,6 +86,29 @@ The following cables will be added for power connections between the PDUs and th
 | --- | :---: | --- | --- | 
 | AUBRI01-PDU-1 | 1 | AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | 
 | AUBRI01-PDU-2 | 1 | AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | 
+
+### Device Power Ports - Maximum and Allocated Draw
+In order to track the power that each of the devices in the rack is consuming, NetBox allows you to model both the Maximum and Allocated Draw, and by doing this for each of the Power Ports on the racked equipment you can track power utilization. 
+
+The [docs](https://docs.netbox.dev/en/stable/models/dcim/powerport/#maximum-draw) define these fields in the data model as follows: 
+>**Maximum Draw**
+>The maximum amount of power this port consumes (in watts).
+>
+>**Allocated Draw**
+>The budgeted amount of power this port consumes (in watts).
+
+All of the device types that have been added to NetBox for the Brisbane project have their Power Port Maximum Draw values already defined in the device type definitions, and Eric has also defined their Allocated Draw values as follows: 
+
+| Device | Power Port | Maximum Draw | Allocated Draw |
+| --- | :---: | :---: | :---: | 
+| AUBRI01-CON-1 | ps1 | 35 | 20 |
+| AUBRI01-RTR-1 | PSU0 | 125 | 100 |
+| AUBRI01-SW-1 | PSU0 | 1100 | 700 |
+| AUBRI01-SW-1 | PSU1 | 1100 | 700 |
+| AUBRI01-VSP-1 | PSU1 | 1400 | 900 |
+| AUBRI01-VSP-1 | PSU2 | 1400 | 900 |
+| AUBRI01-VSP-2 | PSU1 | 1400 | 900 |
+| AUBRI01-VSP-2 | PSU2 | 1400 | 900 |
 
 ## Video - Adding The Facility Power Panels, Feeds and PDUs
 OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the ....., creating the ......, through to adding the ...... 
