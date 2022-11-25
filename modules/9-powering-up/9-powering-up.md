@@ -54,8 +54,8 @@ Each power panel supplies a single power feed (discrete circuit) to the Comms ro
 
 | Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amperage | Phase | 
 | --- | --- | --- | --- | :---: | :---: | :---: | :---: |
-| AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | Three-phase | 
-| AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Redundant | AC | 200 | 16 | Three-phase | 
+| AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | 3-phase | 
+| AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Redundant | AC | 200 | 16 | 3-phase | 
 
 ### Power Distribution Units (PDUs)
 Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and will connect to the power feeds via a single power port, and each PDU has eight C13 power outlets that can be connected to device power supplies:
