@@ -30,9 +30,11 @@ Fantastic - now it's time to add the power connections for the network devices a
 
 These are connecting the power ports of the devices to the power outlets of the PDUs - and note that as there is a redundant power supply where a device has dual PSU's these connections are split across both PDUs - then click submit. and that is all of the cables required to connect up the power and if you click on Power Connections they are all listed there.
 
-OK, so that's the....
+OK, so the last thing to do is to update the allocated draw values for each of the power ports on the devices in the rack, so that we can track the utilization correctly. So go to devices - power ports and then for the ps1 power port for the console server - select it and click edit, then set the allocated draw to 20 and click apply. then for the router set the allocated draw to 100. then select both of the switch power ports and edit them and set them to 700 watts. and lastly select all 4 PSUs for the servers and set the allocated draw too 900 watts. 
 
-So, I hope that has been a useful overview of how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's, VM Interfaces and application services! 
+Great, so now that is done, check the power utilization is being tracked correctly - firstly go to the rack, under organization, racks and then select the brisbane rack - and here you can see the utilization of the available power for the rack is standing at 57%, and if you want to check the individual feeds, then for example you can click on the primary feed under the Power Feeds section - you can see the allocated utilization there also. so that's looking good!
+
+So, I hope that has been a useful overview of how NetBox models facility power as discrete power panels and feeds, and also how to add Power Distribution Units or PDUs to supply power to individual devices. 
 
 If you have any questions as you go through the course then pop on over to the NetBox Zero to Hero channel on the NetDev Community Slack! If you aren't already a member then you can sign up for free using the link below.
 

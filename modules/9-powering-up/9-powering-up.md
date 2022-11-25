@@ -91,11 +91,9 @@ The following cables will be added for power connections between the PDUs and th
 In order to track the power that each of the devices in the rack is consuming, NetBox allows you to model both the Maximum and Allocated Draw, and by doing this for each of the Power Ports on the racked equipment you can track power utilization. 
 
 The [docs](https://docs.netbox.dev/en/stable/models/dcim/powerport/#maximum-draw) define these fields in the data model as follows: 
->**Maximum Draw**
->The maximum amount of power this port consumes (in watts).
+>**Maximum Draw** - The maximum amount of power this port consumes (in watts).
 >
->**Allocated Draw**
->The budgeted amount of power this port consumes (in watts).
+>**Allocated Draw** - The budgeted amount of power this port consumes (in watts).
 
 All of the device types that have been added to NetBox for the Brisbane project have their Power Port Maximum Draw values already defined in the device type definitions, and Eric has also defined their Allocated Draw values as follows: 
 
@@ -111,9 +109,9 @@ All of the device types that have been added to NetBox for the Brisbane project 
 | AUBRI01-VSP-2 | PSU2 | 1400 | 900 |
 
 ## Video - Adding The Facility Power Panels, Feeds and PDUs
-OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the ....., creating the ......, through to adding the ...... 
+OK, so that's the planning work done - let's make this happen in NetBox!! This video will step you through the whole process from adding the power panels, feeds and PDUs, through to connecting the power cables to the network devices and servers. 
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDUs and the power cable connections in the course Git Repository. 
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDU devices and the power cable connections in the course Git Repository. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
