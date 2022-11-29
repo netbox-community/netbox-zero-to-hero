@@ -1,0 +1,9 @@
+side_a_device,side_a_type,side_a_name,side_b_device,side_b_type,side_b_name,type,status,tenant
+AUBRI01-SW-1,dcim.powerport,PSU0,AUBRI01-PDU-1,dcim.poweroutlet,Outlet 1,power,connected,Consulting
+AUBRI01-SW-1,dcim.powerport,PSU1,AUBRI01-PDU-2,dcim.poweroutlet,Outlet 1,power,connected,Consulting
+AUBRI01-CON-1,dcim.powerport,ps1,AUBRI01-PDU-1,dcim.poweroutlet,Outlet 2,power,connected,Consulting
+AUBRI01-RTR-1,dcim.powerport,PSU0,AUBRI01-PDU-2,dcim.poweroutlet,Outlet 2,power,connected,Consulting
+AUBRI01-VSP-1,dcim.powerport,PSU1,AUBRI01-PDU-1,dcim.poweroutlet,Outlet 3,power,connected,Consulting
+AUBRI01-VSP-1,dcim.powerport,PSU2,AUBRI01-PDU-2,dcim.poweroutlet,Outlet 3,power,connected,Consulting
+AUBRI01-VSP-2,dcim.powerport,PSU1,AUBRI01-PDU-1,dcim.poweroutlet,Outlet 4,power,connected,Consulting
+AUBRI01-VSP-2,dcim.powerport,PSU2,AUBRI01-PDU-2,dcim.poweroutlet,Outlet 4,power,connected,Consulting
