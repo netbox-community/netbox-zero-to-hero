@@ -1,0 +1,67 @@
+# Module 9 -  Providers and Circuits
+
+# Introduction
+
+Hello and welcome to module 10 of the NetBox 'Zero-to-Hero' course. In [Module 9: Powering Up!](../9-powering-up/9-powering-up.md), Network Engineer Eric added the facility power panels and feeds for the new Brisbane branch office, along with the PDUs and power cable connections, so all the devices in the new communications cabinet can be powered on. 
+
+Now it's time to connect the new site to the Internet, and in this module Network Engineer Susan will add the new Internet Circuit.  
+
+By the end of this module you will be able to:
+- Describe how NetBox models service providers and circuits
+- Understand how to "connect" circuits directly to device interfaces via cables
+- Use Postman to make API calls to NetBox to add this data programmatically
+
+## Get Hands On
+If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
+1.  Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker) - This is the quickest way to get your own dedicated NetBox instance going and it only takes a few minutes to spin up on your laptop!
+2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
+3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox
+
+The NetBox version used in the video for this module is `v3.3.2`, and the following course materials used in the demo are available: 
+- [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making API calls
+
+## Managing Providers and Circuits in NetBox
+
+From the [official NetBox docs](https://docs.netbox.dev/en/stable/features/circuits/)
+>### Circuits
+>NetBox is ideal for managing your network's transit and peering providers and circuits. It provides all the flexibility needed to model physical circuits in both data center and enterprise environments, and allows for "connecting" circuits directly to device interfaces via cables.
+>
+>### Providers
+>A provider is any organization which provides Internet or private connectivity. Typically, these are large carriers, however they might also include regional providers or even internal services. Each provider can be assigned account and contact details, and may have one or more AS numbers assigned to it.
+>
+>Sometimes you'll need to model provider networks into which you don't have full visibility; these are typically represented on topology diagrams with cloud icons. NetBox facilitates this through its provider network model: A provider network represents a "black box" network to which your circuits can connect. A common example is a provider MPLS network connecting multiple sites.
+>
+>### Circuits
+>A circuit is a physical connection between two points, which is installed and maintained by an external provider. For example, an Internet connection delivered as a fiber optic cable would be modeled as a circuit in NetBox.
+>
+>Each circuit is associated with a provider and assigned a circuit ID, which must be unique to that provider. A circuit is also assigned a user-defined type, operational status, and various other operating characteristics.
+>
+>Each circuit may have up to two terminations (A and Z) defined. Each termination can be associated with a particular site or provider network. In the case of the former, a cable can be connected between the circuit termination and a device component to map its physical connectivity.
+
+## The Project - Adding the Internet Circuit 
+The new Brisbane branch office will have a single Internet Access circuit from an ISP (Internet Service Provider). The circuit will be fiber based with an Ethernet hand-off that connects directly into an interface on the new Brisbane Router, over a Cat6 copper cable. 
+
+The ISP has provisioned the new circuit for as follows:
+
+| Provider | Circuit ID | Circuit Type | Bandwidth (Mbps) | Termination Device | Termination Interface |  
+| --- | --- | --- | :---: | --- | --- |
+| Telstra| TelCir12345 | Internet Access | 200 | AUBRI01-RTR-01 | GigabitEthernet0/0/1 |
+
+## Video - Adding the Provider and the Internet Circuit 
+OK, so that's the planning work done - let's get to the fun stuff!! This video will step you through the whole process from adding the provider and circuit, through to connecting the circuit to the Router interface. 
+
+If you are following along, don't forget to use the [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making the API calls. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Summary
+In this module you have learned how NetBox models providers and circuits, and how to "connect" circuits directly to device interfaces via cables. You also added to your Postman collection for NetBox, to make API calls to add this data programmatically. 
+
+## Join the Discussion
+If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
+
+## Useful Links
+- [Zero To Hero Git Repo](https://github.com/netbox-community/netbox-zero-to-hero)
+- [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
+- [NetBox Docker](https://github.com/netbox-community/netbox-docker)
+- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1

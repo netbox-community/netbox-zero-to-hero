@@ -68,12 +68,14 @@ So, with that said, lets dive in!
 - Use the web interface to manually add Virtualization and service data, including bulk uploading larger amounts of data where required
 
 ### Module 9: Powering Up (coming soon)
-- Describe how NetBox models facility power as discrete power panels and feeds.
+- Describe how NetBox models facility power as discrete power panels and feeds
 - Understand how to add Power Distribution Units (PDUs) to supply power to individual devices
 - Use the web interface to manually add all data relating to facility power including bulk uploading cable connections from CSV data
 
-### Module 10: Is the Internet Down? (coming soon)
-- Providers, circuit types, circuits
+### Module 10: Providers and Circuits (coming soon)
+- Describe how NetBox models service providers and circuits
+- Understand how to "connect" circuits directly to device interfaces via cables
+- Use Postman to make API calls to NetBox to add this data programmatically
 
 ### Module 11: Adding Some Customization (coming soon)
 - Custom Fields, Bandwidth Use on port (link to monitoring graph)
