@@ -1,3 +1,3 @@
 name,device_role,tenant,manufacturer,device_type,status,site,location,rack,position,face
-AUBRI01-PDU-1,PDU,Consulting,APC,AP7921B,planned,AUBRI01,Comms Room,AUBRI01-RK-01,11,rear
-AUBRI01-PDU-2,PDU,Consulting,APC,AP7921B,planned,AUBRI01,Comms Room,AUBRI01-RK-01,12,rear
+AUBRI01-PDU-1,PDU,Consulting,APC,AP7921B,active,AUBRI01,Comms Room,AUBRI01-RK-01,11,rear
+AUBRI01-PDU-2,PDU,Consulting,APC,AP7921B,active,AUBRI01,Comms Room,AUBRI01-RK-01,12,rear
