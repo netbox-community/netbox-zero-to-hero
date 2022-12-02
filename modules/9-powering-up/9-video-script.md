@@ -16,7 +16,7 @@ Excellent, so that's the panels and the feeds set up (click on power feeds to sh
 
 In NetBox PDUs are modelled as normal devices, to as you did for the other devices so far, start by adding the manufacturer, so it's devices, manufacturers click the + and the PDU is made by APC, so add that and click create. 
 
-Next, the device type that Eric has chosen is the AP7921B model, so you can add this by importing from the device type library - so from the github repo (https://github.com/netbox-community/devicetype-library/blob/master/device-types/HPE/ProLiant_DL380_Gen9.yaml) copy the yaml definition and then in the UI, click on the blue import icon next to device types, and then paste in the yaml and click submit. 
+Next, the device type that Eric has chosen is the AP7921B model, so you can add this by importing from the device type library - so from the github repo (https://github.com/netbox-community/devicetype-library/blob/master/device-types/APC/AP7921B.yaml) copy the yaml definition and then in the UI, click on the blue import icon next to device types, and then paste in the yaml and click submit. 
 
 So if you take a look at the device type - you can see it has 1 power port that will connect to the power feed, and 8 power outlets that will the devices in the rack will connect to.
 
@@ -32,7 +32,7 @@ These are connecting the power ports of the devices to the power outlets of the 
 
 OK, so the last thing to do is to update the allocated draw values for each of the power ports on the devices in the rack, so that we can track the utilization correctly. So go to devices - power ports and then for the ps1 power port for the console server - select it and click edit, then set the allocated draw to 20 and click apply. then for the router set the allocated draw to 100. then select both of the switch power ports and edit them and set them to 700 watts. and lastly select all 4 PSUs for the servers and set the allocated draw too 900 watts. 
 
-Great, so now that is done, check the power utilization is being tracked correctly - firstly go to the rack, under organization, racks and then select the brisbane rack - and here you can see the utilization of the available power for the rack is standing at 57%, and if you want to check the individual feeds, then for example you can click on the primary feed under the Power Feeds section - you can see the allocated utilization there also. so that's looking good!
+Great, so now that is done, check the power utilization is being tracked correctly - firstly go to the rack, under organization, racks and then select the brisbane rack - and here you can see the utilization of the available power for the rack is standing at 57%, so that's looking pretty good!
 
 So, I hope that has been a useful overview of how NetBox models facility power as discrete power panels and feeds, and also how to add Power Distribution Units or PDUs to supply power to individual devices. 
 

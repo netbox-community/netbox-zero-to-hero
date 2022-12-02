@@ -65,6 +65,8 @@ Two APC (model AP7921B - 16A, 208/230V) PDU's will be installed in the rack and 
 | AUBRI01-PDU-1 | 11 (rear) |
 | AUBRI01-PDU-2 | 12 (rear) |
 
+You can find the YAML definition for this device in the [Device Type Library repo](https://github.com/netbox-community/devicetype-library/blob/master/device-types/APC/AP7921B.yaml).
+
 ### Device to PDU Power Connections
 The following cables will be added for power connections between the devices and the PDUs:
 
