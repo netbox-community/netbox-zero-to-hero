@@ -52,7 +52,7 @@ There are two power panels provided by the facilities management company:
 ### Power Feeds
 Each power panel supplies a single power feed (discrete circuit) to the Comms room rack as follows: 
 
-| Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amperage | Phase | 
+| Feed Name | Power Panel | Rack | Type | Supply | Voltage | Amps | Phase | 
 | --- | --- | --- | --- | :---: | :---: | :---: | :---: |
 | AUBRI01-PWR-FEED-1 | AUBRI01-PWR-PAN-1 | AUBRI01-RK-01 | Primary | AC | 200 | 16 | 3-phase | 
 | AUBRI01-PWR-FEED-2 | AUBRI01-PWR-PAN-2 | AUBRI01-RK-01 | Redundant | AC | 200 | 16 | 3-phase | 
@@ -115,7 +115,7 @@ OK, so that's the planning work done - let's make this happen in NetBox!! This v
 
 If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDU devices and the power cable connections in the course Git Repository. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ky7UXDPTobA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 In this module you have learned how NetBox models facility power as discrete power panels and feeds. You also learned how to add Power Distribution Units (PDUs) to supply power to individual devices. 
