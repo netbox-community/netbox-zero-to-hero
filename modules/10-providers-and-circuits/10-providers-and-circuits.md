@@ -52,7 +52,7 @@ OK, so that's the planning work done - let's get to the fun stuff!! This video w
 
 If you are following along, don't forget to use the [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making the API calls. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GgnBzAYgZGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 In this module you have learned how NetBox models providers and circuits, and how to "connect" circuits directly to device interfaces via cables. You also added to your Postman collection for NetBox, to make API calls to add this data programmatically. 

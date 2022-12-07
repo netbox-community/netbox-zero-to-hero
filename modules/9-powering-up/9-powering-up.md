@@ -120,6 +120,8 @@ If you are following along you can find the [CSV data](https://github.com/netbox
 ## Summary
 In this module you have learned how NetBox models facility power as discrete power panels and feeds. You also learned how to add Power Distribution Units (PDUs) to supply power to individual devices. 
 
+In [Module 10: Providers and Circuits](../10-providers-and-circuits/10-providers-and-circuits.md) you will learn how NetBox models providers and circuits, and how to "connect" circuits directly to device interfaces via cables. You will also add to your Postman collection for NetBox, with some new API calls to add and verify this data programmatically. 
+
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 

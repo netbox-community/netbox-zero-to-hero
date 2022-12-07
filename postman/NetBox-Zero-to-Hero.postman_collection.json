@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6b61ee7a-a1c0-4bab-8e7c-ba77e36ca1c1",
+		"_postman_id": "64aeb6fc-db20-4da4-87ca-548ee451afa1",
 		"name": "NetBox - Zero to Hero",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21687002"
@@ -626,6 +626,323 @@
 									"key": "name__isw",
 									"value": "aubri"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Circuits",
+			"item": [
+				{
+					"name": "get providers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/providers/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"circuits",
+								"providers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get circuit types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/circuit-types/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"circuits",
+								"circuit-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get circuits",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/circuits/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"circuits",
+								"circuits",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get circuit terminations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}/api/circuits/circuit-terminations/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"circuits",
+								"circuit-terminations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create provider",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Telstra\",\n        \"slug\": \"telstra\",\n        \"account\": \"TELAC6789\",\n        \"portal_url\": \"http://www.madeupportal.com\",\n        \"noc_contact\": \"email: help@madeupportal.com\",\n        \"admin_contact\": \"email:admin@madeupportal.com\"\n    } \n]"
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/providers/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"",
+								"api",
+								"circuits",
+								"providers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create circuit type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Internet Access\",\n        \"slug\": \"internet-access\",\n        \"description\": \"Direct Internet Access Circuit\"\n    } \n]"
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/circuit-types/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"",
+								"api",
+								"circuits",
+								"circuit-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create circuit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"cid\": \"TelCir12345\",\n        \"provider\": 1,\n        \"type\": 1,\n        \"status\": \"active\",\n        \"tenant\": 3, \n        \"commit_rate\": 200000\n    } \n]"
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/circuits/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"",
+								"api",
+								"circuits",
+								"circuits",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create circuit termination",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{api_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n    \"circuit\": {\n        \"cid\": \"TelCir12345\"\n    },\n    \"term_side\": \"Z\",\n    \"site\": {\n        \"name\": \"AUBRI01\"\n    },\n    \"port_speed\": 200000\n    }\n]"
+						},
+						"url": {
+							"raw": "{{protocol}}://{{netboxURL}}:{{port}}//api/circuits/circuit-terminations/",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{netboxURL}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"",
+								"api",
+								"circuits",
+								"circuit-terminations",
+								""
 							]
 						}
 					},

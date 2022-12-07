@@ -72,7 +72,7 @@ So, with that said, lets dive in!
 - Understand how to add Power Distribution Units (PDUs) to supply power to individual devices
 - Use the web interface to manually add all data relating to facility power including bulk uploading cable connections from CSV data
 
-### Module 10: Providers and Circuits (coming soon)
+### [Module 10: Providers and Circuits](modules/10-providers-and-circuits/10-providers-and-circuits.md)
 - Describe how NetBox models service providers and circuits
 - Understand how to "connect" circuits directly to device interfaces via cables
 - Use Postman to make API calls to NetBox to add this data programmatically
