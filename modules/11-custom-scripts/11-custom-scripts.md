@@ -31,6 +31,10 @@ From the [official NetBox docs](https://docs.netbox.dev/en/stable/customization/
 >- Fetch data from an external source and import it to NetBox
 >
 >Custom scripts are Python code and exist outside of the official NetBox code base, so they can be updated and changed without interfering with the core NetBox installation. And because they're completely custom, there is no inherent limitation on what a script can accomplish.
+>
+>A custom script can prompt the user for input via a form (or API data), and is built to do much more than just reporting. Custom scripts are generally used to automate tasks, such as the population of new objects in NetBox, or exchanging data with external systems.
+>
+>The complete Python environment is available to a custom script, including all of NetBox's internal mechanisms: There are no artificial restrictions on what a script can do. As such, custom scripting is considered an advanced feature and requires sufficient familiarity with Python and NetBox's data model.
 
 The official documentation for Custom Scripts referenced above is **the best source of information** on the subject and (as with all modules in this course), this module is meant to compliment the official docs. A quick internet search will also bring up plenty of examples that you can use or get inspiration from for your own scripts. 
 
@@ -60,7 +64,7 @@ The [first script](https://github.com/netbox-community/netbox-zero-to-hero/tree/
 - Cluster Status
 - VM Status 
 
-For each input the user selects the new status - so for example if you are moving a site from `planned` to `active` then you would simply select `active` for the status of each one and then run the script. All the standard choices are available so you could also use this script to update the status to anything you like.
+For each input the user selects the new status - so for example if you are moving a site from `planned` to `active` then you would simply select `active` for the status of each one and then run the script. All the standard choices are available so you could also use this script to update the status to anything you like - for example to decommission a site.
 
 ## Custom Script Two - New Branch 
 This [script](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/NewBranchScript.py) is an adapted version of the example script from the official Docs and takes the following as user input: 
