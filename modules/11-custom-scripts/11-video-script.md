@@ -14,7 +14,7 @@ Next, as this script is working with objects within the DCIM and virtualization 
 
 If you are not familiar with python or just starting out with it then it will help to view the source code of NetBox in the git repo to see what these import statements are doing - so from the UI scroll down to the bottom and click on the Source Code icon to take your there. 
 
-OK, so if you navigate to netbox / netbox / virtualization / models.py and then search for 'class VirtualMachine' you see the base class for a virtual machine that is being imported into the custom script.  Next if you navigate back to virtualization / choices.py you can see for example the class of ClusterStatusChoices - and you see the status choices available for clusters. So as the custom script is importing these python classes we can make use of them to be able to update the status of virtualization objects. 
+OK, so if you navigate to netbox/virtualization/models/virtualmachines.py and scroll down to 'class VirtualMachine' you see the base class for a virtual machine that is being imported into the custom script.  Next if you navigate back to virtualization / choices.py you can see for example the class of ClusterStatusChoices - and you see the status choices available for clusters. So as the custom script is importing these python classes we can make use of them to be able to update the status of virtualization objects. 
 
 I hope that makes sense - and the point here is that the complete Python environment is available to a custom script, including all of NetBox's internal mechanisms. so if you are developing your own custom scripts then at some point you will probably need to refer to the NetBox source code. 
 
