@@ -4,14 +4,14 @@
 
 Hello and welcome to module 11 of the NetBox 'Zero-to-Hero' course. In [Module 10: Providers and Circuits](../10-providers-and-circuits/10-providers-and-circuits.md), Network Engineer Susan added the Circuit to connect the new Brisbane branch office to the Internet. 
 
-Now it's time for the Brisbane office to 'go live', so Eric is going to use a custom script to Update the status of the Site, all Locations, Racks, Devices, Clusters and VMs located at the site from `Planned` to `Active` This will be much quicker and more convenient than having to go into each section of the NetBox UI to update the status of all the objects. He can simply run the script to update everything in a couple of seconds!
+Now it's time for the Brisbane office to 'go live', so Eric is going to use a custom script to Update the status of the Site, and all Locations, Racks, Devices, Clusters and VMs at the site from `Planned` to `Active`. Using a script to do this will be much quicker and more convenient than having to go into each section of the NetBox UI to update the status of all the objects. He can simply run the script to update everything in a couple of seconds!
 
 Eric's boss has also just informed him that a new branch office is planned for Stockholm, Sweden and that he should plan for this also. As the company has standardized on the same network equipment for all branch office locations, Eric is going to use another Custom Script to create the planned site, as well as the network devices that he is planning to deploy there. 
 
 By the end of this module you will be able to:
 - Describe what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish
-- Understand the basics of writing Custom Scripts and also where to find documentation do help you develop your own scripts
-- Kick start writing your Custom Scripts by copying the two example scripts included with this module to get you going
+- Understand the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts
+- Kick start writing your Custom Scripts collection by copying the two example scripts included with this module to get you going
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
@@ -36,7 +36,7 @@ From the [official NetBox docs](https://docs.netbox.dev/en/stable/customization/
 >
 >The complete Python environment is available to a custom script, including all of NetBox's internal mechanisms: There are no artificial restrictions on what a script can do. As such, custom scripting is considered an advanced feature and requires sufficient familiarity with Python and NetBox's data model.
 
-The official documentation for Custom Scripts referenced above is **the best source of information** on the subject and (as with all modules in this course), this module is meant to compliment the official docs. A quick internet search will also bring up plenty of examples that you can use or get inspiration from for your own scripts. 
+The official documentation for Custom Scripts referenced above is **the best source of information** on the subject and (as with all modules in this course), this module is meant to compliment the official docs. A quick internet search will also bring up plenty of example scripts that you can use or get inspiration from for your own scripts. 
 
 ## Adding Custom Scripts to NetBox
 To add custom scripts to your NetBox installation, scripts should be saved to `/opt/netbox/netbox/scripts`. 
@@ -51,10 +51,10 @@ If you are running NetBox Docker then you will find in your `docker-compose.yml`
 Simply copy your scripts into `./scripts` and they will appear in the NetBox container. See this [discussion](https://github.com/netbox-community/netbox/discussions/6085) for more details. 
 
 ## Running Custom Scripts
-You can run scripts in one of three ways - Via the Web UI (the focus of this module) by navigating to the script, completing any required form data, and clicking the "run script" button, or via the API or the CLI. Again, refer to the official docs for more information on script execution via the API/CLI scripts. 
+You can run scripts in one of three ways - Via the Web UI (the focus of this module) by navigating to the script, completing any required form data, and clicking the "Run Script" button, or via the API or the CLI. Again, refer to the official docs for more information on script execution via the API/CLI scripts. 
 
 ## Custom Script One - Site Status Bulk Updater 
-The [first script](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/SiteStatusBulkUpdater.py) takes following as user input: 
+The [first script](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/SiteStatusBulkUpdater.py) takes the following as user input: 
 
 - Site Name
 - Site Status
