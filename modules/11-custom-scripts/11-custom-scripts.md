@@ -4,9 +4,9 @@
 
 Hello and welcome to module 11 of the NetBox 'Zero-to-Hero' course. In [Module 10: Providers and Circuits](../10-providers-and-circuits/10-providers-and-circuits.md), Network Engineer Susan added the Circuit to connect the new Brisbane branch office to the Internet. 
 
-Now it's time for the Brisbane office to 'go live', so Eric is going to use a custom script to Update the status of the Site, all Locations, Racks, Devices, Clusters and VMs located at the site from `Planned` to `Active` This will be much more convenient than having to go into each section of the NetBox system to update the status of all the objects. 
+Now it's time for the Brisbane office to 'go live', so Eric is going to use a custom script to Update the status of the Site, all Locations, Racks, Devices, Clusters and VMs located at the site from `Planned` to `Active` This will be much quicker and more convenient than having to go into each section of the NetBox UI to update the status of all the objects. He can simply run the script to update everything in a couple of seconds!
 
-Eric's boss has also just informed him that a new branch office is planned for Stockholm, Sweden and that he should plan for this also. As the company has standardized on the same network equipment for all branch office locations, Eric is going to use another Custom Script to create the site, as well as the network devices that we is planning to deploy there. 
+Eric's boss has also just informed him that a new branch office is planned for Stockholm, Sweden and that he should plan for this also. As the company has standardized on the same network equipment for all branch office locations, Eric is going to use another Custom Script to create the planned site, as well as the network devices that he is planning to deploy there. 
 
 By the end of this module you will be able to:
 - Describe what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish
@@ -32,12 +32,12 @@ From the [official NetBox docs](https://docs.netbox.dev/en/stable/customization/
 >
 >Custom scripts are Python code and exist outside of the official NetBox code base, so they can be updated and changed without interfering with the core NetBox installation. And because they're completely custom, there is no inherent limitation on what a script can accomplish.
 
-The official documentation for Custom Scripts referenced above is **the** best source of information on the subject and (as with all modules in this course), this module is meant to compliment the official docs. A quick internet search will also bring up plenty of examples that you can use or get inspiration from for your own scripts. 
+The official documentation for Custom Scripts referenced above is **the best source of information** on the subject and (as with all modules in this course), this module is meant to compliment the official docs. A quick internet search will also bring up plenty of examples that you can use or get inspiration from for your own scripts. 
 
 ## Adding Custom Scripts to NetBox
-To add custom scripts to your NetBox installation, scripts should be saved to `/opt/netbox/netbox/scripts`. If you navigate to **Other --> Scripts** in the Web UI before you add any, then you will see a message saying **No Scripts Found**
+To add custom scripts to your NetBox installation, scripts should be saved to `/opt/netbox/netbox/scripts`. 
 
-If you are running NetBox Docker then you will find in your `docker-compose.yml` file the local directory `./scripts` on the host you are running docker-compose is mounted as a volume in the NetBox container: 
+If you are running NetBox Docker then you will find in your `docker-compose.yml` file the local directory `./scripts` on the host you are running docker-compose on, is mounted as a volume in the NetBox container: 
 
 ```
     volumes:
@@ -49,8 +49,8 @@ Simply copy your scripts into `./scripts` and they will appear in the NetBox con
 ## Running Custom Scripts
 You can run scripts in one of three ways - Via the Web UI (the focus of this module) by navigating to the script, completing any required form data, and clicking the "run script" button, or via the API or the CLI. Again, refer to the official docs for more information on script execution via the API/CLI scripts. 
 
-## Custom Script One - [Site Status Bulk Updater](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/SiteStatusBulkUpdater.py)
-The first script takes following as user input: 
+## Custom Script One - Site Status Bulk Updater 
+The [first script](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/SiteStatusBulkUpdater.py) takes following as user input: 
 
 - Site Name
 - Site Status
@@ -62,8 +62,8 @@ The first script takes following as user input:
 
 For each input the user selects the new status - so for example if you are moving a site from `planned` to `active` then you would simply select `active` for the status of each one and then run the script. All the standard choices are available so you could also use this script to update the status to anything you like.
 
-## Custom Script Two - [New Branch](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/NewBranchScript.py)
-This script is an adapted version of the example script from the official Docs and takes the following as user input: 
+## Custom Script Two - New Branch 
+This [script](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts/NewBranchScript.py) is an adapted version of the example script from the official Docs and takes the following as user input: 
 
 - Site Name
 - Switch Count + Model
@@ -71,10 +71,10 @@ This script is an adapted version of the example script from the official Docs a
 - AP Count + Model
 - Server Count + Model
 
-When the script is run it will create a new Site, along with the the required routers, switches, APs and servers. This one is another great time saver in that you can set up a new site and all the required devices in a couple of seconds, all within the same screen of the UI!
+When the script is run it will create a new Site, along with the the required routers, switches, Wireless APs and servers. This one is another great time saver in that you can set up a new site and all the required devices in a couple of seconds, all within the same screen of the UI!
 
 ## Video - NetBox Custom Scripts
-OK, so that's the overview of the scripts that will be used - let's get to the fun stuff!! This video will give you a quick walk through of the code in each script, and show you how to run them from the Web UI and see the results. 
+OK, so that's the overview of the scripts that will be used - let's see them in action!! This video will give you a quick walk through of the code in each script, and show you how to run them from the Web UI and see the results. 
 
 If you are following along, don't forget to use the [Custom Script Examples](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts) 
 
