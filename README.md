@@ -77,8 +77,10 @@ So, with that said, lets dive in!
 - Understand how to "connect" circuits directly to device interfaces via cables
 - Use Postman to make API calls to NetBox to add this data programmatically
 
-### Module 11: Adding Some Customization (coming soon)
-- Custom Fields, Bandwidth Use on port (link to monitoring graph)
+### [Module 11: Custom Scripts](modules/11-custom-scripts/11-custom-scripts.md)
+- Describe what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish
+- Understand the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts
+- Kick start your own Custom Scripts collection, with two example scripts to get you up and running. 
 
 ### Module 12: The Boss is Asking for a Report (another easy win!) (coming soon)
 - Reports
