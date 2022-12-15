@@ -57,6 +57,8 @@ If you are following along, don't forget to use the [Postman Collection](https:/
 ## Summary
 In this module you have learned how NetBox models providers and circuits, and how to "connect" circuits directly to device interfaces via cables. You also added to your Postman collection for NetBox, to make API calls to add this data programmatically. 
 
+In [Module 11 - Custom Scripts](../11-custom-scripts/11-custom-scripts.md) you will learn what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You'll also learn the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts. Plus you can kick start your own Custom Scripts collection by copying the two example scripts included with the module to get you up and running!
+
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 

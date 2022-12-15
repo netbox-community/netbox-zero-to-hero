@@ -11,7 +11,7 @@ Eric's boss has also just informed him that a new branch office is planned for S
 By the end of this module you will be able to:
 - Describe what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish
 - Understand the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts
-- Kick start writing your Custom Scripts collection by copying the two example scripts included with this module to get you going
+- Kick start your own Custom Scripts collection, with two example scripts to get you up and running
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
@@ -82,10 +82,13 @@ OK, so that's the overview of the scripts that will be used - let's see them in 
 
 If you are following along, don't forget to use the [Custom Script Examples](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts) 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/?????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mBZ8HGVuZyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
-In this module you have learned what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You also learned the basics of writing Custom Scripts and where to find documentation do help you develop your own scripts. You also got a head start with the two example scripts included with this module.
+In this module you have learned what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You also learned the basics of writing Custom Scripts and where to find documentation do help you develop your own scripts. You also got a head start on writing your own Custom Scripts collection, with two example scripts to get you up and running. 
+
+## Challenge
+If you fancy a challenge why not see if you can develop one of the scripts further - for example you could also create the rack in the New Branch script, and then assign all newly created devices to the next available rack unit positions. Or you could also add in patch panels, console servers and PDU's - to make adding a new branch even easier! We'd love to see your scripts, so feel free to share them on the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
