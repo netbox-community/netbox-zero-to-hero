@@ -24,7 +24,7 @@ you can scroll down and find the module you are looking, in this case its the ne
 
 Now each of the roles we have defined is structured in exactly the same way as this one - so feel free to explore the rest of them yourself in the roles directory. (click on and expand create_vlan_groups)
 
-OK, so to run all these playbooks to populate the IPAM data, you need to run the main playbook called 'populate_netbox_ipam.yml' so lets just run through what that does (open file)
+OK, so to run of all these playbooks to populate the IPAM data, you need to run the main playbook called 'populate_netbox_ipam.yml' so lets just run through what that does (open file)
 
 So Ansible is all about playbooks and this playbook has a number of plays in it - each one calling one of the roles we have just looked at - and the playbook will execute each play in order.  Breaking this down further we can see that play 1 is calling the 'create_rirs' role - which as we know is going to add the RFC 1918 RIR into netbox. The other parameters in each play are: 
 

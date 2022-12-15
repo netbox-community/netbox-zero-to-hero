@@ -4,7 +4,7 @@
 
 Hello and welcome to module 11 of the NetBox 'Zero-to-Hero' course. In [Module 10: Providers and Circuits](../10-providers-and-circuits/10-providers-and-circuits.md), Network Engineer Susan added the Circuit to connect the new Brisbane branch office to the Internet. 
 
-Now it's time for the Brisbane office to 'go live', so Eric is going to use a custom script to Update the status of the Site, and all Locations, Racks, Devices, Clusters and VMs at the site from `Planned` to `Active`. Using a script to do this will be much quicker and more convenient than having to go into each section of the NetBox UI to update the status of all the objects. He can simply run the script to update everything in a couple of seconds!
+Now it's time for the Brisbane office to 'go live', so Eric is going to use a custom script to update the status of the Site, and all Locations, Racks, Devices, Clusters and VMs at the site from `Planned` to `Active`. Using a script to do this will be much quicker and more convenient than having to go into each section of the NetBox UI to update the status of all the objects. He can simply run the script to update everything in a couple of seconds!
 
 Eric's boss has also just informed him that a new branch office is planned for Stockholm, Sweden and that he should plan for this also. As the company has standardized on the same network equipment for all branch office locations, Eric is going to use another Custom Script to create the planned site, as well as the network devices that he is planning to deploy there. 
 
@@ -16,7 +16,7 @@ By the end of this module you will be able to:
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options: 
 1.  Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker) - This is the quickest way to get your own dedicated NetBox instance going and it only takes a few minutes to spin up on your laptop!
-2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
+2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The NetBox version used in the video for this module is `v3.3.2`, and the following course materials used in the demo are available: 
@@ -85,7 +85,7 @@ If you are following along, don't forget to use the [Custom Script Examples](htt
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mBZ8HGVuZyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
-In this module you have learned what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You also learned the basics of writing Custom Scripts and where to find documentation do help you develop your own scripts. You also got a head start on writing your own Custom Scripts collection, with two example scripts to get you up and running. 
+In this module you have learned what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You also learned the basics of writing Custom Scripts and where to find documentation to help you develop your own scripts. You also got a head start on writing your own Custom Scripts collection, with two example scripts to get you up and running. 
 
 ## Challenge
 If you fancy a challenge why not see if you can develop one of the scripts further - for example you could also create the rack in the New Branch script, and then assign all newly created devices to the next available rack unit positions. Or you could also add in patch panels, console servers and PDU's - to make adding a new branch even easier! We'd love to see your scripts, so feel free to share them on the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
