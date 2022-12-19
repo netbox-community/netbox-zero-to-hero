@@ -82,7 +82,7 @@ So, with that said, lets dive in!
 - Understand the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts
 - Kick start your own Custom Scripts collection, with two example scripts to get you up and running. 
 
-### Module 12: The Boss is Asking for a Report (another easy win!) (coming soon)
+### Module 12: The Boss is Asking for a Report (another easy win!) (coming very soon)
 - Reports
 
 ## Useful Links
