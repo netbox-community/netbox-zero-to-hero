@@ -87,6 +87,8 @@ If you are following along, don't forget to use the [Custom Script Examples](htt
 ## Summary
 In this module you have learned what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You also learned the basics of writing Custom Scripts and where to find documentation to help you develop your own scripts. You also got a head start on writing your own Custom Scripts collection, with two example scripts to get you up and running. 
 
+In [Module 12: The Boss is Asking for a Report (another easy win!)](../12-the-boss-is-asking-for-a-report/12-the-boss-is-asking-for-a-report.md) you will learn what NetBox reports are and what kind of things they can be used to verify. You will also learn the basics of reports and where to find documentation and examples to help you develop your own reports. You also Kick start your own reports collection, with two example reports to get you up and running. 
+
 ## Challenge
 If you fancy a challenge why not see if you can develop one of the scripts further - for example you could also create the rack in the New Branch script, and then assign all newly created devices to the next available rack unit positions. Or you could also add in patch panels, console servers and PDU's - to make adding a new branch even easier! We'd love to see your scripts, so feel free to share them on the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
 

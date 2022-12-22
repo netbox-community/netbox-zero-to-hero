@@ -14,7 +14,7 @@ Next create 2 devices from this device type, by clicking on the blue import icon
 
 Next add the cables to connect the servers to the access switch - and again do this using the CSV data from the file accompanying this module. click on connections, and then the blue import icon, and paste in the csv data for the 6 cables. These are connecting the iLO ports and 2 of the gigabit ethernet ports, and are 2 metre long, cat 6 cables, in blue for iLO and green for the main ethernet connections - then click submit. 
 
-great, so the 2 ethernet interfaces on each server are going to be members of a LAG interfaces, or Aggregated Ethernet interface in Juniper networking terms. in order to create these LAG interfaces, click devices, select the switch, then click interfaces, then scroll down and click on add interfaces in the bottom right corner. so the name of the first LAG interface is ao0, it is of type LAG, the 802.1Q Mode mode is tagged all, and the VLAN groups is Brisbane vlans. then add the 2nd one ae1. 
+great, so the 2 ethernet interfaces on each server are going to be members of a LAG interfaces, or Aggregated Ethernet interface in Juniper networking terms. in order to create these LAG interfaces, click devices, select the switch, then click interfaces, then scroll down and click on add interfaces in the bottom right corner. so the name of the first LAG interface is ae0, it is of type LAG, the 802.1Q Mode mode is tagged all, and the VLAN groups is Brisbane vlans. then add the 2nd one ae1. 
 
 next select both interfaces ge-0/0/1 and 2, and click edit, then add them both to the the ae0 LAG interface, by scrolling down to Related Interfaces, and for LAG select ae0, then under 802.1Q Switching select tagged all, and Brisbane vlans, then click on apply. 
 

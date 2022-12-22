@@ -57,7 +57,7 @@ Simply copy your reports into `./reports` and they will appear in the NetBox con
 ## Running Reports
 You can run reports in one of three ways - Via the Web UI (the focus of this module) by navigating to the report, and clicking the "run report" button at top right, or via the API or the CLI. Again, refer to the official docs for more information on running reports via the API/CLI. 
 
-## Report One - Check For Missing Primary IPs
+### Report One - Check For Missing Primary IPs
 The [first report](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/reports/ip-primary-missing.py) does the following:
 
 1. loops over all devices with a status of `active`
@@ -65,7 +65,7 @@ The [first report](https://github.com/netbox-community/netbox-zero-to-hero/tree/
 3. checks if each device has a primary IPv6 IP address configured
 4. reports which devices are missing primary IPs
 
-## Report Two - Check all Devices Meet Naming Standards
+### Report Two - Check all Devices Meet Naming Standards
 The [second report](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/reports/CheckDeviceNaming.py) does the following:
 
 1. loops over all devices with a status of `active`
