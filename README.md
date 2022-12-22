@@ -82,8 +82,10 @@ So, with that said, lets dive in!
 - Understand the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts
 - Kick start your own Custom Scripts collection, with two example scripts to get you up and running. 
 
-### Module 12: The Boss is Asking for a Report (another easy win!) (coming very soon)
-- Reports
+### [Module 12: The Boss is Asking for a Report (another easy win!)](modules/12-the-boss-is-asking-for-a-report/12-the-boss-is-asking-for-a-report.md)
+- Describe what NetBox reports are and what kind of things they can be used to verify
+- Understand the basics of reports and also where to find documentation and examples to help you develop your own reports
+- Kick start your own NetBox reports collection, with two example reports to get you up and running
 
 ## Useful Links
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
