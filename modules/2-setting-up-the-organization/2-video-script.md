@@ -146,7 +146,7 @@ To complete the organizational set up Susan is going to add some contacts. A con
 
 So to start off TLE consulting has 2 contact groups - IT and facilities management. So from contact groups, click add and then the first one is IT, with a description of IT Staff, the 2nd one is Facilities Management, with a description of 'Facilities Management Staff'
 
-Next add the contact roles, again clicking add. the first role to add is    , and then the next role will be Emergency.
+Next add the contact roles, again clicking add. the first role to add is Operations, and then the next role will be Emergency.
 
 Alright, so now add the individual contacts - starting with Susan - now she is in the IT contact group, and she is an Awesome Network Engineer. and then add her phone 555-123-4567 and email susan@example.com. 
 
