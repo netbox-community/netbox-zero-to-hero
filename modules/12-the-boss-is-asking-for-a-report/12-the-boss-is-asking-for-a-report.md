@@ -65,7 +65,7 @@ The [first report](https://github.com/netbox-community/netbox-zero-to-hero/tree/
 3. checks if each device has a primary IPv6 IP address configured
 4. reports which devices are missing primary IPs
 
-### Report Two - Check all Devices Meet Naming Standards
+### Report Two - Check All Devices Meet Naming Standards
 The [second report](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/reports/CheckDeviceNaming.py) does the following:
 
 1. loops over all devices with a status of `active`
@@ -80,7 +80,7 @@ If you are following along, don't forget to use the [Report Examples](https://gi
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RH3Syxm3EKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
-In this module you have learned what NetBox reports are and what kind of things they can be used to verify. You also learned the basics of reports and where to find documentation and examples to help you develop your own reports. You also Kick started your own reports collection, with two example reports to get you up and running. 
+In this module you have learned what NetBox reports are and what kind of things they can be used to verify. You also learned the basics of reports and where to find documentation and examples to help you develop your own reports. You also kick started your own reports collection, with two example reports to get you up and running. 
 
 ## Challenge
 If you fancy a challenge why not write a report of your own. We'd love to see your Reports, so feel free to share them on the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack!
