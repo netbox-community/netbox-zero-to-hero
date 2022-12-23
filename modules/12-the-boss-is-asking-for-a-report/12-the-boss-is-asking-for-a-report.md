@@ -77,7 +77,7 @@ OK, so that's the overview of NetBox reports - let's see them in action!! This v
 
 If you are following along, don't forget to use the [Report Examples](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/reports).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/???????" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RH3Syxm3EKA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Summary
 In this module you have learned what NetBox reports are and what kind of things they can be used to verify. You also learned the basics of reports and where to find documentation and examples to help you develop your own reports. You also Kick started your own reports collection, with two example reports to get you up and running. 
@@ -89,6 +89,7 @@ If you fancy a challenge why not write a report of your own. We'd love to see yo
 If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 
 ## Useful Links
+- [Community Reports Git repo](https://github.com/netbox-community/reports)
 - [Zero To Hero Git Repo](https://github.com/netbox-community/netbox-zero-to-hero)
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
