@@ -53,7 +53,7 @@ interface {{ intf.name }}
   {% endif %}
     {% for ip in ip_addresses.json.results %}
       {% if ip.assigned_object.name == intf.name %}
-  ip address {{ ip.address.split('/')[0] }} {{ ip.address | ansible.utils.ipaddr('netmask') }}  
+  ip address {{ ip.address.split('/')[0] }} {{ ip.address | ansible.netcommon.ipaddr('netmask') }}  
       {% endif %}
     {% endfor %}
   no shutdown
