@@ -44,7 +44,7 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 If you are following along you can find the [python scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) in the course Git Repository and you can use these as a starting point for building your collection of Python scripts for NetBox. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rewxPa58VCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Adding wireless LANs into Netbox](https://img.youtube.com/vi/rewxPa58VCw/0.jpg)](https://www.youtube.com/watch?v=rewxPa58VCw)
 
 ## Summary
 In this module you have learned how NetBox Models Wireless LANs, and how to add Wireless LAN data using simple Python scripts.

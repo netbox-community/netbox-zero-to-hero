@@ -53,7 +53,7 @@ If you are following along you can find the [CSV data](https://github.com/netbox
 
 With that said, let's get started! 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lit6H8XF2d0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Setting up the organization](https://img.youtube.com/vi/Lit6H8XF2d0/0.jpg)](https://www.youtube.com/watch?v=Lit6H8XF2d0)
 
 ## Summary
 In this module you learned how to set up your organization's data in NetBox using the Web Interface. 
