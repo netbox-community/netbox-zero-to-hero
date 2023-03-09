@@ -58,7 +58,7 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 
 If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/5-making-the-connections/csv_data) in the course Git Repository. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FTjqGPS2oSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Adding cables and connections into Netbox](https://img.youtube.com/vi/FTjqGPS2oSo/0.jpg)](https://www.youtube.com/watch?v=FTjqGPS2oSo)
 
 ## Summary
 In this module you have learned how NetBox models Cables, Interface and Console connections, and how to bulk upload them via the web interface. 
