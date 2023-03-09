@@ -89,4 +89,4 @@ If you have any questions as you go through the course then pop on over to the [
 - [NetBox GitHub](https://github.com/netbox-community/netbox)
 - [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)
 - [NetBox Community Device Type Library](https://github.com/netbox-community/devicetype-library)
-- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1
+- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NetBox Labs

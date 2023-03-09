@@ -133,4 +133,4 @@ If you have any questions as you go through the course then pop on over to the [
 - [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 - [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
 - [NetBox Ansible Documentation](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/index.html)
-- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NS1
+- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NetBox Labs
