@@ -74,7 +74,7 @@ The best way to understand the power of NetBox is to dive right in and start exp
 For a deep dive, you can check out the NetBox [REST API documentation](https://docs.netbox.dev/en/stable/integrations/rest-api/). 
 For now, let's take a quick tour of the REST API in this short video, which will help you to get up and running in no time: 
 
-[![Quick tour of the REST API](https://img.youtube.com/vi/Gsarb0elmoA/maxresdefault.jpg)](https://www.youtube.com/watch?v=Gsarb0elmoA)
+[![Quick tour of the REST API](https://img.youtube.com/vi/Gsarb0elmoA/hqdefault.jpg)](https://www.youtube.com/watch?v=Gsarb0elmoA)
 
 ---------
 
