@@ -82,7 +82,7 @@ OK, so that's the overview of the scripts that will be used - let's see them in 
 
 If you are following along, don't forget to use the [Custom Script Examples](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts) 
 
-[![Netbox custom scripts](https://img.youtube.com/vi/mBZ8HGVuZyE/0.jpg)](https://www.youtube.com/watch?v=mBZ8HGVuZyE)
+[![Netbox custom scripts](https://img.youtube.com/vi/mBZ8HGVuZyE/maxresdefault.jpg)](https://www.youtube.com/watch?v=mBZ8HGVuZyE)
 
 ## Summary
 In this module you have learned what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish. You also learned the basics of writing Custom Scripts and where to find documentation to help you develop your own scripts. You also got a head start on writing your own Custom Scripts collection, with two example scripts to get you up and running. 

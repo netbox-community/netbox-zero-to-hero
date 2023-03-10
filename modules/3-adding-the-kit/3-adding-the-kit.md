@@ -64,7 +64,7 @@ The video demo will now show you how to add all of the device data into NetBox m
 If you are following along, don't forget to use the [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making the API calls and the [YAML files](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/3-adding-the-kit/yaml_data) used for adding device types.
 
 
-[![Adding devices into Netbox](https://img.youtube.com/vi/dA3LZiV7UIg/0.jpg)](https://www.youtube.com/watch?v=dA3LZiV7UIg)
+[![Adding devices into Netbox](https://img.youtube.com/vi/dA3LZiV7UIg/maxresdefault.jpg)](https://www.youtube.com/watch?v=dA3LZiV7UIg)
 
 ## Summary
 In this module you learned how to add devices into NetBox, making use of the NetBox REST API and a Postman collection. 

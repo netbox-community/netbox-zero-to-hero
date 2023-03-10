@@ -52,7 +52,7 @@ OK, so that's the planning work done - let's get to the fun stuff!! This video w
 
 If you are following along, don't forget to use the [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman) for making the API calls. 
 
-[![Adding the provider and the internet circuit](https://img.youtube.com/vi/GgnBzAYgZGY/0.jpg)](https://www.youtube.com/watch?v=GgnBzAYgZGY)
+[![Adding the provider and the internet circuit](https://img.youtube.com/vi/GgnBzAYgZGY/maxresdefault.jpg)](https://www.youtube.com/watch?v=GgnBzAYgZGY)
 
 ## Summary
 In this module you have learned how NetBox models providers and circuits, and how to "connect" circuits directly to device interfaces via cables. You also added to your Postman collection for NetBox, to make API calls to add this data programmatically. 
