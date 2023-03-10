@@ -78,7 +78,7 @@ OK, so that's the overview of NetBox reports - let's see them in action!! This v
 If you are following along, don't forget to use the [Report Examples](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/reports).
 
 
-[![Netbox reports](https://img.youtube.com/vi/RH3Syxm3EKA/0.jpg)](https://www.youtube.com/watch?v=RH3Syxm3EKA)
+[![Netbox reports](https://img.youtube.com/vi/RH3Syxm3EKA/maxresdefault.jpg)](https://www.youtube.com/watch?v=RH3Syxm3EKA)
 
 ## Summary
 In this module you have learned what NetBox reports are and what kind of things they can be used to verify. You also learned the basics of reports and where to find documentation and examples to help you develop your own reports. You also kick started your own reports collection, with two example reports to get you up and running. 

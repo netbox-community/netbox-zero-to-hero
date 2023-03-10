@@ -95,7 +95,7 @@ OK, so that's the planning work done - let's get to the fun stuff!! This video w
 
 If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/8-what-about-virtualization/csv_data) for the new devices and cables in the course Git Repository. 
 
-[![Adding virtualization clusters and virtual machines](https://img.youtube.com/vi/D5iDdjZMUeo/0.jpg)](https://www.youtube.com/watch?v=D5iDdjZMUeo)
+[![Adding virtualization clusters and virtual machines](https://img.youtube.com/vi/D5iDdjZMUeo/maxresdefault.jpg)](https://www.youtube.com/watch?v=D5iDdjZMUeo)
 
 ## Summary
 In this module you have learned how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's and VM Interfaces. You also learned how to model network services and associate them with devices or VM's, and specific IP addresses. 

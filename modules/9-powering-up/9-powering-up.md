@@ -115,7 +115,7 @@ OK, so that's the planning work done - let's make this happen in NetBox!! This v
 
 If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/9-powering-up/csv_data) for the PDU devices and the power cable connections in the course Git Repository. 
 
-[![Adding the facility power panels, feeds and PDUs](https://img.youtube.com/vi/Ky7UXDPTobA/0.jpg)](https://www.youtube.com/watch?v=Ky7UXDPTobA)
+[![Adding the facility power panels, feeds and PDUs](https://img.youtube.com/vi/Ky7UXDPTobA/maxresdefault.jpg)](https://www.youtube.com/watch?v=Ky7UXDPTobA)
 
 ## Summary
 In this module you have learned how NetBox models facility power as discrete power panels and feeds. You also learned how to add Power Distribution Units (PDUs) to supply power to individual devices. 
