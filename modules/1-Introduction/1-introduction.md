@@ -68,7 +68,7 @@ NetBox tracks and manages a wide variety of IPAM components, including:
 ## Video  1 - Introduction to the NetBox Web Interface
 The best way to understand the power of NetBox is to dive right in and start exploring, and this short video will give you a guided tour of the Web Interface: 
 
-[![Guided tour of the web interface](https://img.youtube.com/vi/zT82jOUCcW4/0.jpg)](https://www.youtube.com/watch?v=zT82jOUCcW4)
+[![Guided tour of the web interface](https://img.youtube.com/vi/zT82jOUCcW4/hqdefault.jpg)](https://www.youtube.com/watch?v=zT82jOUCcW4)
 
 ## Video 2 - Introduction to the NetBox REST API
 For a deep dive, you can check out the NetBox [REST API documentation](https://docs.netbox.dev/en/stable/integrations/rest-api/). 
