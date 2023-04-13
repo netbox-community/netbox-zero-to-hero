@@ -18,6 +18,7 @@ If you'd like to follow along with the examples used in this course, it's super 
 1.  Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker) - This is the quickest way to get your own dedicated NetBox instance going and it only takes a few minutes to spin up on your laptop!
 2.  Follow the [official documentation](https://docs.netbox.dev/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 3.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox
+4.  Sign up for a [free trial](https://go.netboxlabs.com/trial) of NetBox Cloud (hosted, managed NetBox with enterprise grade capabilities).
 
 The NetBox version used in the video for this module is `v3.3.2`, and the following course materials used in the demo are available: 
 - [Custom Script Examples](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/custom_scripts) 
