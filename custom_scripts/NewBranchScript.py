@@ -110,11 +110,11 @@ class NewBranchScript(Script):
         output = [
             'name,make,model'
         ]
-        for switch in Device.objects.filter(site=site):
+        for device in Device.objects.filter(site=site):
             attrs = [
-                switch.name,
-                switch.device_type.manufacturer.name,
-                switch.device_type.model
+                device.name,
+                device.device_type.manufacturer.name,
+                device.device_type.model
             ]
             output.append(','.join(attrs))
 
