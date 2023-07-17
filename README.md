@@ -91,4 +91,4 @@ So, with that said, lets dive in!
 - [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
 - [NetBox GitHub](https://github.com/netbox-community/netbox)
 - [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)
-- [NetBox Cloud](https://www.getnetbox.io/) is a hosted solution offered by NetBox Labs
+- [NetBox Cloud](https://netboxlabs.com/pricing//) is a hosted solution offered by NetBox Labs
