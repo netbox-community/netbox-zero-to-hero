@@ -19,6 +19,7 @@ python3 -m pip install --upgrade pip
 pip3 install pynetbox
 pip3 install ansible
 pip3 install netaddr
+pip3 install pytz
 ansible-galaxy collection install netbox.netbox
 ```
 4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks):
