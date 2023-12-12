@@ -9,7 +9,7 @@ Hello and welcome to the first module in this NetBox 'Zero-to-Hero' course. By t
 ## What is NetBox?
 NetBox is designed to be an **Authoritative Network Source of Truth**, providing a complete strategic picture across multiple aspects of network management. That strategic layer then acts as the backbone for layers of network automation and monitoring tools.
 
-It’s worth noting that NetBox is designed to show the *desired* state of a network, not its operational state. As a source of truth for that desired state, NetBox is what network monitoring tools use as the basis of comparison to current reality. 
+It’s worth noting that NetBox is designed to show the *desired* state of a network, not its operational state. As a source of truth for that desired state, NetBox is what network monitoring and assurance tools use as the basis of comparison to current reality. 
 
 NetBox is thriving as an open source tool, with over 11,000 [GitHub](https://github.com/netbox-community/netbox) stars, 1,800 forks, and a vibrant [user community](https://github.com/netbox-community/netbox/discussions). NetBox is currently deployed on thousands of networks around the world, representing a diverse mix of use cases, market verticals, and places along the automation journey. The user base spans some of the world’s largest and most complex telecommunications networks to smaller networks of 
 just a few devices.
