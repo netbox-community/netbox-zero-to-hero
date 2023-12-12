@@ -50,7 +50,7 @@ TLE will use 2 contact groups - IT, which contains Susan and Eric and Facilities
 ## Video - Setting Up The Organization
 As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the objects for the fictional TLE Consulting organization. Also, as TLE's awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch network in Brisbane, Australia, they will also add the information for this new site to kick off the project.
 
-If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/2-setting-up-the-organization/csv_data) in course Git Repository.
+If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/2-setting-up-the-organization/csv_data) in course the Git repository.
 
 With that said, let's get started! 
 
