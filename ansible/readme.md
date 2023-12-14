@@ -22,7 +22,7 @@ pip3 install netaddr
 pip3 install pytz
 ansible-galaxy collection install netbox.netbox
 ```
-4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks):
+4. Set up environment variables for NetBox (these are referenced by the Ansible playbooks). **Be sure** to add `http` or `https` before your URL or Ansible will fail with a crpytic message!:
 ```
 export NETBOX_TOKEN=< YOUR_API_TOKEN >
 export NETBOX_API=< YOUR_NETBOX_URL >
