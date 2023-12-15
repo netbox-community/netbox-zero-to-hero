@@ -177,7 +177,7 @@ The data that will be pulled from NetBox to inject into the templates when they 
   - 802.1Q mode and VLANs (if L2)
 - VLANS
 
-**Disclaimer** *The configurations generated in this demo are not production ready by any stretch, and are purely used to illustrate how to extract the data from NetBox as your network source of truth to be consumed by an automation tool (Ansible in this case) to generate example configs. You would need to extend the templates so suit your own device types and configuration requirements, but you can certainly use them as a starting point.*
+**Disclaimer** *The configurations generated in this demo are not production ready by any stretch, and are purely used to illustrate how to extract the data from NetBox as your network source of truth to be consumed by an automation tool (Ansible in this case) to generate example configs. You would need to extend the templates to suit your own device types and configuration requirements, but you can certainly use them as a starting point.*
 
 ## Video - Automating Device Configurations with NetBox and Ansible
 OK, so with all that said - let's get to the fun stuff!! This video will step you through the whole process from setting up NetBox as the source for the Ansible Inventory through to generating the finished configuration files. 
