@@ -13,7 +13,7 @@ token = os.getenv('api_token')
 
 # Set variables to match your own NetBox installation
 nb_protocol = 'http' 
-nb_host = 'netbox'
+nb_host = 'localhost'
 nb_port = '8000'
 
 # Build the URL for the API request

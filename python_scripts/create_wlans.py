@@ -13,7 +13,7 @@ token = os.getenv('api_token')
 
 # Set variables to match your own NetBox installation
 nb_protocol = 'http' 
-nb_host = 'netbox'
+nb_host = 'localhost'
 nb_port = '8000'
 
 # Build the URL for the API request
@@ -24,7 +24,7 @@ payload = json.dumps([
   {
     "ssid": "B_WIFI",
     "description": "Branch Office Wifi",
-    "group" : 2, 
+    "group" : 1, 
     "vlan": 3, 
     "tenant": 5,
     "auth_type": "wpa-enterprise",
@@ -34,7 +34,7 @@ payload = json.dumps([
   {
     "ssid": "G_WIFI",
     "description": "Guest Wifi",
-    "group" : 2, 
+    "group" : 1, 
     "vlan": 4, 
     "tenant": 5,
     "auth_type": "wpa-enterprise",

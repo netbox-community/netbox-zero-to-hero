@@ -25,10 +25,7 @@ The software versions used in the video for this module are:
 - `netaddr v0.8.0`
 
 ## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/netbox-community/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes! If you already set up Ansible in module 4 then you just need to add one extra python package into your virtual environment to allow Ansible to work with IP addresses and subnets. This allows us to pull the IP address from NetBox in CIDR notation and covert the subnet mask to dotted decimal notation required for Cisco IOS configurations: 
-```
-pip3 install netaddr
-```
+Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/netbox-community/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
 
 ## Using NetBox Ansible Inventory Plugin
 You can use NetBox as the source for the Ansible Inventory (the list of devices you are are automating against), and to use this the file `ansible.cfg` has the following line added:
