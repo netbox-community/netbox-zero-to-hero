@@ -51,13 +51,13 @@ A platform defines the type of software running on a device or virtual machine, 
 ## The Project - New Branch Site Devices
 Our fictional organization has standardized on the following network devices for their Branch office network deployments:
 
-| Manufacturer | Device Type | Device Role | Platform | NAPALM Driver |
-| :--- | :--- | :--- | :--- | :--- |
-| Cisco | ISR4321 | WAN Router | Cisco IOS | ios |
-| Juniper | EX4300-48P | Access Switch | Juniper JunOS | junos |
-| Cisco Meraki | MR56 | Wireless AP | n/a | n/a |
-| Avocent | ACS16 | Console Server | n/a | n/a |
-| Panduit | Mini-Com High Density Patch Panel (48 Port, 1RU) | Patch Panel | n/a | n/a |
+| Manufacturer | Device Type | Device Role | Platform |
+| :--- | :--- | :--- | :--- |
+| Cisco | ISR4321 | WAN Router | Cisco IOS |
+| Juniper | EX4300-48P | Access Switch | Juniper JunOS |
+| Cisco Meraki | MR56 | Wireless AP | n/a |
+| Avocent | ACS16 | Console Server | n/a |
+| Panduit | Mini-Com High Density Patch Panel (48 Port, 1RU) | Patch Panel | n/a |
 
 ## Video - Adding Devices Into NetBox
 The video demo will now show you how to add all of the device data into NetBox mainly using the REST API (the device types will be uploaded manually as YAML files). As always the best way to understand the power of NetBox is to dive right in, so let's get started!

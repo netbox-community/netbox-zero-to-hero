@@ -24,7 +24,7 @@ payload = json.dumps([
   {
     "ssid": "B_WIFI",
     "description": "Branch Office Wifi",
-    "group" : 2, 
+    "group" : 1, 
     "vlan": 3, 
     "tenant": 5,
     "auth_type": "wpa-enterprise",
@@ -34,7 +34,7 @@ payload = json.dumps([
   {
     "ssid": "G_WIFI",
     "description": "Guest Wifi",
-    "group" : 2, 
+    "group" : 1, 
     "vlan": 4, 
     "tenant": 5,
     "auth_type": "wpa-enterprise",
