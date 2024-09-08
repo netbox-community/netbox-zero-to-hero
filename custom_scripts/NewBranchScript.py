@@ -62,7 +62,7 @@ class NewBranchScript(Script):
                 name=f'{site.slug.upper()}-SW-{i}',
                 site=site,
                 status=DeviceStatusChoices.STATUS_PLANNED,
-                device_role=switch_role
+                role=switch_role
             )
             switch.save()
             self.log_success(f"Created new switch: {switch}")
@@ -75,7 +75,7 @@ class NewBranchScript(Script):
                 name=f'{site.slug.upper()}-RTR-{i}',
                 site=site,
                 status=DeviceStatusChoices.STATUS_PLANNED,
-                device_role=router_role
+                role=router_role
             )
             router.save()
             self.log_success(f"Created new router: {router}")
@@ -88,7 +88,7 @@ class NewBranchScript(Script):
                 name=f'{site.slug.upper()}-AP-{i}',
                 site=site,
                 status=DeviceStatusChoices.STATUS_PLANNED,
-                device_role=ap_role
+                role=ap_role
             )
             ap.save()
             self.log_success(f"Created new AP: {router}")
@@ -101,7 +101,7 @@ class NewBranchScript(Script):
                 name=f'{site.slug.upper()}-VSP-{i}',
                 site=site,
                 status=DeviceStatusChoices.STATUS_PLANNED,
-                device_role=server_role
+                role=server_role
             )
             server.save()
             self.log_success(f"Created new server: {router}")
