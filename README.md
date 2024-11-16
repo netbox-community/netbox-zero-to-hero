@@ -1,27 +1,27 @@
 # NetBox - Zero To Hero Course
 
 ## Introduction
-Hello and welcome to this short course designed to take new NetBox users from 'Zero to Hero'. We are excited to have you here! 
+Hello and welcome to this short course designed to take new NetBox users from 'Zero to Hero'. We are excited to have you here!
 
-The goals of this course are as follows: 
+The goals of this course are as follows:
 
 - Enable you to get up and running with minimal fuss and immediately start to get value from NetBox
 - Build a solid foundation from which you can start to leverage NetBox's extra features ie. custom fields, reports, plugins etc
 - Introduce the power of NetBox to drive your Network Automation efforts as the 'Single Source Of Truth' for your NetDevOps workflows
 
 ## Course Format
-The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company. 
+The course consists of bite sized modules, each one introducing a new concept or feature of NetBox. Each module is a step in the journey that leads to the deployment of a new branch office network at a remote site for a fictional company.
 
 Each module includes a video teaching you how to interact with NetBox either via the Web UI or programmatically using the REST API. You can follow along with your own instance of NetBox, and all the code is available in the accompanying [Git Repository](https://github.com/netbox-community/netbox-zero-to-hero) - including a [Postman Collection](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/postman), [Ansible Playbooks](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/ansible) and [Python Scripts](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/python_scripts) - so you will have a fully working code base which you can clone to get you started on your way to becoming a NetBox Hero!
 
 ## Join the Discussion
-If you have any questions as you go through the course then pop on over to the [NetBox Zero to Hero channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
+If you have any questions as you go through the course then pop on over to the [NetBox Learning Channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 
 ## Example Scenario
-The fictional scenario that will be used throughout this course to demonstrate NetBox features is: 
+The fictional scenario that will be used throughout this course to demonstrate NetBox features is:
 
-- The organization is a small consulting firm, with a small IT team 
-- The network consists of two Data Centers, plus multiple branch office locations around the world 
+- The organization is a small consulting firm, with a small IT team
+- The network consists of two Data Centers, plus multiple branch office locations around the world
 - Susan and Eric are awesome Network Engineers with a burning desire to introduce this amazing 'NetDevOps' stuff they keep hearing about (so they can do less work but still wow the bosses!)
 - The network team has been handed a new project to deploy a branch office network in the new location in Brisbane, Australia. The corporate standard branch office design consists of a WAN Router, an Access Switch and Wireless Access Points
 - Susan and Eric are going to use NetBox every step of the way to help deliver the project on time and also to power some network automation to get the devices configured error free (this has long been a problem for them with new sites taking hours and even days to stand up!)
@@ -42,7 +42,7 @@ So, with that said, lets dive in!
 ### [Module 3: Adding the Kit](modules/3-adding-the-kit/3-adding-the-kit.md)
 - Add Manufacturers, Device Types, Platforms, Device Roles and Devices
 - Use Postman to make REST API calls into NetBox to add devices
-  
+
 ### [Module 4: IP Addressing and VLANs](modules/4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md)
 - Add IPAM (IP Address Management) Data - RIRs, Aggregates, Prefixes, IP Addresses and VLANs
 - Integrate NetBox with Ansible, and run playbooks to populate the NetBox database with IPAM data
@@ -61,9 +61,9 @@ So, with that said, lets dive in!
 - Set up Ansible to use NetBox as the source of it's Dynamic Inventory
 - Write Ansible playbooks to make REST API calls to NetBox and extract the data to build the device configurations
 - Automate the generation of device configurations using Jinja templates, passing in the data from NetBox
-  
+
 ### [Module 8: What About Virtualization?](modules/8-what-about-virtualization/8-what-about-virtualization.md)
-- Describe how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VMs and VM Interfaces  
+- Describe how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VMs and VM Interfaces
 - Describe how to model network services associated with devices and/or virtual machines, along with specific IP addresses
 - Use the web interface to manually add Virtualization and service data, including bulk uploading larger amounts of data where required
 
@@ -80,7 +80,7 @@ So, with that said, lets dive in!
 ### [Module 11: Custom Scripts](modules/11-custom-scripts/11-custom-scripts.md)
 - Describe what Custom Scripts are in NetBox and what kind of tasks they can be used to accomplish
 - Understand the basics of writing Custom Scripts and also where to find documentation to help you develop your own scripts
-- Kick start your own Custom Scripts collection, with two example scripts to get you up and running. 
+- Kick start your own Custom Scripts collection, with two example scripts to get you up and running.
 
 ### [Module 12: The Boss is Asking for a Report (another easy win!)](modules/12-the-boss-is-asking-for-a-report/12-the-boss-is-asking-for-a-report.md)
 - Describe what NetBox reports are and what kind of things they can be used to verify
@@ -88,7 +88,7 @@ So, with that said, lets dive in!
 - Kick start your own NetBox reports collection, with two example reports to get you up and running
 
 ## Useful Links
-- [Official NetBox Documentation](https://docs.netbox.dev/en/stable/)
+- [NetBox Cloud](https://netboxlabs.com/free-netbox-cloud/) is a hosted solution offered by NetBox Labs, and can get started with the Free Plan.
+- [Official NetBox Documentation](https://netboxlabs.com/docs/netbox/en/stable/)
 - [NetBox GitHub](https://github.com/netbox-community/netbox)
 - [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)
-- [NetBox Cloud](https://netboxlabs.com/pricing//) is a hosted solution offered by NetBox Labs
