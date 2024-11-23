@@ -3,7 +3,7 @@
 
 Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (our awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
 
-In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible Automation Platform](https://www.ansible.com/) and in particular the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
+In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible](https://www.ansible.com/) and in particular the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
 
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
@@ -22,18 +22,18 @@ Of course, you could add IPAM data manually via the Web Interface, but when you 
 Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical for managing modern networks, so by adding some Ansible knowledge to your armory, you will stay ahead of the game!
 
 ## Get Hands On
-If you'd like to follow along with the examples used in this course, used in this course, it's super easy to do, and you have a few options:
+If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options:
 1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free.
-2.  Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker)
-3.  Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
-4.  Use the public [demo instance](https://demo.netbox.dev/) of NetBox
+2. Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker)
+3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
+4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are:
 - `NetBox v4.1.6`
-- `Python v3.8.9`
-- `ansible-core v2.13.4`
+- `Python v3.12`
+- `ansible v11.0.0`
 - `ansible package v6.4.0`
-- `pynetbox v6.6.2`
+- `pynetbox v7.4.1`
 
 ## Installing Ansible
 Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/netbox-community/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!

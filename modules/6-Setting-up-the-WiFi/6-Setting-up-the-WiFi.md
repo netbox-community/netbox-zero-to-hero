@@ -16,7 +16,7 @@ Getting started with Python is super easy and a lot of fun too! The [scripts](ht
 Also, as any Network Engineer / IT Pro looking to expand their skill set knows, Automation is becoming critical for managing modern networks, so by adding some basic Python coding skills to your armory, you will set yourself up for long term career success!
 
 ## Get Hands On
-If you'd like to follow along with the examples used in this course, used in this course, it's super easy to do, and you have a few options:
+If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options:
 1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free.
 2. Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
