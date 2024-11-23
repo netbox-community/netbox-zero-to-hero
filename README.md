@@ -88,7 +88,7 @@ So, with that said, lets dive in!
 - Kick start your own NetBox reports collection, with two example reports to get you up and running
 
 ## Useful Links
-- [NetBox Cloud](https://netboxlabs.com/free-netbox-cloud/) is a hosted solution offered by NetBox Labs, and can get started with the Free Plan.
+- [NetBox Cloud](https://netboxlabs.com/free-netbox-cloud/) is a hosted solution offered by NetBox Labs, and you can easily get started with the Free Plan.
 - [Official NetBox Documentation](https://netboxlabs.com/docs/netbox/en/stable/)
 - [NetBox GitHub](https://github.com/netbox-community/netbox)
 - [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)

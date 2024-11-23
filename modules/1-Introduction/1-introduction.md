@@ -85,7 +85,7 @@ In [Module 2: Setting up the Organization](../2-setting-up-the-organization/2-se
 If you have any questions as you go through the course then pop on over to the [NetBox Learning Channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
 
 ## Useful Links
-- [NetBox Cloud](https://netboxlabs.com/free-netbox-cloud/) is a hosted solution offered by NetBox Labs, and can get started with the Free Plan.
+- [NetBox Cloud](https://netboxlabs.com/free-netbox-cloud/) is a hosted solution offered by NetBox Labs, and you can easily get started with the Free Plan.
 - [Official NetBox Documentation](https://netboxlabs.com/docs/netbox/en/stable/)
 - [NetBox GitHub](https://github.com/netbox-community/netbox)
 - [GitHub Discussions](https://github.com/netbox-community/netbox/discussions)
