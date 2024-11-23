@@ -14,7 +14,7 @@ By the end of this module you will be able to:
 - Kick start your own Custom Scripts collection, with two example scripts to get you up and running
 
 ## Get Hands On
-If you'd like to follow along with the examples used in this course, used in this course, it's super easy to do, and you have a few options:
+If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options:
 1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free.
 2. Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
