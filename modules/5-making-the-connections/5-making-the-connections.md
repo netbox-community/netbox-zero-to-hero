@@ -1,7 +1,7 @@
 # Module 5 - Making The Connections
 # Introduction
 
-Hello and welcome to module 5 of the NetBox 'Zero-to-Hero' course. In [Module 4: IP Addressing and VLANs](../4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md),  Susan used the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox) to populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office.
+Hello and welcome to module 5 of the NetBox 'Zero-to-Hero' course. In [Module 4: IP Addressing and VLANs](../4-ip-addressing-and-vlans/4-ip-addressing-and-vlans.md), Susan used the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox) to populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office.
 
 In this module, Eric will be adding the cables and connections required to connect the devices in the new Brisbane branch office network together.
 
