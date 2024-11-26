@@ -2,45 +2,26 @@
 
 # Introduction
 
-Hello and welcome to module 7 of the NetBox 'Zero-to-Hero' course. In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), Susan added the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API. In this Module, Eric will use Ansible to extract data from NetBox and then use that data to automate the creation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
+Hello and welcome to module 7 of the NetBox 'Zero-to-Hero' course. In [Module 6: Setting up the WiFi](../6-Setting-up-the-WiFi/6-Setting-up-the-WiFi.md), Susan added the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API. In this Module, Eric will use the Provisioning feature of NetBox to automate the automate the generation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
 
 By the end of this module you will be able to:
-- Set up Ansible to use NetBox as the source of it's Dynamic Inventory
-- Write Ansible playbooks to make REST API calls to NetBox and extract the required data to build the device configurations
-- Automate the generation of device configuration files using Jinja templates, passing in the data extracted from NetBox as variables
+- Understand the basics of how Jinja templates work
+- Make use of Config Contexts and Config Templates combined with data from NetBox to generate device configurations with NetBox Provisioning
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options:
-1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free.
+1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free. Select the option for no data to ensure you start with an empty NetBox database.
 2. Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are:
 - `NetBox v4.1.6`
-- `Python v3.8.9`
+- `Python v3.12.5`
 - `ansible-core v2.13.4`
 - `ansible package v6.4.0`
 - `pynetbox v6.6.2`
 - `netaddr v0.8.0`
-
-## Installing Ansible
-Ansible runs on Linux based systems, and is installed as a Python package. Follow these [steps](https://github.com/netbox-community/netbox-zero-to-hero/blob/main/ansible/readme.md) to set up Ansible on your own system - it takes less than 5 minutes!
-
-## Using NetBox Ansible Inventory Plugin
-You can use NetBox as the source for the Ansible Inventory (the list of devices you are are automating against), and to use this the file `ansible.cfg` has the following line added:
-```
-inventory = ./netbox_inv.yml
-```
-This points to the file `./netbox_inv.yml` which in our example looks like this:
-```
-plugin: netbox.netbox.nb_inventory
-validate_certs: False
-group_by:
- - device_roles
- - sites
- ```
-So this means that Ansible will now load the inventory dynamically from NetBox and will group the devices by their `role` and `site`. You can configure to suit your own requirements, by referring to the [docs](https://docs.ansible.com/ansible/latest/collections/netbox/netbox/nb_inventory_inventory.html).
 
 ## Why Use Jinja Templates For Network Device Configuration?
 Using templates for network device configurations has many advantages for Network Engineers. First and foremost you get consistency - for example if you standardize your branch office networks so that you use the same device types for all of your WAN Routers and Access Switches, and the connectivity and configuration of them is the same, then the only differences between devices at different sites will be a few 'variables' such as:
