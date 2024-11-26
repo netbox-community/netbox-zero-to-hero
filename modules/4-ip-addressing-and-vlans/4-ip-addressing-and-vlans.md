@@ -23,14 +23,14 @@ Also, as any Network Engineer / IT Pro looking to expand their skill set knows, 
 
 ## Get Hands On
 If you'd like to follow along with the examples used in this course, it's super easy to do, and you have a few options:
-1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free.
+1. Sign up for the NetBox Cloud [FREE Plan](https://netboxlabs.com/free-netbox-cloud/) - All the power and flexibility of NetBox - with the security, reliability, and management covered by NetBox Labs - for free. Select the option for no data to ensure you start with an empty NetBox database. Select the option for no data to ensure you start with an empty NetBox database.
 2. Run NetBox as a container with [NetBox Docker](https://github.com/netbox-community/netbox-docker)
 3. Follow the [official documentation](https://netboxlabs.com/docs/netbox/en/stable/installation/) and do a full installation of all the NetBox components. These instructions have been tested on Ubuntu and CentOS Linux.
 4. Use the public [demo instance](https://demo.netbox.dev/) of NetBox
 
 The software versions used in the video for this module are:
 - `NetBox v4.1.6`
-- `Python v3.12`
+- `Python v3.12.5`
 - `ansible v11.0.0`
 - `ansible package v6.4.0`
 - `pynetbox v7.4.1`
