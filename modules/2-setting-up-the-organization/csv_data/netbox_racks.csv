@@ -1,4 +1,4 @@
-site,location,name,tenant,status,role,from_factor,width,u_height
+site,location,name,tenant,status,role,form_factor,width,u_height
 NZAKL01,Comms Room,NZAKL01-RK-01,Sales,active,Infrastructure,4-post-cabinet,19,22
 MYKUL01,Comms Room,MYKUL01-RK-01,Marketing,active,Infrastructure,4-post-cabinet,19,22
 AUSYD01,Comms Room,AUSYD01-RK-01,Consulting,active,Infrastructure,4-post-cabinet,19,22
