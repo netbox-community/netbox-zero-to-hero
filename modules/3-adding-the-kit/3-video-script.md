@@ -2,14 +2,14 @@ Hello and welcome to this video for module 3 of the NetBox Zero to Hero training
 
 For this demo I am using a NetBox Cloud instance. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you get set up with your own instance of NetBox along with a link to the notes that accompany this video module.
 
-In this video, our intrepid Network Engineer Eric will be adding the network devices that are going to be installed at the planned new Brisbane branch office, making use of the NetBox REST API.
+In this video, we will be adding the network devices that are going to be installed at the planned new Brisbane branch office, making use of the NetBox REST API.
 
 ### Setting up the API Token
-Ok so I am logged into NetBox as Eric, and as Eric is going to be using the REST API to add devices, he needs to set up his API Token. The REST API employs token-based authentication, which maps API clients to user accounts and their assigned permissions.
+Ok so I am logged into NetBox and as your going to be using the REST API to add devices, you need to set up your API Token. The REST API employs token-based authentication, which maps API clients to user accounts and their assigned permissions.
 
-To set up the token click on Eric's username and then API tokens, then click Add a token. If no key is provided, one will be generated automatically. If you wanted to make the token read-only then you uncheck the 'write enabled' box, you can optionally set an expiry date and restrict access to the API from only certain IP addresses. so click on create and there we have Eric's API token ready to use.
+To set up the token click on the admin username and then API tokens, then click Add a token. If no key is provided, one will be generated automatically. If you wanted to make the token read-only then you uncheck the 'write enabled' box, you can optionally set an expiry date and restrict access to the API from only certain IP addresses. so click on create and there we have our API token ready to use.
 
-So, click on copy and then we are going to switch to the Postman application. So in postman we already have a collection of API calls for NetBox set up ready to go. So in the collection, click variables and then add a new variable called api_token, paste in eric's token and save. Notice that we have a few other variables set up here in the collection too. If you need a re-cap on using variables in Postman then check out module 1 of this course where this was covered in more detail.
+So, click on copy and then we are going to switch to the Postman application. So in postman we already have a collection of API calls for NetBox set up ready to go. So in the collection, and then for the variable called api_token, paste in your token and save. Notice that we have a few other variables set up here in the collection too. If you need a re-cap on using variables in Postman then check out module 1 of this course where this was covered in more detail.
 
 OK, so now we can make use the api token in our API calls. As you know Postman is an amazing tool to help you work with API's and by building a collection of API call's here, you not only learn how the API works, but you can also simply use the collection to interact with NetBox if you chose to.
 
@@ -23,7 +23,7 @@ OK, Click send, and the response is a 201 - so that's great, and we can see the 
 Great - so switch back to the UI and - and there is the list of manufacturers. Note that we also have HPE and Vertiv already in the list as we added these manually in module 2 for our racks. So click on Cisco for example and once again note the ID is referenced in the top right corner of the page. (click back on manufacturers)
 
 ### Device Roles
-So next Eric needs to add the Device Roles - so back in the postman collection there is an API call for this which is again a post request, this time to the dcim/device-roles api end point. This time in the body of the request we have a list of json objects representing each role starting with the WAN Router.
+So next we need to add the Device Roles - so back in the postman collection there is an API call for this which is again a post request, this time to the dcim/device-roles api end point. This time in the body of the request we have a list of json objects representing each role starting with the WAN Router.
 
 Again there is the name and slug, plus a hexadecimal value for a colour for the device role - feel free to pick whichever colours work for you. You do need to define whether this is a VM role or not and as these are network devices then set this to false.
 

@@ -20,9 +20,6 @@ The NetBox version used in the video for this module is `v4.1.11`.
 ## The Organizational Data
 Our fictional organization is structured as follows:
 
-### NetBox System Users
-Our two awesome Network Engineers, Eric and Susan will be set up with their own user accounts as they will be the two main administrators of the NetBox System.
-
 ### Tenancy
 In NetBox most core objects can be associated with a tenant and this conveys ownership of the object. For example a managed service provider can associate network devices with individual customers.
 
@@ -48,7 +45,7 @@ To complete the organizational set up we will need to add some contacts. A conta
 Our fictional company will use 2 contact groups - IT, which contains Susan and Eric and Facilities, which contains Alexa. The contacts will be assigned to site objects and be given one of the contact roles 'Operations' or 'Emergency'.
 
 ## Video - Setting Up The Organization
-As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the objects for the fictional consulting organization. Also, as our awesome Network Engineers, Susan and Eric are using NetBox to help build out the new branch network in Brisbane, Australia, they will also add the information for this new site to kick off the project.
+As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the objects for the fictional consulting organization. Also, we are using NetBox to help build out the new branch network in Brisbane, Australia, we will also add the information for this new site to kick off the project.
 
 If you are following along you can find the [CSV data](https://github.com/netbox-community/netbox-zero-to-hero/tree/main/modules/2-setting-up-the-organization/csv_data) in course the GitHub repository.
 
@@ -59,7 +56,7 @@ With that said, let's get started!
 ## Summary
 In this module you learned how to set up your organization's data in NetBox using the Web Interface.
 
-In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection to make REST API calls to NetBox.
+In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  we will add the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection to make REST API calls to NetBox.
 
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Learning Channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).

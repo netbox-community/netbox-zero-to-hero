@@ -2,16 +2,9 @@ Hello and welcome to this video for module 2 of the NetBox Zero to Hero training
 
 In this video we will be laying the foundations of the NetBox data for our fictional organization. This organizational data is critical and according to NetBox best practice should be added at the start - as everything else is built on top of it.
 
-### NetBox System Users
-OK, so I am logged into NetBox as the admin user and as you can see I have a completely empty database. The very first thing to do is set up the Network Engineers Eric and Susan as users on the system, as they are going to be the 2 main users for now. One thing to note is that if you are following along using the netbox cloud free plan then the method for adding users is slightly different as you invite them to join your organization as administrators via the netbox cloud admin console. For this video though I will show you how to add them through the NetBox Web UI.
-
-By setting up separate user accounts for them it is easy to track what changes each user is making to the database. To do this, go to Admin, Users and click add, then enter the username of Susan and a password - then select staff and superuser status which means Susan can access the both the NetBox Admin functions and has all permissions to the NetBox database. Scroll further down and you can see that explicit permissions can be set and this is the way you can be more granular with user permissions - for example you could restrict a user or a group to only have read-only access to Device data - this could be helpful in a scenario where you have junior IT support staff who might need to check what devices are at a certain location, but you don't want them to make any changes.
-
-For now though, just click 'Create and add another' down at the bottom, and add Eric now with the same permissions as Susan. OK now that's done, so log out as the admin account and now log back in as Susan. Great, so we can stay logged in as Susan to do the rest of the work for this module.
-
 ### Tenancy
 
-First of all Susan needs to set up the tenants, and she is using the Tenancy feature to define the internal business units and associate them with objects.
+OK, so I am logged into NetBox as the admin user and as you can see I have a completely empty database. First of all we need to set up the tenants, and we are using the Tenancy feature to define the internal business units and associate them with objects.
 
 The individual tenants will be members of a tenant group - so click organization and then click the plus sign next to 'tenant groups'. Then give it the name of 'Departments', - note how the slug is automatically generated and then simply click 'create' and that is the tenant group set up.
 
@@ -19,13 +12,13 @@ Ok, so next add the tenants by clicking 'Add Tenant' in the top right corner. so
 
 then, click 'create and add another' and then do the same for Finance, IT, Marketing and Consulting. Great, then click on Tenants to get a nice table view of them all now.
 
-So, that's the tenants set up based on the departments and Susan can now associate these tenants with other objects as she adds them going through.
+So, that's the tenants set up based on the departments and we can now associate these tenants with other objects as we add them going through.
 
 ### Regions
 
 Next, set up the regions and as you know from the course notes the company is present in 4 parent regions - Africa, Asia Pacific, Europe and North America, with sub-regions nested within them.
 
-From Regions Susan could click add here (click on add to show the interface) just like we did for tenants, but as she needs to add quite a few regions it makes sense to bulk import them to save time.
+From Regions we could click add here (click on add to show the interface) just like we did for tenants, but as we needs to add quite a few regions it makes sense to bulk import them to save time.
 
 To do this, simply click on regions and then click on the import icon in the top right - and here there is an option to either paste in the data in either CSV, JSON or YMAL format, or upload the data as a file. Note the Field options section at the bottom indicates which fields are required as a minimum for the data to be accepted, and in this case it's name and slug.
 
@@ -72,13 +65,13 @@ Denver,denver,Colorado
 Los Angeles,los-angeles,California
 Chicago,chicago,Illinois
 
-OK note here that Brisbane is included as a region - and this will be the geographical location of the the new site that Eric and Susan are going to be deploying.
+OK note here that Brisbane is included as a region - and this will be the geographical location of the the new site that we are going to be deploying.
 
 Ok great, so click on 'Submit' and there are all of the regions created using the bulk upload method. You can see how the regions are nested - for example Johannesburg, sits under South Africa, which comes under the Africa parent region.
 
 ### Site Groups and Sites
 
-Alright, so next up Susan needs to set up the Site Groups and Sites. Site groups are used for functional groupings, and a site typically represents a building within a region and/or site group.
+Alright, so next up we need to set up the Site Groups and Sites. Site groups are used for functional groupings, and a site typically represents a building within a region and/or site group.
 
 So, we have 2 Site Groups based on the function of the sites. the first is Branch so add that manually by clicking on organization and then the plus sign next to Site Groups. So the name is entered as 'Branch' and add a description of 'Branch Sites'
 
@@ -104,13 +97,13 @@ OK so as you know our fictional company has a number of other sites around the w
 
 **netbox_sites.csv**
 
-So just paste them in and this time set the status of them to be active, click submit and that's the import completed. Then click on sites and here is the full list of sites including the planned new site in Brisbane.
+So just paste them in and this time the status is set to active, click submit and that's the import completed. Then click on sites and here is the full list of sites including the planned new site in Brisbane.
 
 ### Locations
 
 So now the sites are set up, the next step is to add the locations - to re-cap, a location can be any logical subdivision within a building, such as a floor or a room. All Branch sites have a single location for IT equipment (the Comms Room) and the Corporate sites have the comms room plus an additional location within them (the on premises data center).
 
-So once again Susan can manually add the the location in the new Brisbane site, and use the bulk upload for the other sites from CSV data. So from locations click 'add' and then select the site as Brisbane, the name is Comms Room, status is 'planned', pop in a description of 'Main IT Suite'. then lastly the tenant group is Departments and the tenant at this location is the Consulting department. OK, so go ahead and click create on that, and there is the new location all set up.
+So once again we can manually add the the location in the new Brisbane site, and use the bulk upload for the other sites from CSV data. So from locations click 'add' and then select the site as Brisbane, the name is Comms Room, status is 'planned', pop in a description of 'Main IT Suite'. then lastly the tenant group is Departments and the tenant at this location is the Consulting department. OK, so go ahead and click create on that, and there is the new location all set up.
 
 OK, so now click Locations and then the upload button for the bulk import of the rest of the locations. we'll set the headers to site, name, slug, status, tenant, and description, and paste in the rest of data. Notice how for the London and Chicago sites there are 2 locations - the 2nd one being the on-premises data center.
 
@@ -125,7 +118,7 @@ You can create re-useable rack types, and our company has standardized on a half
 
 So first of all to create the rack types, if I click on Racks and Rack Types we can see the warning that "Before you can add a rack type you must first create a manufacturer." so let's do that click add. so our first rack manufacturer is HPE so I'll add that, and then add another for Vertiv, and click Create.
 
-Great so now we can import the rack types a csv data. so under rack types I'll click on import and then paste in the data from the csv file. (you will find all the data we are importing in csv files in the Github repository that accompanies this course).
+Great so now we can import the rack types from csv data. so under rack types I'll click on import and then paste in the data from the csv file. (you will find all the data we are importing in csv files in the Github repository that accompanies this course).
 
 So from this data you can see we have 2 rack types, one from Vertiv that is 24 RU in height for smaller deployments such as Brisbane, and a full height rack from HPE use for for larger deployments. I'll click submit and then you can see our two new rack types are available for us to use.
 
@@ -146,7 +139,7 @@ So once again, click on submit and NetBox successfully imported all of the racks
 **NEEDS 4.1.8**
 
 ### Contacts
-To complete the organizational set up Susan is going to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship that a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects.
+To complete the organizational set up we'll add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship that a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects.
 
 So to start off, our company has 2 contact groups - IT and facilities management. So from Organization and contact groups, click add and then the first one is IT, with a description of IT Staff, the 2nd one is Facilities Management, with a description of 'Facilities Management Staff'
 
