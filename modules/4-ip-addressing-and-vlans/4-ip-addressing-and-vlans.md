@@ -1,9 +1,9 @@
 # Module 4 - IP Addressing and VLANS
 # Introduction
 
-Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  Eric (our awesome Network Engineer) added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
+Hello and welcome to module 4 of the NetBox 'Zero-to-Hero' course. In [Module 3: Adding the Kit](../3-adding-the-kit/3-adding-the-kit.md),  we added the devices that are going to be installed at the planned new Brisbane branch office, making use of a Postman collection of REST API calls to NetBox.
 
-In this module Susan (the other member of the Network Engineering dream team) will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this Susan is using the [Ansible](https://www.ansible.com/) and in particular the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
+In this module we will populate NetBox with the IP addressing and VLAN data for the new Brisbane branch office. To do this we are using the [Ansible](https://www.ansible.com/) and in particular the [Ansible Galaxy Collection for NetBox](https://galaxy.ansible.com/netbox/netbox)
 
 By the end of this module you will be able to:
 - Describe how NetBox models IPAM (IP Address Management) Data
@@ -124,7 +124,7 @@ OK, so that's the planning and design work done - now onto the demo! This video 
 ## Summary
 In this module you have learned how NetBox Models IPAM data, how to integrate NetBox with Ansible, and in particular the collection of NetBox Ansible modules. If you have any questions on how to use Ansible with NetBox then there is a dedicated Slack channel **#ansible** on [netdev-community.slack.com](https://netdev-community.slack.com/) so don't hesitate to pop on over there and join in the discussion!
 
-In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md), Eric will add the cables and connections for the new Brisbane branch office network, using the web interface to bulk upload data from a CSV file.
+In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md), we will add the cables and connections for the new Brisbane branch office network, using the web interface to bulk upload data from a CSV file.
 
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Learning Channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).

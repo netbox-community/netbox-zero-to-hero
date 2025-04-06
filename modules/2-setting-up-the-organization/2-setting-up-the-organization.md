@@ -42,7 +42,7 @@ Rack Types define the physical characteristics of a particular manufacturer's mo
 ### Contacts
 To complete the organizational set up we will need to add some contacts. A contact is an individual responsible for a resource within the context of its assigned role. Contacts can be members of a group, and contact roles define the relationship a contact has with an assigned object. Unique contacts are created once and can be assigned to any number of NetBox objects.
 
-Our fictional company will use 2 contact groups - IT, which contains Susan and Eric and Facilities, which contains Alexa. The contacts will be assigned to site objects and be given one of the contact roles 'Operations' or 'Emergency'.
+Our fictional company will use 2 contact groups - IT and Facilities. The contacts will be assigned to site objects and be given one of the contact roles 'Operations' or 'Emergency'.
 
 ## Video - Setting Up The Organization
 As always the best way to understand the power of NetBox is to dive right in! This video will step through creating all the objects for the fictional consulting organization. Also, we are using NetBox to help build out the new branch network in Brisbane, Australia, we will also add the information for this new site to kick off the project.

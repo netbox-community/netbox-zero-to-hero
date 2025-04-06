@@ -2,7 +2,7 @@
 
 # Introduction
 
-Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md),  Eric added the cables and connections required to connect the devices in the new Brisbane branch office network together.  In this module, Susan will be adding the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API.
+Hello and welcome to module 6 of the NetBox 'Zero-to-Hero' course. In [Module 5: Making the Connections](../5-making-the-connections/5-making-the-connections.md),  we added the cables and connections required to connect the devices in the new Brisbane branch office network together.  In this module, we will be adding the required Wireless LANs using some simple Python scripts to interact with the NetBox REST API.
 
 By the end of this module you will be able to:
 - Describe how NetBox models Wireless LANs
@@ -55,7 +55,7 @@ If you fancy a challenge why not develop these simple scripts further and improv
 
 It would be great to see how you develop your scripts and if you want to share this or just ask questions then pop on over to the [NetBox Learning Channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack and join in the discussion!
 
-In [Module 7: Automate All the Things!](../7-automate-all-the-things/7-automate-all-the-things.md) you will learn how to automate the generation of device configurations, by using Ansible to pull data from NetBox and render the configuration files from Jinja2 templates.
+In [Module 7: Provisioning the Devices](../7-provisoning-the-devices/7-provisoning-the-devices.md) you will learn how to automate the generation of device configurations in NetBox using jinja templates and the data from NetBox that defines the intended state of the device configurations.
 
 ## Join the Discussion
 If you have any questions as you go through the course then pop on over to the [NetBox Learning Channel](https://netdev-community.slack.com/archives/C0453L6565C) on the NetDev Community Slack! If you aren't already a member then you can sign up for free [here](https://netdev.chat/).
