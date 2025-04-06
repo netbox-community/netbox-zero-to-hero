@@ -9,12 +9,12 @@ load_dotenv()
 # Set the 'token' variable to the value of 'api_token' from the .env file
 # Rename file .env.example to .env and add your own API token
 # Remember to add .env to your .gitignore file to avoid uploading the token to your Git repo
-token = os.getenv('api_token') 
+token = os.getenv('api_token')
 
 # Set variables to match your own NetBox installation
-nb_protocol = 'http' 
-nb_host = 'netbox'
-nb_port = '8000'
+nb_protocol = 'https'
+nb_host = 'zerotohero.cloud.netboxapp.com'
+nb_port = '443'
 
 # Build the URL for the API request
 url = nb_protocol+'://'+nb_host+':'+nb_port+"/api/wireless/wireless-lan-groups/"

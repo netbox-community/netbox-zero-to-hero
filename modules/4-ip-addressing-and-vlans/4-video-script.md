@@ -2,9 +2,9 @@ Hello and welcome to this video for module 4 of the NetBox Zero to Hero training
 
 For this demo I am using a NetBox Cloud instance. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you get set up with your own instance of NetBox along with a link to the notes that accompany this video module.
 
-In this video our network engineer Susan, will populate NetBox with the IP addressing and VLAN data for the planned new Brisbane branch office. To do this Susan is using Ansible, and in particular the Ansible Galaxy collection for NetBox. Again you will find links to all of these resources in the accompanying Github repository.
+In this video we will populate NetBox with the IP addressing and VLAN data for the planned new Brisbane branch office. To do this we are using Ansible, and in particular the Ansible Galaxy collection for NetBox. Again you will find links to all of these resources in the accompanying Github repository.
 
-OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the IPAM section in the centre of the home page. Susan has already followed the set up instructions for Ansible, has activated a new new virtual environment, and has set her environment variables up for the API URL and the API TOKEN. please do check the instructions in the course notes if you need help with this initial set up of Ansible.
+OK, so we are logged into NetBox as admin, and as you can see there is no data yet in the IPAM section in the centre of the home page. I've already followed the set up instructions for Ansible, have activated a new new virtual environment, and have set the environment variables up for the API URL and the API TOKEN. please do check the instructions in the course notes if you need help with this initial set up of Ansible.
 
 So, if you not familiar with Ansible - it has a feature called 'roles' which allows you to structure your playbooks in a very nice way - for example if I expand the roles directory, you'll see it contains subdirectories for each of the roles we have playbooks for - for example if you expand the assign_ip_addresses role, it has 2 further directories - tasks, and vars. within tasks there is a file called main.yaml -
 

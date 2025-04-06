@@ -2,9 +2,9 @@ Hello and welcome to this video for module 6 of the NetBox Zero to Hero training
 
 For this demo I am using a NetBox Cloud instance. If you would like to follow along with the demo, then you can easily do that too. There are a couple of links down below to help you get set up with your own instance of NetBox along with a link to the notes that accompany this video module.
 
-In this video our network engineer Susan, will populate NetBox with the Wireless LAN data for the planned new Brisbane branch office. To do this Susan is going to use some simple python scripts. Again you will find links to all of these resources in the accompanying GitHub repository.
+In this video we will populate NetBox with the Wireless LAN data for the planned new Brisbane branch office. To do this we are  going to use some simple python scripts. Again you will find links to all of these resources in the accompanying GitHub repository.
 
-OK, so we are logged into NetBox as Susan, and as you can see there is no data yet in the Wireless section of the home page. Susan has already followed the set up instructions for Python, and has activated a new new virtual environment. Please do check the instructions in the course notes if you need help with this initial set up of Python.
+OK, so we are logged into NetBox as admin, and as you can see there is no data yet in the Wireless section of the home page. I have already followed the set up instructions for Python, and have activated a new new virtual environment. Please do check the instructions in the course notes if you need help with this initial set up of Python.
 
 So, in VS Code let's explore the Python scripts. The first task is to create the new Wireless LAN Group, and the script for this is called 'create_wlan_group.py. So starting at top, we are importing the 'requests' module which is used to make the API calls. Next is the json module that is used to work with data in json format, and then the 'os' and 'dotenv' modules allow the script to access the local system environment.
 
@@ -20,7 +20,7 @@ Then finally lines 34 thru 36 make the API call using the python requests module
 
 Lines 35 and 36 take the response, which is what has been returned back from the NetBox server and prints it using some indentation to make it more human readable.
 
-Ok, so do run this go to the terminal and from the virtual environment enter 'python3' followed by the name of the script, which is create_wlan_group.py' and hit enter. and the script has run in less than a second, and has printed the response in nicely formatted json. There is now a wireless LAN group called Asia_Pacific_WLANs, and it has an ID of 2.
+Ok, so do run this go to the terminal and from the virtual environment enter 'python3' followed by the name of the script, which is create_wlan_group.py' and hit enter. and the script has run in less than a second, and has printed the response in nicely formatted json. There is now a wireless LAN group called Asia_Pacific_WLANs, and it has an ID of 1.
 
 To View this in the NetBox Web interface, just flip back and then click on Wireless and then Wireless LAN groups. and there is the new group.
 
