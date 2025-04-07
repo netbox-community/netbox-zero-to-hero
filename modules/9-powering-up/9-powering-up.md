@@ -2,9 +2,9 @@
 
 # Introduction
 
-Hello and welcome to module 9 of the NetBox 'Zero-to-Hero' course. In [Module 8: What About Virtualization?](../8-what-about-virtualization/8-what-about-virtualization.md), Network Engineer Susan added the required physical servers for the vSphere cluster, created the cluster and added the Virtual Machines. She also defined the services that are running on the VM servers.
+Hello and welcome to module 9 of the NetBox 'Zero-to-Hero' course. In [Module 8: What About Virtualization?](../8-what-about-virtualization/8-what-about-virtualization.md), we added the required physical servers for the vSphere cluster, created the cluster and added the Virtual Machines. We also defined the services that are running on the VM servers.
 
-In this video, Eric will add the facility power panels and feeds for the new Brisbane branch office, and then also add the PDUs and power cable connections, so all the devices in the new communications cabinet can be powered on.
+In this video, we  will add the facility power panels and feeds for the new Brisbane branch office, and then also add the PDUs and power cable connections, so all the devices in the new communications cabinet can be powered on.
 
 By the end of this module you will be able to:
 - Describe how NetBox models facility power as discrete power panels and feeds.
@@ -40,7 +40,7 @@ From the [official NetBox docs](https://netboxlabs.com/docs/netbox/en/stable/fea
 >Each power feed in NetBox is assigned a type: primary or redundant. This allows easily modeling redundant power distribution topologies. In scenarios involving only a single, non-redundant power supply, mark all power feeds as primary.
 
 ## The Project - Adding the Facility Power Panels, Feeds and PDUs
-Eric has designed the following solution for power in the new Brisbane Comms Room:
+The solution for the power in the new Brisbane Comms Room has been designed as follows:
 
 ### Power Panels
 There are two power panels provided by the facilities management company:

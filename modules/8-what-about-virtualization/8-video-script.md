@@ -10,6 +10,8 @@ So, the first thing to do is to add the physical servers that will make up the V
 
 Then add the device type. and do this by importing from the device type library - so from the github repo (https://github.com/netbox-community/devicetype-library/blob/master/device-types/HPE/ProLiant-DL380-Gen9.yaml) copy the yaml definition of the HPE ProLiant DL380 Gen9 server and then in the UI, click on the import icon next to device types, and then paste in the yaml and click submit.
 
+We now just need to tweak the device type and add in a couple of Power Ports, so we can click on Add Components, and then select Power Port, and we will add 2 of them, by using a range of 1-2 (PSU[1-2]) and we'll go with a Type C14.
+
 Next create 2 devices from this device type, by clicking on the import icon next to devices, and then paste in the CSV data to define the 2 servers AUBRI01-VSP-1 and 2. Note that the csv data also includes the rack mounting information - with the first server located at rack unit 1, and the second at unit 3. so after clicking on submit, check the rack elevation now by clicking on the link to the rack - and there are the 2 new servers at the bottom of the rack.
 
 Next add the cables to connect the servers to the access switch - and again do this using the CSV data from the file accompanying this module. click on connections, and then the import icon next to Cables, and paste in the csv data for the 6 cables. These are connecting the iLO ports and 2 of the gigabit ethernet ports, and are 2 metre long, cat 6 cables, in blue for iLO and green for the main ethernet connections - then click submit.
