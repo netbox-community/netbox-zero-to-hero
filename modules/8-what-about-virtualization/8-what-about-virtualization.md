@@ -2,11 +2,11 @@
 
 # Introduction
 
-Hello and welcome to module 8 of the NetBox 'Zero-to-Hero' course. In [Module 7: Automate All the Things!](../7-automate-all-the-things/7-automate-all-the-things.md), Eric used Ansible to extract data from NetBox and then use that data to automate the creation of basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
+Hello and welcome to module 8 of the NetBox 'Zero-to-Hero' course. In [Module 7: Provisioning the Devices](../7-provisoning-the-devices/7-provisoning-the-devices.md), we used NetBox generate basic device configurations for the WAN Router (Cisco IOS) and the Access Switch (Juniper JunOS), at the new Brisbane branch office.
 
 The IT Manager has now decided that as there are going to be two data scientists working out of the new Brisbane office, it makes sense to have a Database server located on premises there, along with a local file and print server. These servers will be virtual machines hosted on a VMware vSphere cluster.
 
-In this video, Network Engineer Susan will add the required physical servers for the vSphere cluster, create the cluster and add the Virtual Machines for the servers. She will also define the services including the protocol and port numbers that will be running on the VM servers, and all of this will be done via the web interface.
+In this video, we will add the required physical servers for the vSphere cluster, create the cluster and add the Virtual Machines for the servers. We will also define the services including the protocol and port numbers that will be running on the VM servers, and all of this will be done via the web interface.
 
 By the end of this module you will be able to:
 - Describe how NetBox models Virtualization, including Cluster Types, Clusters, Platforms, VM's and VM Interfaces
