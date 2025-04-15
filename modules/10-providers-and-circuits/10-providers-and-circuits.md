@@ -2,9 +2,9 @@
 
 # Introduction
 
-Hello and welcome to module 10 of the NetBox 'Zero-to-Hero' course. In [Module 9: Powering Up!](../9-powering-up/9-powering-up.md), Network Engineer Eric added the facility power panels and feeds for the new Brisbane branch office, along with the PDUs and power cable connections, so all the devices in the new communications cabinet can be powered on.
+Hello and welcome to module 10 of the NetBox 'Zero-to-Hero' course. In [Module 9: Powering Up!](../9-powering-up/9-powering-up.md),we added the facility power panels and feeds for the new Brisbane branch office, along with the PDUs and power cable connections, so all the devices in the new communications cabinet can be powered on.
 
-Now it's time to connect the new site to the Internet, and in this module Network Engineer Susan will add the new Internet Circuit.
+Now it's time to connect the new site to the Internet, and in this module we will add the new Internet Circuit.
 
 By the end of this module you will be able to:
 - Describe how NetBox models service providers and circuits
